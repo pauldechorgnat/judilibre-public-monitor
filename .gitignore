@@ -1,0 +1,6 @@
+__pycache__
+venv
+venv-dev
+.env
+judilibre-public-monitor/data/raw_data/*
+.ipynb_checkpoints
