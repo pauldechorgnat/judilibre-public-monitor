@@ -4,3 +4,4 @@ venv-dev
 .env
 judilibre-public-monitor/data/raw_data/*
 .ipynb_checkpoints
+judilibre-public-monitor/assets/fonts
