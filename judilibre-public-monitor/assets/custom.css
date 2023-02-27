@@ -1,0 +1,143 @@
+@font-face {
+    font-family: 'Marianne';
+    src: url('fonts/marianne-regular-webfont.woff');
+}
+
+body {
+    margin: 0;
+    font-family: "Marianne";
+    color: rgb(58, 58, 58)
+}
+
+.header-container {
+    height: 100px;
+    padding: 20px 20%;
+    margin-bottom: 70px;
+    width: 60%;
+    box-shadow: 0 8px 8px #0000001a, 0 8px 16px -16px #00000052;
+    background-color: white;
+    display: inline-block;
+}
+
+
+
+.title-container {
+    margin-top: auto;
+    margin-bottom: auto;
+    display: inline-block;
+}
+
+.main-title {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.secondary-title {
+    font-size: 1rem;
+    font-weight: 100;
+    margin-top: 0
+}
+
+.summary-container {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.card-container {
+    display: flex;
+    /* background-color: blue; */
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.card {
+    display: block;
+    /* background-color: red; */
+    text-align: center;
+    border-right: solid grey 1px;
+    border-left: solid grey 1px;
+    border-top: solid grey 1px;
+    border-bottom: solid 4px #000091;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    height: 120px;
+}
+
+.card-content {
+    font-weight: bold;
+}
+
+.content-container {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 50px
+}
+
+.graph-title {
+    margin-bottom: 0;
+    font-weight: 300;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.graph-container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 2rem;
+
+}
+
+.main-text {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+h2:after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 50px;
+    height: 3px;
+    border-top: 1px solid;
+    border-bottom: 1px solid #fff;
+    width: 50rem;
+    margin-right: -100%;
+    margin-left: 2rem;
+}
+
+h2 {
+    margin-bottom: 3rem;
+}
+
+button {
+    background-color: #000091;
+    color: white;
+    height: 3rem;
+    box-shadow: 0;
+    margin: 3rem;
+    width: 50%;
+    border-radius: .5rem;
+    cursor: pointer;
+    /* border-radius: 1rem; */
+}
+
+.Select-value-label,
+.Select-value-icon {
+    color: #000091;
+    background-color: white;
+    box-shadow: none;
+    border: none;
+    /* border: solid 1px #000091 */
+}
+
+.Select-value {
+    border-color: #000091 !important;
+    box-shadow: none;
+}

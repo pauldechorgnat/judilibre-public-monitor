@@ -5,3 +5,6 @@ venv-dev
 judilibre-public-monitor/data/raw_data/*
 .ipynb_checkpoints
 judilibre-public-monitor/assets/fonts
+
+notes.md
+notebooks

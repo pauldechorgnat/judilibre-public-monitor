@@ -1,0 +1,1 @@
+Cette application permet de suivre la diffusion des données de justice faite par l'application Judilibre maintenue par la cour de cassation. Ces données sont diffusées à titre indicatif et n'engage pas la responsabilité des développeurs.

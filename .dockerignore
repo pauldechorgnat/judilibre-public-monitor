@@ -1,0 +1,4 @@
+.env
+venv
+venv-dev
+judilibre-public-monitor/data/raw_data
