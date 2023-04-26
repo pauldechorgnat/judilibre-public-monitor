@@ -1,3 +1,8 @@
+:root {
+    --bleu-france: #000091;
+    --rouge-marianne: #E1000F;
+}
+
 @font-face {
     font-family: 'Marianne';
     src: url('fonts/marianne-regular-webfont.woff');
@@ -59,7 +64,7 @@ body {
     border-right: solid grey 1px;
     border-left: solid grey 1px;
     border-top: solid grey 1px;
-    border-bottom: solid 4px #000091;
+    border-bottom: solid 4px var(--bleu-france);
     margin-left: auto;
     margin-right: auto;
     width: 150px;
@@ -73,7 +78,9 @@ body {
 .content-container {
     margin-left: 20%;
     margin-right: 20%;
-    margin-top: 50px
+    margin-top: 50px;
+    /* background-color: green; */
+    overflow: hidden !important;
 }
 
 .graph-title {
@@ -103,13 +110,13 @@ h2:after {
     content: '';
     display: inline-block;
     vertical-align: middle;
-    width: 50px;
     height: 3px;
     border-top: 1px solid;
     border-bottom: 1px solid #fff;
-    width: 50rem;
+    width: 100rem;
     margin-right: -100%;
     margin-left: 2rem;
+
 }
 
 h2 {
@@ -117,27 +124,56 @@ h2 {
 }
 
 button {
-    background-color: #000091;
+    background-color: var(--bleu-france);
     color: white;
     height: 3rem;
-    box-shadow: 0;
+    box-shadow: none;
     margin: 3rem;
     width: 50%;
-    border-radius: .5rem;
+    border-radius: .25rem;
+    border: none;
     cursor: pointer;
     /* border-radius: 1rem; */
 }
 
 .Select-value-label,
 .Select-value-icon {
-    color: #000091;
+    color: var(--bleu-france);
     background-color: white;
     box-shadow: none;
     border: none;
-    /* border: solid 1px #000091 */
+    /* border: solid 1px var(--bleu-france) */
 }
 
 .Select-value {
-    border-color: #000091 !important;
+    border-color: var(--bleu-france) !important;
     box-shadow: none;
 }
+
+#cour-de-cassation-bloc-marque {
+    padding-left: 20%;
+    margin-right: 20px;
+}
+
+.CalendarDay__selected {
+    background-color: var(--bleu-france);
+    border-color: var(--bleu-france);
+}
+
+.CalendarDay__selected:hover {
+
+    background-color: var(--bleu-france);
+    border-color: var(--bleu-france);
+    opacity: .8;
+    border-color: white;
+}
+
+.DateInput_input__focused {
+    border-bottom-color: var(--bleu-france) ! important;
+}
+
+.DayPickerKeyboardShortcuts_buttonReset {
+    display: none
+}
+
+/* .DayPickerKeyboardShortcuts_buttonReset_1 DayPickerKeyboardShortcuts_show DayPickerKeyboardShortcuts_show_2 DayPickerKeyboardShortcuts_show__bottomRight DayPickerKeyboardShortcuts_show__bottomRight_3 */
