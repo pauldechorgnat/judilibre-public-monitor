@@ -69,7 +69,6 @@ def update_graphs(n_clicks, start_date, end_date):
     df = df[df["decision_date"] <= end_date]
 
     source_graph = get_source_graph(df=df)
-    # jurisdiction_graph = get_jurisidction_graph(df=df)
     time_graph = get_time_graph(df=df, date_type="decision_date")
     location_graph = get_location_graph(df=df, include_cc=False)
     nac_graph = get_nac_graph(df=df)
@@ -77,7 +76,6 @@ def update_graphs(n_clicks, start_date, end_date):
     type_graph = get_type_graph(df=df)
     return (
         source_graph,
-        # jurisdiction_graph,
         time_graph,
         location_graph,
         nac_graph,
