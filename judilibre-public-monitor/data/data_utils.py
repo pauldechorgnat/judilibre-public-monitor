@@ -3,8 +3,8 @@ from string import digits
 
 from pandas.api.types import CategoricalDtype
 
-LETTERS = [l for l in ascii_letters]
-NUMBERS = [n for n in digits]
+LETTERS = [letter for letter in ascii_letters]
+NUMBERS = [number for number in digits]
 
 SOURCES = ["dila", "jurinet", "jurica"]
 SOURCES_DTYPE = CategoricalDtype(SOURCES)
@@ -93,3 +93,47 @@ LOCATIONS_CA = {
 }
 
 LOCATIONS = {**LOCATIONS_CA}
+
+
+FORMATIONS_CC = {
+    "pl": "Assemblée plénière",
+    "mi": "Chambre mixte",
+    "civ1": "Première chambre civile",
+    "civ2": "Deuxième chambre civile",
+    "civ3": "Troisième chambre civile",
+    "comm": "Chambre commerciale financière et économique",
+    "soc": "Chambre sociale",
+    "cr": "Chambre criminelle",
+    "creun": "Chambres réunies",
+    "ordo": "Première présidence (Ordonnance)",
+    "allciv": "Toutes les chambres civiles",
+    "other": "Autre",
+}
+
+
+FORMATIONS_CC = {
+    "pl": "Plénière",
+    "mi": "Mixte",
+    "civ1": "Civile I",
+    "civ2": "Civile II",
+    "civ3": "Civile III",
+    "comm": "Commerciale",
+    "soc": "Sociale",
+    "cr": "Criminelle",
+    "creun": "Réunies",
+    "ordo": "Ordonnance (PP)",
+    "allciv": "Civiles",
+    "other": "Autre",
+}
+
+TYPES = {
+    "arret": "Arrêt",
+    "avis": "Avis",
+    "ordonnance": "Ordonnance",
+    "other": "Autre",
+    "qpc": "QPC",
+    "saisie": "Saisie",
+}
+
+
+SOURCES = {"dila": "DILA", "jurinet": "Jurinet", "jurica": "Jurica"}
