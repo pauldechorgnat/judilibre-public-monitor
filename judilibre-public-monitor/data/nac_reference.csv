@@ -1,0 +1,972 @@
+Code NAC,N1,N2,Niveau 1,Niveau 2,Intitulé NAC
+10,1,10,Droit des personnes,Nationalité,Nationalité
+10A,1,10,Droit des personnes,Nationalité,Demande tendant à contester l'enregistrement ou le refus d'enregistrement d'une déclaration de nationalité
+10B,1,10,Droit des personnes,Nationalité,Action déclaratoire ou négatoire de nationalité
+10C,1,10,Droit des personnes,Nationalité,Contestation sur une question de nationalité soulevée par voie de question préjudicielle
+10D,1,10,Droit des personnes,Nationalité,Demande tendant à contester l'enregistrement d'une déclaration de nationalité
+10E,1,10,Droit des personnes,Nationalité,Demande tendant à contester le refus d'enregistrement d'une déclaration de nationalité
+10F,1,10,Droit des personnes,Nationalité,Action déclaratoire de nationalité
+10G,1,10,Droit des personnes,Nationalité,Action négatoire de nationalité
+10H,1,10,Droit des personnes,Nationalité,Action en contestation du refus de délivrance d'un certificat de nationalité française
+10Z,1,10,Droit des personnes,Nationalité,Autres demandes en matière de nationalité
+11,1,11,Droit des personnes,État civil,Etat civil
+11A,1,11,Droit des personnes,État civil,Demande de jugement déclaratif d'un acte de l'état civil ou de reconstitution d'un acte ou d'un registre de l'état civil détruit
+11B,1,11,Droit des personnes,État civil,Demande de rectification d'un acte de l'état civil
+11C,1,11,Droit des personnes,État civil,Demande sanctionnant le dysfonctionnement de l'état civil
+11D,1,11,Droit des personnes,État civil,Demande d'annulation d'un acte d'état civil ou des pièces en tenant lieu
+11E,1,11,Droit des personnes,État civil,Demande de modification de la mention du sexe dans les actes d'état civil
+11F,1,11,Droit des personnes,État civil,Contestation d'une décision d'irrecevabilité d'une déclaration conjointe de PACS
+11G,1,11,Droit des personnes,État civil,Demande aux fins d'annulation de PACS
+11Z,1,11,Droit des personnes,État civil,Autres demandes concernant l'état civil
+12,1,12,Droit des personnes,Nom - Prénom,Nom - Prénom
+12A,1,12,Droit des personnes,Nom - Prénom,"Demande de changement, de substitution ou de reprise de nom d'un enfant naturel"
+12B,1,12,Droit des personnes,Nom - Prénom,Demande relative à l'usage du nom d'un conjoint ou d'un ex-conjoint
+12C,1,12,Droit des personnes,Nom - Prénom,Contestation du choix du prénom par le procureur de la République
+12D,1,12,Droit des personnes,Nom - Prénom,Demande de changement de prénom après opposition du procureur de la République
+12E,1,12,Droit des personnes,Nom - Prénom,Demande de changement de nom après opposition du procureur de la République
+12Z,1,12,Droit des personnes,Nom - Prénom,Autres demandes en matière de nom ou de prénom
+13,1,13,Droit des personnes,Absence et disparition,Absence et disparition
+13A,1,13,Droit des personnes,Absence et disparition,Demande de jugement déclaratif de décès en cas de disparition
+13B,1,13,Droit des personnes,Absence et disparition,Demande d'annulation d'un jugement déclaratif de décès
+13C,1,13,Droit des personnes,Absence et disparition,Demande de constatation de présomption d'absence
+13D,1,13,Droit des personnes,Absence et disparition,Demande de déclaration d'absence
+13E,1,13,Droit des personnes,Absence et disparition,Demande d'annulation d'un jugement déclaratif d'absence
+13Z,1,13,Droit des personnes,Absence et disparition,Autres demandes relatives à l'absence et à la disparition
+14,1,14,Droit des personnes,Droits attachés à la personne,Droits attachés à la personne
+14A,1,14,Droit des personnes,Droits attachés à la personne,Demande tendant à la réparation et/ou à la cessation d'une atteinte au droit au respect de la vie privée
+14B,1,14,Droit des personnes,Droits attachés à la personne,Demande relative à l'organisation des funérailles ou à la sépulture
+14C,1,14,Droit des personnes,Droits attachés à la personne,Demande relative à l'internement d'une personne
+14D,1,14,Droit des personnes,Droits attachés à la personne,"Demande de relevé des peines de la faillite personnelle et/ou de l'interdiction de diriger, de gérer, d'administrer ou de contrôler"
+14E,1,14,Droit des personnes,Droits attachés à la personne,Demande tendant à la réparation et/ou à la cessation d'une atteinte à la présomption d'innocence
+14F,1,14,Droit des personnes,Droits attachés à la personne,Demande relative au don d'organes
+14G,1,14,Droit des personnes,Droits attachés à la personne,Demande d'autorisation relative à la rétention et au maintien en zone d'attente d'un étranger
+14H,1,14,Droit des personnes,Droits attachés à la personne,Demande de mainlevée de la rétention formée devant le juge des libertés et de la détention par l'étranger
+14I,1,14,Droit des personnes,Droits attachés à la personne,Demande de mainlevée d'une mesure d'hospitalisation complète par le patient ou toute personne agissant dans son intérêt
+14J,1,14,Droit des personnes,Droits attachés à la personne,Demande de mainlevée d'une mesure d'hospitalisation autre que complète par le patient ou toute personne agissant dans son intérêt
+14K,1,14,Droit des personnes,Droits attachés à la personne,Demande de contrôle obligatoire périodique de la nécessité d'une mesure d'hospitalisation complète
+14L,1,14,Droit des personnes,Droits attachés à la personne,Demande de contrôle de la nécessité d'une mesure d'hospitalisation complète en cas de désaccord entre psychiatres et préfet
+14N,1,14,Droit des personnes,Droits attachés à la personne,Contestation de la légalité de l'arrêté de placement en rétention devant le juge des libertés et de la détention par l'étranger
+14O,1,14,Droit des personnes,Droits attachés à la personne,Demande de prolongation d’une mesure de quarantaine ou d’isolement
+14P,1,14,Droit des personnes,Droits attachés à la personne,Demande de mainlevée d’une mesure de quarantaine ou d’isolement
+14Q,1,14,Droit des personnes,Droits attachés à la personne,Demande d'autorisation de prolongation des mesures de rétention prises à l'encontre des étrangers en situation irrégulière
+14R,1,14,Droit des personnes,Droits attachés à la personne,Demande d'autorisation de maintien en zone d'attente d'un étranger demandant son admission sur le territoire français
+14S,1,14,Droit des personnes,Droits attachés à la personne,Demande de mainlevée d'une mesure d'isolement et/ou de contention formée à titre principal
+14T,1,14,Droit des personnes,Droits attachés à la personne,Demande de maintien d’une mesure d’isolement et/ou de contention formée par le directeur de l’établissement
+15,1,15,Droit des personnes,Incapacité des mineurs,Incapacité des mineurs
+15A,1,15,Droit des personnes,Incapacité des mineurs,Demande d'autorisation d'un acte ou de désignation d'un administrateur ad hoc dans le cadre d'une administration légale pure et simple
+15B,1,15,Droit des personnes,Incapacité des mineurs,Demande d'autorisation d'un acte ou de désignation d'un administrateur ad hoc dans le cadre de l'administration légale sous contrôle judiciaire
+15C,1,15,Droit des personnes,Incapacité des mineurs,Demande d'ouverture d'une tutelle - Incapacité des mineurs -
+15D,1,15,Droit des personnes,Incapacité des mineurs,Recours exercé à l'encontre d'une décision d'un organe tutélaire - Incapacité des mineurs -
+15E,1,15,Droit des personnes,Incapacité des mineurs,Demande d'émancipation
+15F,1,15,Droit des personnes,Incapacité des mineurs,Demande d'autorisation d'un acte ou de désignation d'un administrateur ad hoc dans le cadre d'une administration légale
+15G,1,15,Droit des personnes,Incapacité des mineurs,Demande aux fins de contrôle d'un acte dans des situations à risque
+15H,1,15,Droit des personnes,Incapacité des mineurs,Demande aux fins de levée de contrôle d'un acte
+15Z,1,15,Droit des personnes,Incapacité des mineurs,Autres demandes relatives à l'incapacité des mineurs
+16,1,16,Droit des personnes,Majeurs protégés : ouverture d'un régime de protection et mandat de protection future,Majeurs protégés : ouverture d'un régime de protection et mandat de protection future
+16A,1,16,Droit des personnes,Majeurs protégés : ouverture d'un régime de protection et mandat de protection future,Appel d'une décision relative à l'organisation ou la prolongation d'une protection judiciaire en faveur d'un jeune majeur
+16B,1,16,Droit des personnes,Majeurs protégés : ouverture d'un régime de protection et mandat de protection future,Demande d'ouverture d'un régime de protection sans autre indication
+16C,1,16,Droit des personnes,Majeurs protégés : ouverture d'un régime de protection et mandat de protection future,Demande d'ouverture d'une tutelle - majeurs protégés -
+16D,1,16,Droit des personnes,Majeurs protégés : ouverture d'un régime de protection et mandat de protection future,Demande d'ouverture d'une curatelle
+16E,1,16,Droit des personnes,Majeurs protégés : ouverture d'un régime de protection et mandat de protection future,Demande de conversion de tutelle en curatelle
+16F,1,16,Droit des personnes,Majeurs protégés : ouverture d'un régime de protection et mandat de protection future,Demande de conversion de curatelle en tutelle
+16G,1,16,Droit des personnes,Majeurs protégés : ouverture d'un régime de protection et mandat de protection future,Demande d'ouverture d'une tutelle aux prestations sociales
+16H,1,16,Droit des personnes,Majeurs protégés : ouverture d'un régime de protection et mandat de protection future,Demande d'ouverture d'une mesure d'accompagnement judiciaire
+16I,1,16,Droit des personnes,Majeurs protégés : ouverture d'un régime de protection et mandat de protection future,Demande de conversion de tutelle aux prestations sociales en mesure d'accompagnement judiciaire
+16J,1,16,Droit des personnes,Majeurs protégés : ouverture d'un régime de protection et mandat de protection future,Demande de placement sous sauvegarde de justice - mesure autonome -
+16K,1,16,Droit des personnes,Majeurs protégés : ouverture d'un régime de protection et mandat de protection future,Demande de versement direct des prestations sociales au bailleur -contrat d'accompagnement social personnalisé-
+16M,1,16,Droit des personnes,Majeurs protégés : ouverture d'un régime de protection et mandat de protection future,Contestation de la mise en œuvre ou de l'exécution d'un mandat de protection future
+16N,1,16,Droit des personnes,Majeurs protégés : ouverture d'un régime de protection et mandat de protection future,Demande d'autorisation d'accomplir un acte dans le cadre d'un mandat de protection future
+16O,1,16,Droit des personnes,Majeurs protégés : ouverture d'un régime de protection et mandat de protection future,Demande aux fins de désignation d'une personne habilitée
+16P,1,16,Droit des personnes,Majeurs protégés : ouverture d'un régime de protection et mandat de protection future,Demande de conversion d'une tutelle en habilitation familiale
+16Q,1,16,Droit des personnes,Majeurs protégés : ouverture d'un régime de protection et mandat de protection future,Demande de conversion d'une curatelle en habilitation familiale
+16R,1,16,Droit des personnes,Majeurs protégés : ouverture d'un régime de protection et mandat de protection future,Demande de conversion d'une habilitation familiale en tutelle
+16S,1,16,Droit des personnes,Majeurs protégés : ouverture d'un régime de protection et mandat de protection future,Demande de conversion d'une habilitation familiale en curatelle
+17,1,17,Droit des personnes,Majeurs protégés : fonctionnement des régimes de protection,Majeurs protégés : fonctionnement des régimes de protection
+17A,1,17,Droit des personnes,Majeurs protégés : fonctionnement des régimes de protection,Recours contre une décision relative à la gestion de la personne et/ou des biens d'un majeur protégé
+17B,1,17,Droit des personnes,Majeurs protégés : fonctionnement des régimes de protection,Recours contre une décision relative à la  désignation ou à la  révocation d'un mandataire du majeur placé sous sauvegarde de justice
+17C,1,17,Droit des personnes,Majeurs protégés : fonctionnement des régimes de protection,Recours contre une décision relative à une demande d'autorisation supplétive d'un acte formée par un majeur en curatelle
+17D,1,17,Droit des personnes,Majeurs protégés : fonctionnement des régimes de protection,Demande tendant à modifier l'étendue de la curatelle
+17E,1,17,Droit des personnes,Majeurs protégés : fonctionnement des régimes de protection,Demande tendant à modifier l'étendue de la tutelle
+17F,1,17,Droit des personnes,Majeurs protégés : fonctionnement des régimes de protection,Recours exercé à l'encontre d'une décision d'un organe tutélaire - majeurs protégés -
+17G,1,17,Droit des personnes,Majeurs protégés : fonctionnement des régimes de protection,Demande de modification de l'étendue de la tutelle aux prestations sociales
+17H,1,17,Droit des personnes,Majeurs protégés : fonctionnement des régimes de protection,Demande de renouvellement de la tutelle aux prestations sociales
+17I,1,17,Droit des personnes,Majeurs protégés : fonctionnement des régimes de protection,Demande de modification de l'étendue de la mesure d'accompagnement judiciaire
+17J,1,17,Droit des personnes,Majeurs protégés : fonctionnement des régimes de protection,Demande de renouvellement de la mesure d'accompagnement judiciaire
+17K,1,17,Droit des personnes,Majeurs protégés : fonctionnement des régimes de protection,Demande de renouvellement de la mesure de tutelle
+17L,1,17,Droit des personnes,Majeurs protégés : fonctionnement des régimes de protection,Demande de renouvellement de la mesure de curatelle
+17M,1,17,Droit des personnes,Majeurs protégés : fonctionnement des régimes de protection,Demande de renouvellement de la mesure de sauvegarde de justice
+17N,1,17,Droit des personnes,Majeurs protégés : fonctionnement des régimes de protection,Demande de changement de représentant légal
+17O,1,17,Droit des personnes,Majeurs protégés : fonctionnement des régimes de protection,Demande tendant à modifier l'étendue de l'habilitation familiale
+17P,1,17,Droit des personnes,Majeurs protégés : fonctionnement des régimes de protection,Demande de renouvellement de l'habilitation familiale
+17Q,1,17,Droit des personnes,Majeurs protégés : fonctionnement des régimes de protection,Demande de changement de représentant légal dans le cadre d'une habilitation familiale
+17R,1,17,Droit des personnes,Majeurs protégés : fonctionnement des régimes de protection,Recours contre une décision relative à la personne protégée
+17S,1,17,Droit des personnes,Majeurs protégés : fonctionnement des régimes de protection,Recours contre une décision relative aux biens d'une personne protégé
+17T,1,17,Droit des personnes,Majeurs protégés : fonctionnement des régimes de protection,Demande de prorogation de la durée du renouvellement de la mesure
+18,1,18,Droit des personnes,"Majeurs protégés : clôture des régimes de protection, et demandes consécutives à la clôture",Majeurs protégés : clôture des régimes de protection et demandes consécutives à la clôture
+18A,1,18,Droit des personnes,"Majeurs protégés : clôture des régimes de protection, et demandes consécutives à la clôture",Demande de mainlevée d'une tutelle
+18B,1,18,Droit des personnes,"Majeurs protégés : clôture des régimes de protection, et demandes consécutives à la clôture",Demande de mainlevée d'une curatelle
+18C,1,18,Droit des personnes,"Majeurs protégés : clôture des régimes de protection, et demandes consécutives à la clôture",Appel relatif à la mainlevée d'une mesure en faveur d'un jeune majeur
+18D,1,18,Droit des personnes,"Majeurs protégés : clôture des régimes de protection, et demandes consécutives à la clôture",Demande de mainlevée d'une tutelle aux prestations sociales
+18E,1,18,Droit des personnes,"Majeurs protégés : clôture des régimes de protection, et demandes consécutives à la clôture",Demande de mainlevée d'une mesure d'accompagnement judiciaire
+18F,1,18,Droit des personnes,"Majeurs protégés : clôture des régimes de protection, et demandes consécutives à la clôture",Demande de mainlevée de la mesure de sauvegarde de justice
+18G,1,18,Droit des personnes,"Majeurs protégés : clôture des régimes de protection, et demandes consécutives à la clôture",Demande de mainlevée du versement direct des prestations sociales au bailleur -contrat d'accompagnement social personnalisé-
+18H,1,18,Droit des personnes,"Majeurs protégés : clôture des régimes de protection, et demandes consécutives à la clôture",Demande de mainlevée de l'habilitation familiale
+18Z,1,18,Droit des personnes,"Majeurs protégés : clôture des régimes de protection, et demandes consécutives à la clôture", Autres demandes relatives à la clôture des régimes de protection
+20,2,20,Droit de la famille,Divorce,Divorce
+20A,2,20,Droit de la famille,Divorce,Demande en divorce sur requête conjointe
+20B,2,20,Droit de la famille,Divorce,Demande en divorce sur demande acceptée
+20C,2,20,Droit de la famille,Divorce,"Demande en divorce pour rupture de la vie commune, en cas de séparation de fait"
+20D,2,20,Droit de la famille,Divorce,"Demande en divorce pour rupture de la vie commune, en cas de séparation de fait"
+20E,2,20,Droit de la famille,Divorce,Demande en divorce pour faute
+20F,2,20,Droit de la famille,Divorce,Demande en conversion de la séparation de corps en divorce
+20G,2,20,Droit de la famille,Divorce,Demande de modification des mesures provisoires - divorce -
+20H,2,20,Droit de la famille,Divorce,Action en opposabilité ou en inopposabilité d'une décision de divorce rendue à l'étranger
+20I,2,20,Droit de la famille,Divorce,Demande en divorce par consentement mutuel
+20J,2,20,Droit de la famille,Divorce,Art. 751 du CPC - Demande en divorce autre que par consentement mutuel
+20K,2,20,Droit de la famille,Divorce,Demande en divorce par consentement mutuel - passerelle -
+20L,2,20,Droit de la famille,Divorce,Art. 1107 CPC- Demande en divorce autre que par consentement mutuel
+21,2,21,Droit de la famille,Séparation de corps,Séparation de corps
+21A,2,21,Droit de la famille,Séparation de corps,Demande en séparation de corps sur requête conjointe
+21B,2,21,Droit de la famille,Séparation de corps,Demande en séparation de corps sur demande acceptée
+21C,2,21,Droit de la famille,Séparation de corps,"Demande en séparation de corps pour rupture de la vie commune, en cas de séparation de fait"
+21D,2,21,Droit de la famille,Séparation de corps,"Demande en séparation de corps pour rupture de la vie commune, en cas d'altération des facultés mentales"
+21E,2,21,Droit de la famille,Séparation de corps,Demande en séparation de corps pour faute
+21F,2,21,Droit de la famille,Séparation de corps,Demande de modification des mesures provisoires - séparation de corps -
+21G,2,21,Droit de la famille,Séparation de corps,Action en opposabilité ou en inopposabilité d'une décision prononçant la séparation de corps rendue à l'étranger
+21H,2,21,Droit de la famille,Séparation de corps,Demande en séparation de corps par consentement mutuel
+21I,2,21,Droit de la famille,Séparation de corps,Art. 751 du CPC - Demande en séparation de corps autre que par consentement mutuel
+21J,2,21,Droit de la famille,Séparation de corps,Demande en séparation de corps par consentement mutuel - passerelle -
+21K,2,21,Droit de la famille,Séparation de corps,Art. 1107 du CPC - Demande en séparation de corps autre que par consentement mutuel
+22,2,22,Droit de la famille,Demandes postérieures au prononcé du divorce ou de la séparation de corps,Demandes postérieures au prononcé du divorce ou de la séparation de corps
+22A,2,22,Droit de la famille,Demandes postérieures au prononcé du divorce ou de la séparation de corps,Demande de modification de l'exercice de l'autorité parentale ou de la résidence habituelle des enfants mineurs - après divorce ou séparation de corps -
+22B,2,22,Droit de la famille,Demandes postérieures au prononcé du divorce ou de la séparation de corps,Demande de révision de la prestation compensatoire ou de substitution d'un capital à la rente
+22C,2,22,Droit de la famille,Demandes postérieures au prononcé du divorce ou de la séparation de corps,Demande de modification de la contribution à l'entretien des enfants - après divorce ou séparation de corps -
+22D,2,22,Droit de la famille,Demandes postérieures au prononcé du divorce ou de la séparation de corps,Demande de fixation ou de modification de la pension alimentaire versée au conjoint
+22E,2,22,Droit de la famille,Demandes postérieures au prononcé du divorce ou de la séparation de corps,Demande de modification du droit de visite - après divorce ou séparation de corps -
+22F,2,22,Droit de la famille,Demandes postérieures au prononcé du divorce ou de la séparation de corps,Demande relative au bail concédé à l'un des époux
+22G,2,22,Droit de la famille,Demandes postérieures au prononcé du divorce ou de la séparation de corps,Demande relative à la liquidation du régime matrimonial
+23,2,23,Droit de la famille,Mariage et régimes matrimoniaux,Mariage et régimes matrimoniaux
+23A,2,23,Droit de la famille,Mariage et régimes matrimoniaux,Demande en nullité de mariage
+23B,2,23,Droit de la famille,Mariage et régimes matrimoniaux,Demande de mainlevée d'une opposition à mariage
+23C,2,23,Droit de la famille,Mariage et régimes matrimoniaux,Demande en nullité d'un acte passé par un époux sans le consentement de l'autre
+23D,2,23,Droit de la famille,Mariage et régimes matrimoniaux,Demande d'autorisation à passer seul un acte
+23E,2,23,Droit de la famille,Mariage et régimes matrimoniaux,"Demande relative à l'habilitation à représenter l'autre conjoint, ou à lui être substitué dans la gestion des biens propres ou communs"
+23F,2,23,Droit de la famille,Mariage et régimes matrimoniaux,Demande de mesures urgentes lorsque l'un des époux manque gravement à ses devoirs et met en péril les intérêts de la famille
+23G,2,23,Droit de la famille,Mariage et régimes matrimoniaux,Demande d'homologation du changement de régime matrimonial
+23H,2,23,Droit de la famille,Mariage et régimes matrimoniaux,Demande en séparation de biens judiciaire
+23I,2,23,Droit de la famille,Mariage et régimes matrimoniaux,Demande en nullité de mariage célébré à l’étranger par le procureur de la République de Nantes
+23J,2,23,Droit de la famille,Mariage et régimes matrimoniaux,Demande en nullité de mariage célébré en France par le procureur de la République
+23K,2,23,Droit de la famille,Mariage et régimes matrimoniaux,Demande en nullité de mariage par toute partie autre que le procureur de la République
+23Z,2,23,Droit de la famille,Mariage et régimes matrimoniaux,Autres demandes relatives au mariage et au régime matrimonial
+24,2,24,Droit de la famille,Obligations à caractère alimentaire,Obligations à caractère alimentaire
+24A,2,24,Droit de la famille,Obligations à caractère alimentaire,Demande relative à la pension alimentaire des enfants nés hors mariage
+24B,2,24,Droit de la famille,Obligations à caractère alimentaire,Demande tendant à faire décharger le débiteur de tout ou partie de sa dette pour cause d'ingratitude du créancier
+24C,2,24,Droit de la famille,Obligations à caractère alimentaire,Demande d'entretien formée par l'enfant majeur
+24D,2,24,Droit de la famille,Obligations à caractère alimentaire,Recours entre codébiteurs d'aliments
+24E,2,24,Droit de la famille,Obligations à caractère alimentaire,Recours des tiers payeurs contre les débiteurs d'aliments
+24F,2,24,Droit de la famille,Obligations à caractère alimentaire,Contribution aux charges du mariage
+24G,2,24,Droit de la famille,Obligations à caractère alimentaire,Action à fin de subsides
+24H,2,24,Droit de la famille,Obligations à caractère alimentaire,Contestation relative au paiement direct ou au recouvrement public des pensions alimentaires
+24I,2,24,Droit de la famille,Obligations à caractère alimentaire,Demande relative à la fixation de la pension alimentaire des enfants - parents non mariés -
+24J,2,24,Droit de la famille,Obligations à caractère alimentaire,Demande relative à la révision de la pension alimentaire des enfants - parents non mariés -
+24K,2,24,Droit de la famille,Obligations à caractère alimentaire,Demande relative à la fixation de l'obligation alimentaire formée par l'enfant majeur à l'égard de ses parents ou autres ascendants
+24L,2,24,Droit de la famille,Obligations à caractère alimentaire,Demande relative à la révision de l'obligation alimentaire formée par l'enfant majeur à l'égard de ses parents ou autres ascendants
+24M,2,24,Droit de la famille,Obligations à caractère alimentaire,Demande relative à la fixation ou à la révision de l'obligation alimentaire formée par des parents ou autres ascendants à l'égard de leurs enfants
+24N,2,24,Droit de la famille,Obligations à caractère alimentaire,Demande de rétablissement judiciaire de l'intermédiation financière
+24Z,2,24,Droit de la famille,Obligations à caractère alimentaire,Autres demandes en matière d'obligation alimentaire
+25,2,25,Droit de la famille,Filiation légitime et légitimation (postes à n'utiliser qu'en cas de recours à compter du 1er juillet 2006),Filiation légitime et légitimation (postes à n'utiliser qu'en cas de recours à compter du 1er juillet 2006)
+25A,2,25,Droit de la famille,Filiation légitime et légitimation (postes à n'utiliser qu'en cas de recours à compter du 1er juillet 2006),Action en désaveu de paternité (action introduite devant le TGI avant le 1er juillet 2006)
+25B,2,25,Droit de la famille,Filiation légitime et légitimation (postes à n'utiliser qu'en cas de recours à compter du 1er juillet 2006),Action en contestation de paternité formée par la mère remariée (action introduite devant le TGI avant le 1er juillet 2006)
+25C,2,25,Droit de la famille,Filiation légitime et légitimation (postes à n'utiliser qu'en cas de recours à compter du 1er juillet 2006),Autres actions tendant à contester la présomption de paternité légitime (action introduite devant le TGI avant le 1er juillet 2006)
+25D,2,25,Droit de la famille,Filiation légitime et légitimation (postes à n'utiliser qu'en cas de recours à compter du 1er juillet 2006),Action en rétablissement de la présomption de paternité légitime (action introduite devant le TGI avant le 1er juillet 2006)
+25E,2,25,Droit de la famille,Filiation légitime et légitimation (postes à n'utiliser qu'en cas de recours à compter du 1er juillet 2006),"Action en contestation d'état, action en réclamation d'état (action introduite devant le TGI avant le 1er juillet 2006)"
+25F,2,25,Droit de la famille,Filiation légitime et légitimation (postes à n'utiliser qu'en cas de recours à compter du 1er juillet 2006),Action en revendication d'enfant légitime (action introduite devant le TGI avant le 1er juillet 2006)
+25G,2,25,Droit de la famille,Filiation légitime et légitimation (postes à n'utiliser qu'en cas de recours à compter du 1er juillet 2006),Demande de légitimation postérieurement au mariage (action introduite devant le TGI avant le 1er juillet 2006)
+25H,2,25,Droit de la famille,Filiation légitime et légitimation (postes à n'utiliser qu'en cas de recours à compter du 1er juillet 2006),Demande relative au consentement à une procréation médicalement assistée ou à la délivrance d'un acte de notoriété constatant la possession d'état d'enfant légitime (action introduite devant le TGI avant le 1er juillet 2006)
+25I,2,25,Droit de la famille,Filiation légitime et légitimation (postes à n'utiliser qu'en cas de recours à compter du 1er juillet 2006),Demande de légitimation par autorité de justice (action introduite devant le TGI avant le 1er juillet 2006)
+26,2,26,Droit de la famille,Filiation naturelle (recours) et filiation adoptive,Filiation naturelle (recours) et filiation adoptive
+26A,2,26,Droit de la famille,Filiation naturelle (recours) et filiation adoptive,Action en contestation de reconnaissance et demande en nullité de reconnaissance (action introduite devant le TGI avant le 1er juillet 2006)
+26B,2,26,Droit de la famille,Filiation naturelle (recours) et filiation adoptive,Action en recherche de paternité naturelle (action introduite devant le TGI avant le 1er juillet 2006)
+26C,2,26,Droit de la famille,Filiation naturelle (recours) et filiation adoptive,Action en recherche de maternité naturelle (action introduite devant le TGI avant le 1er juillet 2006)
+26D,2,26,Droit de la famille,Filiation naturelle (recours) et filiation adoptive,Demande tendant à la restitution de l'enfant après rétractation du consentement à l'adoption
+26E,2,26,Droit de la famille,Filiation naturelle (recours) et filiation adoptive,Demande en déclaration d'abandon
+26F,2,26,Droit de la famille,Filiation naturelle (recours) et filiation adoptive,Demande d'adoption simple
+26G,2,26,Droit de la famille,Filiation naturelle (recours) et filiation adoptive,Demande d'adoption plénière
+26H,2,26,Droit de la famille,Filiation naturelle (recours) et filiation adoptive,Demande de révocation d'une adoption simple
+26I,2,26,Droit de la famille,Filiation naturelle (recours) et filiation adoptive,Demande relative au consentement à une procréation médicalement assistée ou à la délivrance d'un acte de notoriété constatant la possession d'état - filiation naturelle - (action introduite devant le TGI avant le 1er juillet 2006)
+26J,2,26,Droit de la famille,Filiation naturelle (recours) et filiation adoptive,Demande d'adoption simple de l'enfant du conjoint
+26K,2,26,Droit de la famille,Filiation naturelle (recours) et filiation adoptive,Demande d'adoption plénière de l'enfant du conjoint
+26Y,2,26,Droit de la famille,Filiation naturelle (recours) et filiation adoptive,Autres demandes relatives à la filiation adoptive
+26Z,2,26,Droit de la famille,Filiation naturelle (recours) et filiation adoptive,Autres demandes relatives à la filiation naturelle et à la filiation adoptive (action introduite devant le TGI avant le 1er juillet 2006)
+27,2,27,Droit de la famille,Autorité parentale,Autorité parentale
+27A,2,27,Droit de la famille,Autorité parentale,"Demande relative au droit de visite des grands-parents ou autres personnes, parents ou non"
+27B,2,27,Droit de la famille,Autorité parentale,Demande tendant à faire trancher un conflit relatif à l'exercice de l'autorité parentale - parents mariés -
+27C,2,27,Droit de la famille,Autorité parentale,Demande de délégation ou de transfert de délégation de l'autorité parentale
+27D,2,27,Droit de la famille,Autorité parentale,Demande de retrait total de l'autorité parentale
+27E,2,27,Droit de la famille,Autorité parentale,Demande de restitution de l'autorité parentale
+27F,2,27,Droit de la famille,Autorité parentale,"Demande relative à l'exercice de l'autorité parentale, à la fixation de la résidence habituelle des enfants mineurs, ou au droit de visite - parents non mariés - "
+27G,2,27,Droit de la famille,Autorité parentale,Recours en matière de mesure judiciaire d'aide à la gestion du budget familial
+27H,2,27,Droit de la famille,Autorité parentale,Recours contre une mesure relative à l'assistance éducative
+27I,2,27,Droit de la famille,Autorité parentale,Demande relative à l'exercice de l'autorité parentale à l'égard de l'enfant qui a fait l'objet d'une adoption simple par le conjoint
+27J,2,27,Droit de la famille,Autorité parentale,Demande aux fins d'obtenir le retour de l'enfant -enlèvement international d'enfant-
+27K,2,27,Droit de la famille,Autorité parentale,Demande d'interdiction de sortie de territoire d'un mineur sans l’autorisation des deux parents
+27L,2,27,Droit de la famille,Autorité parentale,Demande en déclaration judiciaire de délaissement parental
+27M,2,27,Droit de la famille,Autorité parentale,Demande du procureur de la République à l’issue d’une suspension de plein droit de l'exercice de l'autorité parentale sur le fondement de l’art. 378-2 du C. civ.
+27Z,2,27,Droit de la famille,Autorité parentale,Autres demandes relatives à l'autorité parentale
+28,2,28,Droit de la famille,"Partage, indivision, succession","Partage, indivision, succession"
+28A,2,28,Droit de la famille,"Partage, indivision, succession","Demande en partage, ou contestations relatives au partage"
+28B,2,28,Droit de la famille,"Partage, indivision, succession","Demande en annulation d'un acte accompli sur un bien indivis, ou d'une convention d'indivision"
+28C,2,28,Droit de la famille,"Partage, indivision, succession",Demande relative aux pouvoirs de gestion des biens indivis
+28D,2,28,Droit de la famille,"Partage, indivision, succession",Demande relative aux charges et revenus de l'indivision
+28E,2,28,Droit de la famille,"Partage, indivision, succession",Demande relative à l'option successorale
+28F,2,28,Droit de la famille,"Partage, indivision, succession",Recours sur la succession exercé par un organisme social
+28G,2,28,Droit de la famille,"Partage, indivision, succession",Demande relative à une succession vacante ou non réclamée
+28H,2,28,Droit de la famille,"Partage, indivision, succession",Demande d'apposition de scellés
+28I,2,28,Droit de la famille,"Partage, indivision, succession",Contestation en matière de scellés
+28Z,2,28,Droit de la famille,"Partage, indivision, succession",Autres demandes en matière de succession
+29,2,29,Droit de la famille,Libéralités (donations et testaments),Libéralités (donations et testaments)
+29A,2,29,Droit de la famille,Libéralités (donations et testaments),"Demande en annulation, en réduction d'une libéralité ou d'une clause d'une libéralité"
+29B,2,29,Droit de la famille,Libéralités (donations et testaments),Demande en révocation d'une libéralité ou en caducité d'un legs
+29C,2,29,Droit de la famille,Libéralités (donations et testaments),Demande en délivrance d'un legs
+29D,2,29,Droit de la famille,Libéralités (donations et testaments),Demande relative aux modalités d'une libéralité faite au conjoint survivant
+29E,2,29,Droit de la famille,Libéralités (donations et testaments),Demande relative au rapport à succession
+29F,2,29,Droit de la famille,Libéralités (donations et testaments),Demande relative aux libéralités faites à l'Etat ou à des établissements publics
+29Z,2,29,Droit de la famille,Libéralités (donations et testaments),Autres demandes en matière de libéralités
+2A,2,2A,Droit de la famille,Filiation,Filiation
+2AA,2,2A,Droit de la famille,Filiation,Action en recherche de paternité
+2AB,2,2A,Droit de la famille,Filiation,Action en recherche de maternité - dans le mariage -
+2AC,2,2A,Droit de la famille,Filiation,Action en recherche de maternité - hors mariage -
+2AD,2,2A,Droit de la famille,Filiation,Action en rétablissement de la présomption de paternité
+2AE,2,2A,Droit de la famille,Filiation,Action en constatation de la possession d'état d'un enfant né dans le mariage
+2AF,2,2A,Droit de la famille,Filiation,Action en constatation de la possession d'état d'un enfant né hors mariage
+2AG,2,2A,Droit de la famille,Filiation,Demande de délivrance d'un acte de notoriété relative à la possession d'état d'un enfant né dans le mariage
+2AH,3,2A,Droit de la famille,Filiation,Demande de délivrance d'un acte de notoriété relative à la possession d'état d'un enfant né hors mariage
+2AI,4,2A,Droit de la famille,Filiation,Demande relative au consentement à une procréation médicalement assistée  - dans le mariage -
+2AJ,5,2A,Droit de la famille,Filiation,Demande relative au consentement à une procréation médicalement assistée - hors mariage -
+2AK,2,2A,Droit de la famille,Filiation,Demande de mainlevée d’une opposition à reconnaissance de paternité ou de maternité
+2AM,2,2A,Droit de la famille,Filiation,Action en contestation de maternité - dans le mariage -
+2AN,2,2A,Droit de la famille,Filiation,Action en contestation de maternité - hors mariage -
+2AO,2,2A,Droit de la famille,Filiation,Action en contestation de paternité - dans le mariage -
+2AP,2,2A,Droit de la famille,Filiation,Action en contestation de paternité - hors mariage -
+2AQ,2,2A,Droit de la famille,Filiation,Action en contestation de la possession d'état d'un enfant né dans le mariage
+2AR,2,2A,Droit de la famille,Filiation,Action en contestation de la possession d'état d'un enfant hors mariage
+2AS,2,2A,Droit de la famille,Filiation,Demande formée par le ministère public visant à contester la filiation  maternelle - dans le mariage-
+2AT,2,2A,Droit de la famille,Filiation,Demande formée par le ministère public visant à contester la filiation  maternelle -hors mariage -
+2AU,2,2A,Droit de la famille,Filiation,Demande formée par le ministère public visant à contester la filiation paternelle - dans le mariage -
+2AV,2,2A,Droit de la famille,Filiation,Demande formée par le ministère public visant à contester la  filiation paternelle - hors mariage-
+2AZ,2,2A,Droit de la famille,Filiation,Autres demandes relatives à la filiation
+30,3,30,Droit des affaires ,Bail commercial,Bail commercial
+30A,3,30,Droit des affaires ,Bail commercial,Demande en nullité du bail commercial
+30B,3,30,Droit des affaires ,Bail commercial,Demande en paiement des loyers et charges et/ou tendant à la  résiliation du bail et/ou à l'expulsion
+30C,3,30,Droit des affaires ,Bail commercial,Demande de fixation du prix du bail révisé ou renouvelé
+30D,3,30,Droit des affaires ,Bail commercial,Action relative à la déspécialisation
+30E,3,30,Droit des affaires ,Bail commercial,Action en contestation de congé et/ou demande de renouvellement de bail
+30F,3,30,Droit des affaires ,Bail commercial,Demande d'évaluation et/ou en paiement de l'indemnité d'éviction
+30G,3,30,Droit des affaires ,Bail commercial,"Demande d'exécution de travaux à la charge du bailleur, ou demande en garantie contre le bailleur"
+30H,3,30,Droit des affaires ,Bail commercial,Demande de fixation du prix de cession du bail commercial en cas de préemption
+30Z,3,30,Droit des affaires ,Bail commercial,Autres demandes en matière de baux commerciaux
+31,3,31,Droit des affaires ,Vente du fonds de commerce,Vente du fonds de commerce
+31A,3,31,Droit des affaires ,Vente du fonds de commerce,Demande en nullité des promesses de vente ou de vente de fonds de commerce
+31B,3,31,Droit des affaires ,Vente du fonds de commerce,Demande en paiement du prix et/ou tendant à faire sanctionner le non-paiement du prix
+31C,3,31,Droit des affaires ,Vente du fonds de commerce,Demande formée par les créanciers du vendeur inscrits ou opposants
+31D,3,31,Droit des affaires ,Vente du fonds de commerce,Demande en garantie formée contre le vendeur
+31E,3,31,Droit des affaires ,Vente du fonds de commerce,Demande en radiation de l'inscription du privilège du vendeur
+31F,3,31,Droit des affaires ,Vente du fonds de commerce,Demande en nullité ou mainlevée de l'opposition sur le prix de vente
+31G,3,31,Droit des affaires ,Vente du fonds de commerce,Demande de vente en justice du fonds de commerce
+31H,3,31,Droit des affaires ,Vente du fonds de commerce,Demande de fixation du prix de cession du fonds de commerce en cas de préemption
+31Z,3,31,Droit des affaires ,Vente du fonds de commerce,Autres demandes en matière de vente de fonds de commerce
+32,3,32,Droit des affaires ,Location-gérance du fonds de commerce,Location-gérance du fonds de commerce
+32A,3,32,Droit des affaires ,Location-gérance du fonds de commerce,Demande en nullité du contrat de location-gérance
+32B,3,32,Droit des affaires ,Location-gérance du fonds de commerce,Demande en paiement formée contre le loueur et/ou le locataire-gérant
+32C,3,32,Droit des affaires ,Location-gérance du fonds de commerce,Demande en révision du loyer assorti d'une clause d'échelle mobile
+32D,3,32,Droit des affaires ,Location-gérance du fonds de commerce,Demande en paiement de redevance et/ou en résiliation de contrat
+32E,3,32,Droit des affaires ,Location-gérance du fonds de commerce,Demande de reprise du fonds par le loueur à l'expiration du contrat de location-gérance
+32F,3,32,Droit des affaires ,Location-gérance du fonds de commerce,Demande de dispense des conditions nécessaires à la concession d'une location gérance
+32Z,3,32,Droit des affaires ,Location-gérance du fonds de commerce,Autres demandes en matière de location-gérance du fonds de commerce
+33,3,33,Droit des affaires ,"Nantissement du fonds de commerce ou du fonds artisanal, de l'outillage, et du matériel d'équipement ou gage des stocks","Nantissement du fonds de commerce ou du fonds artisanal, de l'outillage, et du matériel d'équipement ou gage des stocks"
+33A,3,33,Droit des affaires ,"Nantissement du fonds de commerce ou du fonds artisanal, de l'outillage, et du matériel d'équipement ou gage des stocks",Demande de vente forcée du fonds nanti et/ou en surenchère du 10°
+33B,3,33,Droit des affaires ,"Nantissement du fonds de commerce ou du fonds artisanal, de l'outillage, et du matériel d'équipement ou gage des stocks",Demande en nullité du nantissement et de l'inscription du nantissement du fonds de commerce
+33C,3,33,Droit des affaires ,"Nantissement du fonds de commerce ou du fonds artisanal, de l'outillage, et du matériel d'équipement ou gage des stocks",Demande d'inscription provisoire du nantissement du fonds de commerce nanti
+33D,3,33,Droit des affaires ,"Nantissement du fonds de commerce ou du fonds artisanal, de l'outillage, et du matériel d'équipement ou gage des stocks",Demande en déchéance du terme en cas de déplacement du fonds de commerce
+33E,3,33,Droit des affaires ,"Nantissement du fonds de commerce ou du fonds artisanal, de l'outillage, et du matériel d'équipement ou gage des stocks",Demande de vente forcée du bien nanti et/ou en surenchère du 10°
+33F,3,33,Droit des affaires ,"Nantissement du fonds de commerce ou du fonds artisanal, de l'outillage, et du matériel d'équipement ou gage des stocks",Demande en nullité du nantissement ou de l'inscription du nantissement du matériel ou de l'outillage
+33G,3,33,Droit des affaires ,"Nantissement du fonds de commerce ou du fonds artisanal, de l'outillage, et du matériel d'équipement ou gage des stocks",Demande d'autorisation de vente amiable du bien formée par le débiteur
+33H,3,33,Droit des affaires ,"Nantissement du fonds de commerce ou du fonds artisanal, de l'outillage, et du matériel d'équipement ou gage des stocks",Demande de déchéance du terme en cas de déplacement du bien nanti
+33Z,3,33,Droit des affaires ,"Nantissement du fonds de commerce ou du fonds artisanal, de l'outillage, et du matériel d'équipement ou gage des stocks","Autres demandes en matière de nantissement du fonds de commerce, du fonds artisanal, du matériel ou de l'outillage ou du gage des stocks"
+34,3,34,Droit des affaires ,Groupements : Fonctionnement (I),Groupements : Fonctionnement (I)
+34A,3,34,Droit des affaires ,Groupements : Fonctionnement (I),Demande en nullité de groupement
+34B,3,34,Droit des affaires ,Groupements : Fonctionnement (I),Demande de libération des apports et/ou en régularisation des statuts et des formalités de constitution
+34C,3,34,Droit des affaires ,Groupements : Fonctionnement (I),Demande en nullité des actes des assemblées et conseils
+34D,3,34,Droit des affaires ,Groupements : Fonctionnement (I),Demande relative à la tenue de l'assemblée générale
+34E,3,34,Droit des affaires ,Groupements : Fonctionnement (I),Demande de prorogation pour le paiement des dividendes
+34F,3,34,Droit des affaires ,Groupements : Fonctionnement (I),Demande tendant à la communication des documents sociaux
+34G,3,34,Droit des affaires ,Groupements : Fonctionnement (I),"Demande en paiement de cotisations formée contre les adhérents d'une association, d'un syndicat ou d'un ordre professionnel"
+34H,3,34,Droit des affaires ,Groupements : Fonctionnement (I),Demande visant à faire respecter les obligations d'une société relatives au plan de vigilance
+35,3,35,Droit des affaires ,Groupements : Fonctionnement (II),Groupements : Fonctionnement (II)
+35A,3,35,Droit des affaires ,Groupements : Fonctionnement (II),Demande tendant à contester l'agrément ou le refus d'agrément de cessionnaires de parts sociales ou d'actions
+35B,3,35,Droit des affaires ,Groupements : Fonctionnement (II),"Action en opposition des créanciers contre un projet de fusion, scission, ou de réduction du capital"
+35C,3,35,Droit des affaires ,Groupements : Fonctionnement (II),"Demande de nomination d'un commissaire aux apports, d'un commissaire à la fusion ou d'un commissaire à la transformation"
+35D,3,35,Droit des affaires ,Groupements : Fonctionnement (II),"Demande de nomination, de récusation ou de relèvement judiciaires d'un commissaire aux comptes"
+35E,3,35,Droit des affaires ,Groupements : Fonctionnement (II),Demande de nomination d'un mandataire de justice chargé d'accomplir certaines opérations
+35F,3,35,Droit des affaires ,Groupements : Fonctionnement (II),Demande de dissolution du groupement
+35G,3,35,Droit des affaires ,Groupements : Fonctionnement (II),Demande de nomination d'un administrateur provisoire
+35H,3,35,Droit des affaires ,Groupements : Fonctionnement (II),Demande relative à la désignation et aux pouvoirs du liquidateur
+35Z,3,35,Droit des affaires ,Groupements : Fonctionnement (II),Autres demandes relatives au fonctionnement du groupement
+36,3,36,Droit des affaires ,Groupements : Dirigeants,Groupements : Dirigeants
+36A,3,36,Droit des affaires ,Groupements : Dirigeants,Demande en nullité de la désignation d'un dirigeant du groupement
+36B,3,36,Droit des affaires ,Groupements : Dirigeants,Demande en révocation des dirigeants
+36C,3,36,Droit des affaires ,Groupements : Dirigeants,Demande en indemnisation formée par le dirigeant pour révocation injustifiée
+36D,3,36,Droit des affaires ,Groupements : Dirigeants,Demande en nullité des opérations ou des conventions conclues par un dirigeant
+36E,3,36,Droit des affaires ,Groupements : Dirigeants,Action en responsabilité civile exercée contre les dirigeants ou les associés
+36F,3,36,Droit des affaires ,Groupements : Dirigeants,Demande d'exclusion de membre ou retrait de membre ou associé
+36Z,3,36,Droit des affaires ,Groupements : Dirigeants,Autres demandes relatives aux dirigeants du groupement
+38,3,38,Droit des affaires ,Banque - Effets de commerce,Banque - Effets de commerce
+38A,3,38,Droit des affaires ,Banque - Effets de commerce,Demande relative à une cession ou un nantissement de créances professionnelles
+38B,3,38,Droit des affaires ,Banque - Effets de commerce,"Demande en paiement par le porteur, d'une lettre de change, d'un billet à ordre"
+38C,3,38,Droit des affaires ,Banque - Effets de commerce,Demande en paiement du solde du compte bancaire
+38D,3,38,Droit des affaires ,Banque - Effets de commerce,Action en responsabilité exercée contre l'établissement de crédit pour octroi abusif de crédits ou brusque rupture de crédits
+38E,3,38,Droit des affaires ,Banque - Effets de commerce,Autres actions en responsabilité exercées contre un établissement de crédit
+38F,3,38,Droit des affaires ,Banque - Effets de commerce,Demande relative à une interdiction bancaire
+38G,3,38,Droit des affaires ,Banque - Effets de commerce,Demande de mainlevée d'opposition au paiement d'un chèque
+38Z,3,38,Droit des affaires ,Banque - Effets de commerce,Autres demandes en matière de droit bancaire et d'effets de commerce
+39,3,39,Droit des affaires ,Concurrence,Concurrence
+39A,3,39,Droit des affaires ,Concurrence,"Demande en cessation et/ou en réparation, de pratiques anticoncurrentielles restrictives "
+39B,3,39,Droit des affaires ,Concurrence,"Demande en contrefaçon et/ou en nullité de brevet, d'obtention végétale ou de topographie de semi conducteur (Ce poste ne doit plus être utilisé à compter du 1er janvier 2009)"
+39C,3,39,Droit des affaires ,Concurrence,Demande en contrefaçon et/ou en nullité de marque (Ce poste ne doit plus être utilisé à compter du 1er janvier 2009)
+39D,3,39,Droit des affaires ,Concurrence,Demande en contrefaçon et/ou en nullité de dessins et modèles (Ce poste ne doit plus être utilisé à compter du 1er janvier 2009)
+39E,3,39,Droit des affaires ,Concurrence,Demande en délivrance de licence et/ou en fixation de redevances (Ce poste ne doit plus être utilisé à compter du 1er janvier 2009)
+39F,3,39,Droit des affaires ,Concurrence,"Demande en exécution, nullité, résolution d'un contrat de licence et cession de brevet, d'obtention végétale, de topographie de semi conducteur ou de marque (Ce poste ne doit plus être utilisé à compter du 1er janvier 2009)"
+39G,3,39,Droit des affaires ,Concurrence,"Demande en cessation d'utilisation d'un nom commercial, d'une raison sociale, ou d'une enseigne "
+39H,3,39,Droit des affaires ,Concurrence,Demande en cessation de concurrence déloyale ou illicite et/ou en dommages et intérêts
+39I,3,39,Droit des affaires ,Concurrence,Demande en cessation d'utilisation d'un nom de domaine
+39J  ,3,39,Droit des affaires ,Concurrence,Demande en réparation des préjudices résultant de la rupture brutale d'une relation commerciale établie
+39K,3,39,Droit des affaires ,Concurrence,Demande en cessation et/ou en nullité et/ou en réparation du fait de pratiques anticoncurrentielles
+39L,3,39,Droit des affaires ,Concurrence,Demande en cessation et/ou en nullité et/ou en réparation du fait de pratiques restrictives
+39M,3,39,Droit des affaires ,Concurrence,Recours contre les décisions de communication ou de production de pièces susceptibles d'être couvertes par un secret des affaires
+39Z,3,39,Droit des affaires ,Concurrence,"Autres demandes en matière de brevet, d'obtention végétale, de topographie de semi conducteur, marque, dessins et modèles (Ce poste ne doit plus être utilisé à compter du 1er janvier 2009)"
+3A,3,3A,Droit des affaires ,"Propriété industrielle : Brevets, certificats complémentaires de protection et topographie de semi-conducteurs","Propriété industrielle : Brevets, certificats complémentaires de protection et topographie de semi-conducteurs"
+3AA,3,3A,Droit des affaires ,"Propriété industrielle : Brevets, certificats complémentaires de protection et topographie de semi-conducteurs",Demande en contrefaçon de brevet européen
+3AB,3,3A,Droit des affaires ,"Propriété industrielle : Brevets, certificats complémentaires de protection et topographie de semi-conducteurs","Demande en contrefaçon de brevet français, de certificat complémentaire de protection ou de topographie de semi-conducteurs"
+3AC,3,3A,Droit des affaires ,"Propriété industrielle : Brevets, certificats complémentaires de protection et topographie de semi-conducteurs",Demande en non-contrefaçon de brevet européen
+3AD,3,3A,Droit des affaires ,"Propriété industrielle : Brevets, certificats complémentaires de protection et topographie de semi-conducteurs","Demande en non-contrefaçon de brevet français, de certificat complémentaire de protection "
+3AE,3,3A,Droit des affaires ,"Propriété industrielle : Brevets, certificats complémentaires de protection et topographie de semi-conducteurs",Demande en nullité de brevet européen
+3AF,3,3A,Droit des affaires ,"Propriété industrielle : Brevets, certificats complémentaires de protection et topographie de semi-conducteurs","Demande en nullité de brevet français, de certificat complémentaire de protection ou de topographie de semi-conducteurs"
+3AG,3,3A,Droit des affaires ,"Propriété industrielle : Brevets, certificats complémentaires de protection et topographie de semi-conducteurs",Demande de rémunération d'un inventeur salarié
+3AH,3,3A,Droit des affaires ,"Propriété industrielle : Brevets, certificats complémentaires de protection et topographie de semi-conducteurs","Demande en exécution, nullité, résolution d'un contrat de licence ou de cession de brevet"
+3AI,3,3A,Droit des affaires ,"Propriété industrielle : Brevets, certificats complémentaires de protection et topographie de semi-conducteurs",Recours contre les décisions du directeur de l'INPI - brevets -
+3AZ,3,3A,Droit des affaires ,"Propriété industrielle : Brevets, certificats complémentaires de protection et topographie de semi-conducteurs","Autres demandes en matière de brevets, certificats complémentaires de protection et topographie de semi-conducteurs"
+3B,3,3B,Droit des affaires ,Propriété industrielle : Obtentions végétales,Propriété industrielle : Obtentions végétales
+3BA,3,3B,Droit des affaires ,Propriété industrielle : Obtentions végétales,Demande en contrefaçon d'obtention végétale communautaire
+3BB,3,3B,Droit des affaires ,Propriété industrielle : Obtentions végétales,Demande en contrefaçon d'obtention végétale nationale
+3BC,3,3B,Droit des affaires ,Propriété industrielle : Obtentions végétales,Demande en nullité du certificat d'obtention végétale communautaire
+3BD,3,3B,Droit des affaires ,Propriété industrielle : Obtentions végétales,Demande en nullité du certificat d'obtention végétale nationale
+3BE,3,3B,Droit des affaires ,Propriété industrielle : Obtentions végétales,"Demande en exécution, nullité, résolution d'un contrat de licence ou de cession d'obtention végétale"
+3BF,3,3B,Droit des affaires ,Propriété industrielle : Obtentions végétales,Recours contre les décisions de l'Instance nationale des obtentions végétales
+3BZ,3,3B,Droit des affaires ,Propriété industrielle : Obtentions végétales,Autres demandes en matière d'obtention végétale
+3C,3,3C,Droit des affaires ,Propriété industrielle : Marques,Propriété industrielle : Marques
+3CA,3,3C,Droit des affaires ,Propriété industrielle : Marques,Demande en contrefaçon de marque communautaire
+3CB,3,3C,Droit des affaires ,Propriété industrielle : Marques,Demande en contrefaçon de marque française ou internationale
+3CC,3,3C,Droit des affaires ,Propriété industrielle : Marques,Demande en nullité de marque
+3CD,3,3C,Droit des affaires ,Propriété industrielle : Marques,Demande en déchéance de marque
+3CE,3,3C,Droit des affaires ,Propriété industrielle : Marques,Recours contre les décisions du directeur de l'INPI - marques -
+3CF,3,3C,Droit des affaires ,Propriété industrielle : Marques,"Demande en exécution, nullité, résolution d'un contrat de licence ou de cession de marques"
+3CZ,3,3C,Droit des affaires ,Propriété industrielle : Marques,Autres demandes en matière de marques
+3D,3,3D,Droit des affaires ,Propriété industrielle : Indications géographiques (appellations d'origine contrôlée),Propriété industrielle : Indications géographiques (appellations d'origine contrôlée)
+3DA,3,3D,Droit des affaires ,Propriété industrielle : Indications géographiques (appellations d'origine contrôlée),Demande en contrefaçon - indications géographiques (appellations d'origine contrôlée) -
+3DZ,3,3D,Droit des affaires ,Propriété industrielle : Indications géographiques (appellations d'origine contrôlée),Autres demandes en matière d'indications géographiques (appellations d'origine contrôlée)
+3E,3,3E,Droit des affaires , Propriété industrielle : Dessins et modèles, Propriété industrielle : Dessins et modèles
+3EA,3,3E,Droit des affaires , Propriété industrielle : Dessins et modèles,Demande en contrefaçon de dessins et modèles communautaires
+3EB,3,3E,Droit des affaires , Propriété industrielle : Dessins et modèles,Demande en contrefaçon de dessins et modèles français ou internationaux
+3EC,3,3E,Droit des affaires , Propriété industrielle : Dessins et modèles,Demande en nullité de dessins et modèles communautaires non enregistrés
+3ED,3,3E,Droit des affaires , Propriété industrielle : Dessins et modèles,Demande en nullité de dessins et modèles français ou internationaux
+3EE,3,3E,Droit des affaires , Propriété industrielle : Dessins et modèles,Recours contre les décisions du directeur de l'INPI - dessins et modèles-
+3EF,3,3E,Droit des affaires , Propriété industrielle : Dessins et modèles,"Demande en exécution, nullité, résolution d'un contrat de licence ou de cession de dessins et modèles"
+3EZ,3,3E,Droit des affaires , Propriété industrielle : Dessins et modèles,Autres demandes en matière de dessins et modèles
+40,4,40,Entreprises en difficulté,Ouverture du redressement ou de la liquidation judiciaire (procédures ouvertes avant le 1er janvier 2006),Ouverture du redressement ou de la liquidation judiciaire (procédures ouvertes avant le 1er janvier 2006)
+40A,4,40,Entreprises en difficulté,Ouverture du redressement ou de la liquidation judiciaire (procédures ouvertes avant le 1er janvier 2006),Demande de redressement judiciaire (procédures ouvertes avant le 1er janvier 2006)
+40B,4,40,Entreprises en difficulté,Ouverture du redressement ou de la liquidation judiciaire (procédures ouvertes avant le 1er janvier 2006),Demande de liquidation judiciaire (procédures ouvertes avant le 1er janvier 2006)
+40C,4,40,Entreprises en difficulté,Ouverture du redressement ou de la liquidation judiciaire (procédures ouvertes avant le 1er janvier 2006),Demande d'ouverture d'une procédure de règlement amiable ou de désignation d'un conciliateur (procédures ouvertes avant le 1er janvier 2006)
+40D,4,40,Entreprises en difficulté,Ouverture du redressement ou de la liquidation judiciaire (procédures ouvertes avant le 1er janvier 2006),Appel sur une décision de cessation de l'activité de l'entreprise ou de liquidation judiciaire en cours de procédure (procédures ouvertes avant le 1er janvier 2006)
+40E,4,40,Entreprises en difficulté,Ouverture du redressement ou de la liquidation judiciaire (procédures ouvertes avant le 1er janvier 2006),Demande de redressement judiciaire à l'encontre du locataire-gérant en cas d'inexécution de ses obligations (procédures ouvertes avant le 1er janvier 2006)
+40F,4,40,Entreprises en difficulté,Ouverture du redressement ou de la liquidation judiciaire (procédures ouvertes avant le 1er janvier 2006),Demande d'ouverture d'une procédure de liquidation judiciaire  en cas de résolution du plan de continuation (procédures ouvertes avant le 1er janvier 2006)
+40G,4,40,Entreprises en difficulté,Ouverture du redressement ou de la liquidation judiciaire (procédures ouvertes avant le 1er janvier 2006),Demande d'ouverture d'une procédure de redressement ou de liquidation judiciaire à l'encontre des dirigeants en cas d'inexécution de la condamnation en comblement de l'insuffisance d'actif (procédures ouvertes avant le 1er janvier 2006)
+40H,4,40,Entreprises en difficulté,Ouverture du redressement ou de la liquidation judiciaire (procédures ouvertes avant le 1er janvier 2006),Demande d'extension aux dirigeants du redressement ou de la liquidation judiciaire (procédures ouvertes avant le 1er janvier 2006)
+40I,4,40,Entreprises en difficulté,Ouverture du redressement ou de la liquidation judiciaire (procédures ouvertes avant le 1er janvier 2006),Demande de reprise de la procédure de redressement judiciaire (procédures ouvertes avant le 1er janvier 2006)
+41,4,41,Entreprises en difficulté,L'entreprise au cours de la procédure (I) (procédures ouvertes avant le 1er janvier 2006),L'entreprise au cours de la procédure (I) (procédures ouvertes avant le 1er janvier 2006)
+41A,4,41,Entreprises en difficulté,L'entreprise au cours de la procédure (I) (procédures ouvertes avant le 1er janvier 2006),"Appel sur une décision relative à la désignation, au remplacement ou à la mission d'un expert, de l'administrateur, du représentant du créancier, du commissaire à l'exécution du plan ou du liquidateur (procédures ouvertes avant le 1er janvier 2006)"
+41Z,4,41,Entreprises en difficulté,L'entreprise au cours de la procédure (I) (procédures ouvertes avant le 1er janvier 2006),Appel sur des décisions relatives au déroulement de la procédure (procédures ouvertes avant le 1er janvier 2006)
+42,4,42,Entreprises en difficulté,L'entreprise au cours de la procédure (II) (procédures ouvertes avant le 1er janvier 2006),L'entreprise au cours de la procédure (II) (procédures ouvertes avant le 1er janvier 2006)
+42A,4,42,Entreprises en difficulté,L'entreprise au cours de la procédure (II) (procédures ouvertes avant le 1er janvier 2006),Appel sur des décisions relatives à l'autorisation ou à la résiliation d'un contrat de location gérance ou à la nullité des actes du débiteur non autorisés par le juge commissaire ou d'homologation de compromis ou de transaction (procédures ouvertes avant le 1er janvier 2006)
+42B,4,42,Entreprises en difficulté,L'entreprise au cours de la procédure (II) (procédures ouvertes avant le 1er janvier 2006),"Appel sur des décisions relatives au remplacement du ou des dirigeants, ou de privation du droit de vote, ou de cession forcée des actions (procédures ouvertes avant le 1er janvier 2006)"
+43,4,43,Entreprises en difficulté,L'entreprise au cours de la procédure (III) (procédures ouvertes avant le 1er janvier 2006),L'entreprise au cours de la procédure (III) (procédures ouvertes avant le 1er janvier 2006)
+43A,4,43,Entreprises en difficulté,L'entreprise au cours de la procédure (III) (procédures ouvertes avant le 1er janvier 2006),Demande en modification de la date de la cessation des paiements (procédures ouvertes avant le 1er janvier 2006)
+43B,4,43,Entreprises en difficulté,L'entreprise au cours de la procédure (III) (procédures ouvertes avant le 1er janvier 2006),Demande en nullité des actes de la période suspecte (procédures ouvertes avant le 1er janvier 2006)
+43C,4,43,Entreprises en difficulté,L'entreprise au cours de la procédure (III) (procédures ouvertes avant le 1er janvier 2006),Appel sur une décision du juge commissaire relative à l'admission des créances (procédures ouvertes avant le 1er janvier 2006)
+43D,4,43,Entreprises en difficulté,L'entreprise au cours de la procédure (III) (procédures ouvertes avant le 1er janvier 2006),Appel sur une décision du juge commissaire relative à la réclamation sur l'état des créances (procédures ouvertes avant le 1er janvier 2006)
+43E,4,43,Entreprises en difficulté,L'entreprise au cours de la procédure (III) (procédures ouvertes avant le 1er janvier 2006),Appel sur une décision relative au relevé de forclusion (procédures ouvertes avant le 1er janvier 2006)
+44,4,44,Entreprises en difficulté,Plan de continuation de l'entreprise (procédures ouvertes avant le 1er janvier 2006),Plan de continuation de l'entreprise (procédures ouvertes avant le 1er janvier 2006)
+44A,4,44,Entreprises en difficulté,Plan de continuation de l'entreprise (procédures ouvertes avant le 1er janvier 2006),Appel sur une décision relative à l'admission du plan de continuation (procédures ouvertes avant le 1er janvier 2006)
+44B,4,44,Entreprises en difficulté,Plan de continuation de l'entreprise (procédures ouvertes avant le 1er janvier 2006),Appel sur une décision  relative à la modification substantielle du plan de continuation (procédures ouvertes avant le 1er janvier 2006)
+44C,4,44,Entreprises en difficulté,Plan de continuation de l'entreprise (procédures ouvertes avant le 1er janvier 2006),Demande en nullité d'un acte passé en violation d'une inaliénabilité temporaire (procédures ouvertes avant le 1er janvier 2006)
+45,4,45,Entreprises en difficulté,Plan de cession de l'entreprise (procédures ouvertes avant le 1er janvier 2006),Plan de cession de l'entreprise (procédures ouvertes avant le 1er janvier 2006)
+45A,4,45,Entreprises en difficulté,Plan de cession de l'entreprise (procédures ouvertes avant le 1er janvier 2006),Appel sur une décision relative à l'admission du plan de cession sans location gérance (procédures ouvertes avant le 1er janvier 2006)
+45B,4,45,Entreprises en difficulté,Plan de cession de l'entreprise (procédures ouvertes avant le 1er janvier 2006),Appel sur une décision relative à l'admission du plan de cession avec location gérance (procédures ouvertes avant le 1er janvier 2006)
+45C,4,45,Entreprises en difficulté,Plan de cession de l'entreprise (procédures ouvertes avant le 1er janvier 2006),Appel sur une décision  relative à la modification substantielle du plan de cession (procédures ouvertes avant le 1er janvier 2006)
+45D,4,45,Entreprises en difficulté,Plan de cession de l'entreprise (procédures ouvertes avant le 1er janvier 2006),"Appel sur une décision relative à l'autorisation par le cessionnaire d'aliéner des biens, les louer, les grever de sûretés (procédures ouvertes avant le 1er janvier 2006)"
+45E,4,45,Entreprises en difficulté,Plan de cession de l'entreprise (procédures ouvertes avant le 1er janvier 2006),Demande en nullité des actes interdits au cessionnaire (procédures ouvertes avant le 1er janvier 2006)
+45F,4,45,Entreprises en difficulté,Plan de cession de l'entreprise (procédures ouvertes avant le 1er janvier 2006),Appel sur une décision de nomination d'un administrateur ad hoc (procédures ouvertes avant le 1er janvier 2006)
+45G,4,45,Entreprises en difficulté,Plan de cession de l'entreprise (procédures ouvertes avant le 1er janvier 2006),Demande de clôture du plan de cession (procédures ouvertes avant le 1er janvier 2006)
+45H,4,45,Entreprises en difficulté,Plan de cession de l'entreprise (procédures ouvertes avant le 1er janvier 2006),Demande de résolution du plan de cession (procédures ouvertes avant le 1er janvier 2006)
+46,4,46,Entreprises en difficulté,Liquidation judiciaire - Clôture des opérations (procédures ouvertes avant le 1er janvier 2006),Liquidation judiciaire - Clôture des opérations (procédures ouvertes avant le 1er janvier 2006)
+46A,4,46,Entreprises en difficulté,Liquidation judiciaire - Clôture des opérations (procédures ouvertes avant le 1er janvier 2006),Demande de clôture pour extinction du passif  (procédures ouvertes avant le 1er janvier 2006)
+46B,4,46,Entreprises en difficulté,Liquidation judiciaire - Clôture des opérations (procédures ouvertes avant le 1er janvier 2006),Demande de clôture pour insuffisance d'actif  (procédures ouvertes avant le 1er janvier 2006)
+47,4,47,Entreprises en difficulté,Autres demandes en matière de redressement et de liquidation judiciaires (procédures ouvertes avant le 1er janvier 2006),Autres demandes en matière de redressement et de liquidation judiciaires (procédures ouvertes avant le 1er janvier 2006)
+47A,4,47,Entreprises en difficulté,Autres demandes en matière de redressement et de liquidation judiciaires (procédures ouvertes avant le 1er janvier 2006),Demande en comblement de l'insuffisance d'actif à l'encontre des dirigeants (procédures ouvertes avant le 1er janvier 2006)
+47B,4,47,Entreprises en difficulté,Autres demandes en matière de redressement et de liquidation judiciaires (procédures ouvertes avant le 1er janvier 2006),Demande de prononcé de la faillite personnelle ou d'autres sanctions (procédures ouvertes avant le 1er janvier 2006)
+47C,4,47,Entreprises en difficulté,Autres demandes en matière de redressement et de liquidation judiciaires (procédures ouvertes avant le 1er janvier 2006),"Action en responsabilité exercée contre l'administrateur, le représentant des créanciers, le liquidateur, le commissaire à l'exécution du plan (procédures ouvertes avant le 1er janvier 2006)"
+47D,4,47,Entreprises en difficulté,Autres demandes en matière de redressement et de liquidation judiciaires (procédures ouvertes avant le 1er janvier 2006),Recours devant le tribunal contre les décisions du juge commissaire (procédures ouvertes avant le 1er janvier 2006)
+47E,4,47,Entreprises en difficulté,Autres demandes en matière de redressement et de liquidation judiciaires (procédures ouvertes avant le 1er janvier 2006),"Action en responsabilité exercée contre l'Etat, les collectivités territoriales (procédures ouvertes avant le 1er janvier 2006)"
+47F,4,47,Entreprises en difficulté,Autres demandes en matière de redressement et de liquidation judiciaires (procédures ouvertes avant le 1er janvier 2006),Action en responsabilité exercée contre les fournisseurs (procédures ouvertes avant le 1er janvier 2006)
+47G,4,47,Entreprises en difficulté,Autres demandes en matière de redressement et de liquidation judiciaires (procédures ouvertes avant le 1er janvier 2006),"Demande relative au règlement judiciaire, à la liquidation des biens, aux sanctions et à la suspension provisoire des poursuites (procédures ouvertes avant le 1er janvier 2006)"
+48,4,48,Entreprises en difficulté-surendettement,"Surendettement des particuliers, faillite civile et rétablissement personnel","Surendettement des particuliers, faillite civile et rétablissement personnel"
+48A,4,48,Entreprises en difficulté-surendettement,"Surendettement des particuliers, faillite civile et rétablissement personnel",Recours contre les décisions statuant sur la recevabilité prononcées par les commissions de surendettement des particuliers
+48B,4,48,Entreprises en difficulté-surendettement,"Surendettement des particuliers, faillite civile et rétablissement personnel","Demande de vérification de la validité des créances, des titres qui les constatent  et du montant des sommes réclamées "
+48C,4,48,Entreprises en difficulté-surendettement,"Surendettement des particuliers, faillite civile et rétablissement personnel",Contestation des mesures imposées par la commission de surendettement  des particuliers
+48D,4,48,Entreprises en difficulté-surendettement,"Surendettement des particuliers, faillite civile et rétablissement personnel",Demande relative à la procédure collective applicable aux débiteurs civils spécifique à l'Alsace-Moselle
+48E,4,48,Entreprises en difficulté-surendettement,"Surendettement des particuliers, faillite civile et rétablissement personnel",Demande aux fins de conférer force exécutoire aux mesures recommandées par les commissions de surendettement des particuliers
+48F,4,48,Entreprises en difficulté-surendettement,"Surendettement des particuliers, faillite civile et rétablissement personnel",Demande postérieure à l'établissement d'un plan de redressement
+48G,4,48,Entreprises en difficulté-surendettement,"Surendettement des particuliers, faillite civile et rétablissement personnel",Demande d'ouverture de la procédure de rétablissement personnel (avec liquidation judiciaire à compter du 1er novembre 2010)
+48H,4,48,Entreprises en difficulté-surendettement,"Surendettement des particuliers, faillite civile et rétablissement personnel",Recours contre les décisions d'orientation du dossier prononcées par la commission de surendettement des particuliers
+48I,4,48,Entreprises en difficulté-surendettement,"Surendettement des particuliers, faillite civile et rétablissement personnel",Demande aux fins de conférer force exécutoire aux recommandations de rétablissement personnel sans liquidation judiciaire
+48J,4,48,Entreprises en difficulté-surendettement,"Surendettement des particuliers, faillite civile et rétablissement personnel",Contestation de la décision de la commission imposant un rétablissement personnel sans liquidation judiciaire
+48K,4,48,Entreprises en difficulté-surendettement,"Surendettement des particuliers, faillite civile et rétablissement personnel",Demande de résolution du plan pris dans le cas d'une procédure de rétablissement personnel
+48L,4,48,Entreprises en difficulté-surendettement,"Surendettement des particuliers, faillite civile et rétablissement personnel",Demande d'annulation d'un acte ou d'un paiement par la commission de surendettement
+48M,4,48,Entreprises en difficulté-surendettement,"Surendettement des particuliers, faillite civile et rétablissement personnel",Demande d'autorisation d'accomplir l'un des actes mentionnés à l'article L. 722-5 C. consom.
+48N,4,48,Entreprises en difficulté-surendettement,"Surendettement des particuliers, faillite civile et rétablissement personnel",Recours contre la décision de déchéance du bénéfice de la procédure de traitement du surendettement
+48O,4,48,Entreprises en difficulté-surendettement,"Surendettement des particuliers, faillite civile et rétablissement personnel",Demande aux fins de suspension des mesures d'expulsion du logement du débiteur
+48P,4,48,Entreprises en difficulté-surendettement,"Surendettement des particuliers, faillite civile et rétablissement personnel",Demande du débiteur tendant à autoriser à aliéner un bien
+48Q,4,48,Entreprises en difficulté-surendettement,"Surendettement des particuliers, faillite civile et rétablissement personnel",Demande formée avant la décision de recevabilité aux fins de suspension des procédures d'exécution et des cessions des rémunérations
+48R,4,48,Entreprises en difficulté-surendettement,"Surendettement des particuliers, faillite civile et rétablissement personnel",Demande de relevé de forclusion de déclaration de créances
+4A,4,4A,Entreprises en difficulté-surendettement,"Désignation d'un mandataire ad hoc, ouverture d'une procédure de conciliation ou de règlement amiable agricole, de sauvegarde, de sauvegarde accélérée, de redressement ou de liquidation judiciaire ","Désignation d'un mandataire ad hoc, ouverture d'une procédure de conciliation ou de règlement amiable agricole, de sauvegarde, de sauvegarde accélérée, de redressement ou de liquidation judiciaire "
+4AA,4,4A,Entreprises en difficulté-surendettement,"Désignation d'un mandataire ad hoc, ouverture d'une procédure de conciliation ou de règlement amiable agricole, de sauvegarde, de sauvegarde accélérée, de redressement ou de liquidation judiciaire ",Demande de désignation d'un mandataire ad hoc
+4AB,4,4A,Entreprises en difficulté-surendettement,"Désignation d'un mandataire ad hoc, ouverture d'une procédure de conciliation ou de règlement amiable agricole, de sauvegarde, de sauvegarde accélérée, de redressement ou de liquidation judiciaire ",Demande d'ouverture de la procédure de conciliation
+4AC,4,4A,Entreprises en difficulté-surendettement,"Désignation d'un mandataire ad hoc, ouverture d'une procédure de conciliation ou de règlement amiable agricole, de sauvegarde, de sauvegarde accélérée, de redressement ou de liquidation judiciaire ",Demande d'ouverture d'une procédure de règlement amiable ou de désignation d'un conciliateur en matière agricole
+4AD,4,4A,Entreprises en difficulté-surendettement,"Désignation d'un mandataire ad hoc, ouverture d'une procédure de conciliation ou de règlement amiable agricole, de sauvegarde, de sauvegarde accélérée, de redressement ou de liquidation judiciaire ",Demande d'ouverture de la procédure de sauvegarde
+4AE,4,4A,Entreprises en difficulté-surendettement,"Désignation d'un mandataire ad hoc, ouverture d'une procédure de conciliation ou de règlement amiable agricole, de sauvegarde, de sauvegarde accélérée, de redressement ou de liquidation judiciaire ",Demande d'ouverture de la procédure de redressement judiciaire
+4AF,4,4A,Entreprises en difficulté-surendettement,"Désignation d'un mandataire ad hoc, ouverture d'une procédure de conciliation ou de règlement amiable agricole, de sauvegarde, de sauvegarde accélérée, de redressement ou de liquidation judiciaire ",Demande d'ouverture de la procédure de liquidation judiciaire
+4AG,4,4A,Entreprises en difficulté-surendettement,"Désignation d'un mandataire ad hoc, ouverture d'une procédure de conciliation ou de règlement amiable agricole, de sauvegarde, de sauvegarde accélérée, de redressement ou de liquidation judiciaire ",Demande de prononcé de la liquidation judiciaire après résolution du plan de sauvegarde ou du plan de redressement
+4AH,4,4A,Entreprises en difficulté-surendettement,"Désignation d'un mandataire ad hoc, ouverture d'une procédure de conciliation ou de règlement amiable agricole, de sauvegarde, de sauvegarde accélérée, de redressement ou de liquidation judiciaire ",Demande de reprise de la procédure de liquidation judiciaire
+4AI,4,4A,Entreprises en difficulté-surendettement,"Désignation d'un mandataire ad hoc, ouverture d'une procédure de conciliation ou de règlement amiable agricole, de sauvegarde, de sauvegarde accélérée, de redressement ou de liquidation judiciaire ",Demande d'extension de la procédure de sauvegarde pour confusion du patrimoine ou fictivité d'une personne morale
+4AJ,4,4A,Entreprises en difficulté-surendettement,"Désignation d'un mandataire ad hoc, ouverture d'une procédure de conciliation ou de règlement amiable agricole, de sauvegarde, de sauvegarde accélérée, de redressement ou de liquidation judiciaire ",Demande d'extension de la procédure de redressement judiciaire pour confusion de patrimoine ou fictivité d'une personne morale
+4AK,4,4A,Entreprises en difficulté-surendettement,"Désignation d'un mandataire ad hoc, ouverture d'une procédure de conciliation ou de règlement amiable agricole, de sauvegarde, de sauvegarde accélérée, de redressement ou de liquidation judiciaire ",Demande d'extension de la procédure de liquidation judiciaire pour confusion de patrimoine ou fictivité d'une personne morale
+4AL,4,4A,Entreprises en difficulté-surendettement,"Désignation d'un mandataire ad hoc, ouverture d'une procédure de conciliation ou de règlement amiable agricole, de sauvegarde, de sauvegarde accélérée, de redressement ou de liquidation judiciaire ",Demande d’ouverture d’une procédure de redressement judiciaire après résolution du plan de sauvegarde
+4AM,4,4A,Entreprises en difficulté-surendettement,"Désignation d'un mandataire ad hoc, ouverture d'une procédure de conciliation ou de règlement amiable agricole, de sauvegarde, de sauvegarde accélérée, de redressement ou de liquidation judiciaire ",Demande d'ouverture de la procédure de sauvegarde financière accélérée
+4AN,4,4A,Entreprises en difficulté-surendettement,"Désignation d'un mandataire ad hoc, ouverture d'une procédure de conciliation ou de règlement amiable agricole, de sauvegarde, de sauvegarde accélérée, de redressement ou de liquidation judiciaire ",Demande d'ouverture de la procédure de sauvegarde accélérée
+4AO,4,4A,Entreprises en difficulté-surendettement,"Désignation d'un mandataire ad hoc, ouverture d'une procédure de conciliation ou de règlement amiable agricole, de sauvegarde, de sauvegarde accélérée, de redressement ou de liquidation judiciaire ",Demande d'ouverture de la procédure de rétablissement professionnel concomitamment à la procédure de liquidation judiciaire
+4AP,4,4A,Entreprises en difficulté-surendettement,"Désignation d'un mandataire ad hoc, ouverture d'une procédure de conciliation ou de règlement amiable agricole, de sauvegarde, de sauvegarde accélérée, de redressement ou de liquidation judiciaire ",Demande de prononcé de la liquidation judiciaire après clôture d'une procédure de rétablissement professionnel
+4AQ,4,4A,Entreprises en difficulté-surendettement,"Désignation d'un mandataire ad hoc, ouverture d'une procédure de conciliation ou de règlement amiable agricole, de sauvegarde, de sauvegarde accélérée, de redressement ou de liquidation judiciaire ",
+4B,4,4B,Entreprises en difficulté-surendettement,"L'entreprise au cours de la procédure  - Délais, organes - ","L'entreprise au cours de la procédure  - Délais, organes - "
+4BA,4,4B,Entreprises en difficulté-surendettement,"L'entreprise au cours de la procédure  - Délais, organes - ","Appel sur une décision relative à la désignation, au remplacement ou à la mission d'un expert, de l'administrateur, du mandataire judiciaire, du commissaire à l'exécution du plan ou du liquidateur "
+4BB,4,4B,Entreprises en difficulté-surendettement,"L'entreprise au cours de la procédure  - Délais, organes - ",Appel sur des décisions relatives au déroulement de la procédure
+4C,4,4C,Entreprises en difficulté-surendettement,"L'entreprise au cours de la procédure  - Autorisations,  plan de cession et actions diverses - ","L'entreprise au cours de la procédure  - Autorisations,  plan de cession et actions diverses - "
+4CA,4,4C,Entreprises en difficulté-surendettement,"L'entreprise au cours de la procédure  - Autorisations,  plan de cession et actions diverses - ",Appel sur des décisions relatives à la nullité des actes du débiteur non autorisés par le juge commissaire ou d'homologation de compromis ou de transaction
+4CB,4,4C,Entreprises en difficulté-surendettement,"L'entreprise au cours de la procédure  - Autorisations,  plan de cession et actions diverses - ","Appel sur des décisions relatives au remplacement du ou des dirigeants, ou de privation du droit de vote, ou de cession forcée des actions "
+4CC,4,4C,Entreprises en difficulté-surendettement,"L'entreprise au cours de la procédure  - Autorisations,  plan de cession et actions diverses - ",Appel sur des décisions relatives au plan de cession
+4CD,4,4C,Entreprises en difficulté-surendettement,"L'entreprise au cours de la procédure  - Autorisations,  plan de cession et actions diverses - ",Appel sur des décisions statuant sur la nullité des actes interdits au cessionnaire
+4D,4,4D,Entreprises en difficulté-surendettement,L'entreprise au cours de la procédure  - Période suspecte et sort des créances et cession d'actifs - ,L'entreprise au cours de la procédure  - Période suspecte et sort des créances et cession d'actifs -
+4DA,4,4D,Entreprises en difficulté-surendettement,L'entreprise au cours de la procédure  - Période suspecte et sort des créances et cession d'actifs - ,Appel sur les décisions relatives à la modification de la date de la cessation des paiements
+4DB,4,4D,Entreprises en difficulté-surendettement,L'entreprise au cours de la procédure  - Période suspecte et sort des créances et cession d'actifs - ,Appel sur des décisions relatives à la nullité des actes de la période suspecte
+4DC,4,4D,Entreprises en difficulté-surendettement,L'entreprise au cours de la procédure  - Période suspecte et sort des créances et cession d'actifs - ,Appel sur une décision du juge commissaire relative à l'admission des créances
+4DD,4,4D,Entreprises en difficulté-surendettement,L'entreprise au cours de la procédure  - Période suspecte et sort des créances et cession d'actifs - ,Appel sur une décision du juge commissaire relative à la réclamation sur l'état des créances
+4DE,4,4D,Entreprises en difficulté-surendettement,L'entreprise au cours de la procédure  - Période suspecte et sort des créances et cession d'actifs - ,Appel sur une décision relative au relevé de forclusion
+4DF,4,4D,Entreprises en difficulté-surendettement,L'entreprise au cours de la procédure  - Période suspecte et sort des créances et cession d'actifs - ,Appel sur une décision du juge commissaire relative à la vente d'actifs
+4E,4,4E,Entreprises en difficulté-surendettement,Conciliation ,Conciliation
+4EA,4,4E,Entreprises en difficulté-surendettement,Conciliation ,Recours contre les décisions relatives à l'homologation ou au constat de l'accord
+4EB,4,4E,Entreprises en difficulté-surendettement,Conciliation ,Demande de résolution de l'accord
+4EC,4,4E,Entreprises en difficulté-surendettement,Conciliation ,Autres demandes postérieures à la clôture de la procédure de conciliation
+4F,4,4F,Entreprises en difficulté-surendettement,Plan de sauvegarde et plan arrêté en sauvegarde accélérée,Plan de sauvegarde et plan arrêté en sauvegarde accélérée
+4FA,4,4F,Entreprises en difficulté-surendettement,Plan de sauvegarde et plan arrêté en sauvegarde accélérée,Appel sur une décision relative à l'admission du plan de sauvegarde
+4FB,4,4F,Entreprises en difficulté-surendettement,Plan de sauvegarde et plan arrêté en sauvegarde accélérée,Appel sur une décision  relative à la modification substantielle du plan de sauvegarde
+4FC,4,4F,Entreprises en difficulté-surendettement,Plan de sauvegarde et plan arrêté en sauvegarde accélérée,Demande en nullité d'un acte passé en violation d'une inaliénabilité temporaire formée après clôture de la procédure de sauvegarde
+4FD,4,4F,Entreprises en difficulté-surendettement,Plan de sauvegarde et plan arrêté en sauvegarde accélérée,Demande de résolution du plan de sauvegarde formée après clôture de la procédure
+4FE,4,4F,Entreprises en difficulté-surendettement,Plan de sauvegarde et plan arrêté en sauvegarde accélérée,Demande visant à faire constater l'exécution du plan de sauvegarde
+4FF,4,4F,Entreprises en difficulté-surendettement,Plan de sauvegarde et plan arrêté en sauvegarde accélérée,Autres demandes postérieures à la clôture de la procédure de sauvegarde ou de sauvegarde financière accélérée ou de sauvegarde accélérée
+4FG,4,4F,Entreprises en difficulté-surendettement,Plan de sauvegarde et plan arrêté en sauvegarde accélérée,Appel sur une décision relative à l'admission du plan arrêté en sauvegarde financière accélérée ou en sauvegarde accélérée
+4FH,4,4F,Entreprises en difficulté-surendettement,Plan de sauvegarde et plan arrêté en sauvegarde accélérée,Appel sur une décision relative à la modification substantielle du plan arrêté en sauvegarde financière accélérée ou en sauvegarde accélérée
+4FI,4,4F,Entreprises en difficulté-surendettement,Plan de sauvegarde et plan arrêté en sauvegarde accélérée,Demande en nullité d'un acte passé en violation d'une inaliénabilité temporaire formée après clôture de la procédure de sauvegarde  financière accélérée ou de sauvegarde accélérée
+4FJ,4,4F,Entreprises en difficulté-surendettement,Plan de sauvegarde et plan arrêté en sauvegarde accélérée,Demande de résolution du plan arrêté en sauvegarde financière accélérée ou en sauvegarde accélérée formée après clôture de la procédure
+4FK,4,4F,Entreprises en difficulté-surendettement,Plan de sauvegarde et plan arrêté en sauvegarde accélérée,Demande visant à faire constater l'exécution du plan arrêté en sauvegarde financière accélérée ou en sauvegarde accélérée
+4FL,4,4F,Entreprises en difficulté-surendettement,Plan de sauvegarde et plan arrêté en sauvegarde accélérée,Plan de sauvegarde - Recours préalable relatif à la constitution des classes de parties affectées
+4FM,4,4F,Entreprises en difficulté-surendettement,Plan de sauvegarde et plan arrêté en sauvegarde accélérée,Plan de sauvegarde - Contestation du respect du meilleur intérêt des parties affectées
+4G,4,4G,Entreprises en difficulté-surendettement,Plan de redressement de l'entreprise ,Plan de redressement de l'entreprise
+4GA,4,4G,Entreprises en difficulté-surendettement,Plan de redressement de l'entreprise ,Appel sur une décision relative à l'admission du plan de redressement
+4GB,4,4G,Entreprises en difficulté-surendettement,Plan de redressement de l'entreprise ,Appel sur une décision  relative à la modification substantielle du plan de redressement
+4GC,4,4G,Entreprises en difficulté-surendettement,Plan de redressement de l'entreprise ,Demande en nullité d'un acte passé en violation d'une inaliénabilité temporaire formée après clôture de la procédure de redressement
+4GD,4,4G,Entreprises en difficulté-surendettement,Plan de redressement de l'entreprise ,Demande de résolution du plan de redressement formée après clôture de la procédure
+4GE,4,4G,Entreprises en difficulté-surendettement,Plan de redressement de l'entreprise ,Demande relative au constat de l'exécution du plan de redressement
+4GF,4,4G,Entreprises en difficulté-surendettement,Plan de redressement de l'entreprise ,Autres demandes postérieures à la clôture de la procédure de redressement
+4GG,4,4G,Entreprises en difficulté-surendettement,Plan de redressement de l'entreprise ,Plan de redressement - Recours préalable relatif à la constitution des classes de parties affectées
+4GH,4,4G,Entreprises en difficulté-surendettement,Plan de redressement de l'entreprise ,Plan de redressement - Contestation du respect du meilleur intérêt des parties affectées - plan de redressement
+4H,4,4H,Entreprises en difficulté-surendettement,Liquidation judiciaire ,Liquidation judiciaire
+4HA,4,4H,Entreprises en difficulté-surendettement,Liquidation judiciaire ,Appel contre des décisions prononçant la liquidation judiciaire
+4HB,4,4H,Entreprises en difficulté-surendettement,Liquidation judiciaire ,Appel contre des décisions statuant sur la clôture de la liquidation judiciaire
+4HC,4,4H,Entreprises en difficulté-surendettement,Liquidation judiciaire ,Autres demandes postérieures à la clôture de la procédure de liquidation judiciaire
+4I,4,4I,Entreprises en difficulté-surendettement,"Autres demandes en matière de sauvegarde, de redressement et de liquidation judiciaires ","Autres demandes en matière de sauvegarde, de redressement et de liquidation judiciaires"
+4IA,4,4I,Entreprises en difficulté-surendettement,"Autres demandes en matière de sauvegarde, de redressement et de liquidation judiciaires ",Action en responsabilité pour insuffisance d'actif à l'encontre des dirigeants
+4IB,4,4I,Entreprises en difficulté-surendettement,"Autres demandes en matière de sauvegarde, de redressement et de liquidation judiciaires ",Action en responsabilité aux fins de condamnation au paiement de tout ou partie des dettes sociales  (Loi n°2005-845 du 26 juillet 2005 de sauvegarde des entreprises)
+4IC,4,4I,Entreprises en difficulté-surendettement,"Autres demandes en matière de sauvegarde, de redressement et de liquidation judiciaires ",Demande de prononcé de la faillite personnelle
+4ID,4,4I,Entreprises en difficulté-surendettement,"Autres demandes en matière de sauvegarde, de redressement et de liquidation judiciaires ","Demande de prononcé d'une interdiction de diriger, gérer, administrer ou contrôler "
+4IE,4,4I,Entreprises en difficulté-surendettement,"Autres demandes en matière de sauvegarde, de redressement et de liquidation judiciaires ","Action en responsabilité exercée contre l'administrateur, le mandataire judiciaire , le liquidateur, le commissaire à l'exécution du plan "
+4IF,4,4I,Entreprises en difficulté-surendettement,"Autres demandes en matière de sauvegarde, de redressement et de liquidation judiciaires ",Recours devant le tribunal contre les décisions du juge commissaire et appels contre les décisions statuant sur ces recours
+4IG,4,4I,Entreprises en difficulté-surendettement,"Autres demandes en matière de sauvegarde, de redressement et de liquidation judiciaires ","Action en responsabilité exercée contre l'Etat, les collectivités territoriales (introduite après le 1er janvier 2006)"
+4IH,4,4I,Entreprises en difficulté-surendettement,"Autres demandes en matière de sauvegarde, de redressement et de liquidation judiciaires ",Action en responsabilité exercée contre les créanciers
+4II,4,4I,Entreprises en difficulté-surendettement,"Autres demandes en matière de sauvegarde, de redressement et de liquidation judiciaires ",Recours devant la cour d'appel contre les décisions du juge commis
+4J,4,4J,Entreprises en difficulté-surendettement,Procédure d'insolvabilité,Procédures d'insolvabilité - Règlement (UE) n°2015-848
+4JA,4,4J,Entreprises en difficulté-surendettement,Procédure d'insolvabilité,"Recours contre la nature principale, secondaire ou territorial d’une procédure collective ouverte dans le cadre du règlement européen d'insolvabilité"
+4JB,4,4J,Entreprises en difficulté-surendettement,Procédure d'insolvabilité,Contestation de l’engagement par un créancier local
+4JC,4,4J,Entreprises en difficulté-surendettement,Procédure d'insolvabilité,"Demande de suspension, de renouvellement ou de levée de la suspension de la réalisation de l’ensemble des actifs par le praticien de l’insolvabilité de la procédure d’insolvabilité principale"
+4JD,4,4J,Entreprises en difficulté-surendettement,Procédure d'insolvabilité,"Demande de suspension, de renouvellement ou de levée de la suspension de la réalisation de l’ensemble des actifs formée par le praticien de l’insolvabilité désigné dans une procédure ouverte à l’encontre d’une autre société appartenant au même groupe de sociétés que le débiteur"
+4JE,4,4J,Entreprises en difficulté-surendettement,Procédure d'insolvabilité,Demande de vérification des conditions d’approbation d’un engagement pris en application de l’article 36 du REI
+4JF,4,4J,Entreprises en difficulté-surendettement,Procédure d'insolvabilité,Demande de mesure provisoire ou conservatoire en vue d’assurer le respect des termes de l’engagement pris
+4JG,4,4J,Entreprises en difficulté-surendettement,Procédure d'insolvabilité,Demande d’autorisation des licenciements par le tribunal lorsqu’une procédure d’insolvabilité a été ouverte dans un autre état membre en application de l’article 13
+4JH,4,4J,Entreprises en difficulté-surendettement,Procédure d'insolvabilité,Demande d’ouverture de la procédure de coordination collective
+4JI,4,4J,Entreprises en difficulté-surendettement,Procédure d'insolvabilité,Demande relative aux coûts de la procédure de coordination collective
+4JJ,4,4J,Entreprises en difficulté-surendettement,Procédure d'insolvabilité,Demande de révocation du coordinateur
+4JK,4,4J,Entreprises en difficulté-surendettement,Procédure d'insolvabilité,"Demande de suspension de la procédure d’insolvabilité ouverte à l’égard d’une société française membre d’un groupe de société, formée par le coordinateur"
+4JL,4,4J,Entreprises en difficulté-surendettement,Procédure d'insolvabilité,"Demande de levée de suspension de la procédure d’insolvabilité ouverte à l’égard d’une société française membre d’un groupe de société, formée par le coordinateur"
+50,5,50,Contrats,Vente,Vente
+50A,5,50,Contrats,Vente,Demande en nullité de la vente ou d'une clause de la vente
+50B,5,50,Contrats,Vente,Demande en paiement du prix ou tendant à faire sanctionner le non-paiement du prix
+50C,5,50,Contrats,Vente,Demande tendant à obtenir la livraison de la chose ou à faire sanctionner le défaut de livraison
+50D,5,50,Contrats,Vente,Demande en garantie des vices cachés ou tendant à faire sanctionner un défaut de conformité
+50E,5,50,Contrats,Vente,Demande de garantie d'éviction
+50F,5,50,Contrats,Vente,Autres demandes  tendant à faire sanctionner l'inexécution des obligations du vendeur
+50G,5,50,Contrats,Vente,Demande relative à l'exécution d'une promesse unilatérale de vente ou d'un pacte de préférence ou d'un compromis de vente
+50Z,5,50,Contrats,Vente,Autres demandes relatives à la vente
+51,5,51,Contrats,Baux d'habitation et baux professionnels,Baux d'habitation et baux professionnels
+51A,5,51,Contrats,Baux d'habitation et baux professionnels,Demande en paiement des loyers et des charges et/ou tendant à faire prononcer ou constater la résiliation pour défaut de paiement  ou défaut d'assurance et ordonner l'expulsion
+51B,5,51,Contrats,Baux d'habitation et baux professionnels,Demande tendant à l'exécution des autres obligations du locataire et/ou tendant à faire prononcer  la résiliation pour inexécution de ces obligations et ordonner l'expulsion
+51C,5,51,Contrats,Baux d'habitation et baux professionnels,Demande du bailleur tendant à faire constater la validité du congé et à ordonner l'expulsion
+51D,5,51,Contrats,Baux d'habitation et baux professionnels,Demande du  locataire ou de l'ancien locataire tendant au maintien dans les lieux
+51E,5,51,Contrats,Baux d'habitation et baux professionnels,Demande en dommages-intérêts formée par le bailleur en fin de bail en raison des dégradations ou des pertes imputables au locataire
+51F,5,51,Contrats,Baux d'habitation et baux professionnels,Demande du locataire tendant  à être autorisé d'exécuter des travaux ou à faire exécuter des travaux à la charge du bailleur
+51G,5,51,Contrats,Baux d'habitation et baux professionnels,"Demande du locataire tendant à la diminution du loyer ou des charges, et/ou à la résiliation du bail, et/ou à des dommages-intérêts,  en raison de troubles de jouissance"
+51H,5,51,Contrats,Baux d'habitation et baux professionnels,Demande du locataire en fin de bail en restitution du dépôt de garantie et/ou tendant au paiement d'une indemnité pour amélioration des lieux loués
+51I,5,51,Contrats,Baux d'habitation et baux professionnels,Demande tendant à la fixation judiciaire du montant du loyer
+51J,5,51,Contrats,Baux d'habitation et baux professionnels,Demande du bailleur tendant à faire constater la résiliation du bail pour abandon du domicile par le locataire
+51K,5,51,Contrats,Baux d'habitation et baux professionnels,Demande du locataire tendant à la diminution du loyer en raison de l'absence de certaines mentions ou de la présence de mentions erronées dans le contrat de location
+51L,5,51,Contrats,Baux d'habitation et baux professionnels,Demande du locataire tendant à la diminution du loyer lorsque son montant est supérieur au loyer de référence majoré
+51M,5,51,Contrats,Baux d'habitation et baux professionnels,Demande du bailleur tendant à la réévaluation du loyer lorsque son montant est inférieur au loyer de référence minoré
+51Z,5,51,Contrats,Baux d'habitation et baux professionnels,Autres demandes relatives à un bail d'habitation ou à un bail professionnel
+52,5,52,Contrats,Baux ruraux,Baux ruraux
+52A,5,52,Contrats,Baux ruraux,Demande en paiement des fermages ou loyers et/ou tendant à faire prononcer ou constater la résiliation du bail pour défaut de paiement et prononcer l'expulsion
+52B,5,52,Contrats,Baux ruraux,Demande tendant à l'exécution des autres obligations du preneur et/ou tendant à faire prononcer la résiliation et l'expulsion pour un motif autre que le non paiement des loyers
+52C,5,52,Contrats,Baux ruraux,Demande formée par le bailleur ou le preneur relative à la poursuite ou au renouvellement du bail
+52D,5,52,Contrats,Baux ruraux,Demande en paiement de dommages-intérêts formée par le bailleur en fin de bail en raison de dégradations ou de pertes imputables au preneur
+52E,5,52,Contrats,Baux ruraux,Demande du preneur tendant à faire exécuter ou à être autorisé à exécuter des travaux à la charge du bailleur
+52F,5,52,Contrats,Baux ruraux,Demande en paiement des indemnités dues en fin de bail au preneur sortant
+52G,5,52,Contrats,Baux ruraux,Demande relative à l'exercice du droit de préemption du preneur
+52Z,5,52,Contrats,Baux ruraux,Autres demandes relatives à un bail rural
+53,5,53,Contrats,"Prêt d'argent, crédit-bail (ou leasing), cautionnement","Prêt d'argent, crédit-bail (ou leasing), cautionnement"
+53A,5,53,Contrats,"Prêt d'argent, crédit-bail (ou leasing), cautionnement",Prêt - Demande en nullité du contrat ou d'une clause du contrat
+53B,5,53,Contrats,"Prêt d'argent, crédit-bail (ou leasing), cautionnement",Prêt - Demande en remboursement du prêt
+53D,5,53,Contrats,"Prêt d'argent, crédit-bail (ou leasing), cautionnement",Autres demandes relatives au prêt
+53E,5,53,Contrats,"Prêt d'argent, crédit-bail (ou leasing), cautionnement",Crédit-bail ou leasing - Demande en nullité du contrat ou d'une clause du contrat
+53F,5,53,Contrats,"Prêt d'argent, crédit-bail (ou leasing), cautionnement",Crédit-bail ou leasing - Demande en paiement des loyers et/ou en résiliation du crédit-bail
+53H,5,53,Contrats,"Prêt d'argent, crédit-bail (ou leasing), cautionnement",Autres demandes relatives au crédit-bail
+53I,5,53,Contrats,"Prêt d'argent, crédit-bail (ou leasing), cautionnement",Cautionnement - Demande en paiement formée contre la caution seule
+53J,5,53,Contrats,"Prêt d'argent, crédit-bail (ou leasing), cautionnement",Cautionnement - Recours de la caution contre le débiteur principal ou contre une autre caution
+53L,5,53,Contrats,"Prêt d'argent, crédit-bail (ou leasing), cautionnement",Autres demandes relatives au cautionnement
+54,5,54,Contrats,Contrat tendant à la réalisation de travaux de construction,Contrat tendant à la réalisation de travaux de construction
+54A,5,54,Contrats,Contrat tendant à la réalisation de travaux de construction,Demande en nullité d'un contrat tendant à la réalisation de travaux de construction
+54B,5,54,Contrats,Contrat tendant à la réalisation de travaux de construction,Demande en paiement du prix formée par le sous-traitant contre l'entrepreneur principal
+54C,5,54,Contrats,Contrat tendant à la réalisation de travaux de construction,Demande en paiement du prix formée par le constructeur contre le maître de l'ouvrage ou son garant
+54D,5,54,Contrats,Contrat tendant à la réalisation de travaux de construction,Demande en paiement direct du prix formée par le sous-traitant contre le maître de l'ouvrage
+54E,5,54,Contrats,Contrat tendant à la réalisation de travaux de construction,Recours formé par le constructeur entrepreneur principal contre un sous-traitant
+54F,5,54,Contrats,Contrat tendant à la réalisation de travaux de construction,Recours entre constructeurs
+54G,5,54,Contrats,Contrat tendant à la réalisation de travaux de construction,"Demande d'exécution de travaux, ou de dommages-intérêts, formée par le maître de l'ouvrage contre le constructeur ou son garant, ou contre le fabricant d'un élément de construction"
+54Z,5,54,Contrats,Contrat tendant à la réalisation de travaux de construction,Autres demandes relatives à un contrat de réalisation de travaux de construction
+55,5,55,Contrats,Contrat de transport,Contrat de transport
+55A,5,55,Contrats,Contrat de transport,Demande en paiement du prix du transport
+55B,5,55,Contrats,Contrat de transport,Action en responsabilité exercée contre le transporteur
+55Z,5,55,Contrats,Contrat de transport,Autres demandes relatives au contrat de transport
+56,5,56,Contrats,Autres contrats de prestation de services,Autres contrats de prestation de services
+56A,5,56,Contrats,Autres contrats de prestation de services,Demande en nullité d'un contrat de prestation de services
+56B,5,56,Contrats,Autres contrats de prestation de services,"Demande en paiement du prix, ou des honoraires formée contre le client et/ou tendant à faire sanctionner le non-paiement du prix, ou des honoraires"
+56C,5,56,Contrats,Autres contrats de prestation de services,Demande en dommages-intérêts contre le prestataire de services pour mauvaise exécution
+56D,5,56,Contrats,Autres contrats de prestation de services,Demande en restitution d'une chose confiée au prestataire de services et/ou en dommages-intérêts pour non restitution
+56E,5,56,Contrats,Autres contrats de prestation de services,Demande en exécution formée par le client contre le prestataire de services
+56F,5,56,Contrats,Autres contrats de prestation de services,Demande en résolution formée par le client pour inexécution de la prestation de services
+56Z,5,56,Contrats,Autres contrats de prestation de services, Autres demandes relatives à un contrat de prestation de services
+57,5,57,Contrats,Contrats d'intermédiaire,Contrats d'intermédiaire
+57A,5,57,Contrats,Contrats d'intermédiaire,Demande en paiement ou en indemnisation formée par un intermédiaire
+57B,5,57,Contrats,Contrats d'intermédiaire,Demande en réparation des dommages causés par un intermédiaire
+58,5,58,Contrats,Contrat d'assurance,Contrat d'assurance
+58A,5,58,Contrats,Contrat d'assurance,"Demande en nullité du contrat d'assurance, et/ou en remboursement des indemnités pour fausse déclaration intentionnelle ou réticence de la part de l'assuré  formée par l'assureur"
+58B,5,58,Contrats,Contrat d'assurance,Autres demandes en nullité et/ou en remboursement des indemnités formées par l'assureur
+58C,5,58,Contrats,Contrat d'assurance,"Demande en nullité du contrat et/ou en restitution des primes, ou cotisations, formée par l'assuré"
+58D,5,58,Contrats,Contrat d'assurance,"Demande en paiement des primes, ou cotisations, formée contre l'assuré"
+58E,5,58,Contrats,Contrat d'assurance,Demande en paiement de l'indemnité d'assurance dans une assurance de dommages
+58F,5,58,Contrats,Contrat d'assurance,Demande en paiement de l'indemnité d'assurance de responsabilité formée par l'assuré
+58G,5,58,Contrats,Contrat d'assurance,Demande en paiement de l'indemnité d'assurance dans une assurance de personnes
+58H,5,58,Contrats,Contrat d'assurance,Demande en paiement de l'indemnité d'assurance dans une assurance-crédit
+58Z,5,58,Contrats,Contrat d'assurance,Demande relative à d'autres contrats d'assurance
+59,5,59,Contrats,Contrats divers,Contrats divers
+59A,5,59,Contrats,Contrats divers,Demande en nullité d'un contrat ou des clauses relatives à un autre contrat
+59B,5,59,Contrats,Contrats divers,Demande en paiement relative à un autre contrat
+59C,5,59,Contrats,Contrats divers,Demande en exécution ou en dommages-intérêts pour mauvaise exécution d'un autre contrat
+59D,5,59,Contrats,Contrats divers,Demande en paiement relative à un contrat non qualifié
+59E,5,59,Contrats,Contrats divers,Demande en exécution ou en dommages-intérêts pour mauvaise exécution d'un contrat non qualifié
+59G,5,59,Contrats,Contrats divers,Demande conjointe tendant à réviser le contrat pour imprévision
+59H,5,59,Contrats,Contrats divers,Demande unilatérale tendant à réviser le contrat ou y mettre fin pour imprévision
+5A,5,5A,Contrats,Baux d'habitation,Baux d'habitation
+5AA,5,5A,Contrats,Baux d'habitation,Baux d'habitation - Demande en paiement des loyers et des charges et/ou tendant à faire prononcer ou constater la résiliation pour défaut de paiement  ou défaut d'assurance et ordonner l'expulsion
+5AB,6,5A,Contrats,Baux d'habitation,Baux d'habitation - Demande tendant à l'exécution des autres obligations du locataire et/ou tendant à faire prononcer  la résiliation pour inexécution de ces obligations et ordonner l'expulsion
+5AC,7,5A,Contrats,Baux d'habitation,Baux d'habitation - Demande du bailleur tendant à faire constater la validité du congé et à ordonner l'expulsion
+5AD,8,5A,Contrats,Baux d'habitation,Baux d'habitation - Demande du  locataire ou de l'ancien locataire tendant au maintien dans les lieux
+5AE,9,5A,Contrats,Baux d'habitation,Baux d'habitation - Demande en dommages-intérêts formée par le bailleur en fin de bail en raison des dégradations ou des pertes imputables au locataire
+5AF,10,5A,Contrats,Baux d'habitation,Baux d'habitation - Demande du locataire tendant  à être autorisé d'exécuter des travaux ou à faire exécuter des travaux à la charge du bailleur
+5AG,11,5A,Contrats,Baux d'habitation,"Baux d'habitation - Demande du locataire tendant à la diminution du loyer ou des charges, et/ou à la résiliation du bail, et/ou à des dommages-intérêts,  en raison de troubles de jouissance"
+5AH,12,5A,Contrats,Baux d'habitation,Baux d'habitation - Demande du locataire en fin de bail en restitution du dépôt de garantie et/ou tendant au paiement d'une indemnité pour amélioration des lieux loués
+5AI,13,5A,Contrats,Baux d'habitation,Baux d'habitation - Demande tendant à la fixation judiciaire du montant du loyer
+5AJ,14,5A,Contrats,Baux d'habitation,Baux d'habitation - Demande du bailleur tendant à faire constater la résiliation du bail pour abandon du domicile par le locataire
+5AK,15,5A,Contrats,Baux d'habitation,Baux d'habitation - Demande du locataire tendant à la diminution du loyer en raison de l'absence de certaines mentions ou de la présence de mentions erronées dans le contrat de location et/ou demande tendant à la mise en conformité du bail
+5AL,16,5A,Contrats,Baux d'habitation,Baux d'habitation - Demande du locataire tendant à la diminution du loyer lorsque son montant est supérieur au loyer de référence majoré
+5AM,17,5A,Contrats,Baux d'habitation,Baux d'habitation - Demande du bailleur tendant à la réévaluation du loyer lorsque son montant est inférieur au loyer de référence minoré
+5AZ,18,5A,Contrats,Baux d'habitation,Baux d'habitation - Autres demandes relatives à un bail d'habitation
+5B,5,5B,Contrats,Baux professionnels,Baux professionnels
+5BA,5,5B,Contrats,Baux professionnels,Baux professionnels - Demande en paiement des loyers et des charges et/ou tendant à faire prononcer ou constater la résiliation pour défaut de paiement  ou défaut d'assurance et ordonner l'expulsion
+5BB,6,5B,Contrats,Baux professionnels,Baux professionnels - Demande tendant à l'exécution des autres obligations du locataire et/ou tendant à faire prononcer  la résiliation pour inexécution de ces obligations et ordonner l'expulsion
+5BC,7,5B,Contrats,Baux professionnels,Baux professionnels - Demande du bailleur tendant à faire constater la validité du congé et à ordonner l'expulsion
+5BD,8,5B,Contrats,Baux professionnels,Baux professionnels - Demande en dommages-intérêts formée par le bailleur en fin de bail en raison des dégradations ou des pertes imputables au locataire
+5BE,9,5B,Contrats,Baux professionnels,Baux professionnels - Demande du  locataire ou de l'ancien locataire tendant au maintien dans les lieux
+5BF,10,5B,Contrats,Baux professionnels,Baux professionnels - Demande du locataire tendant à la diminution du loyer ou des charges et/ou à la résiliation du bail et/ou à des dommages-intérêts en raison de troubles de jouissance
+5BG,11,5B,Contrats,Baux professionnels,Baux professionnels - Demande du locataire en fin de bail en restitution du dépôt de garantie et/ou tendant au paiement d'une indemnité pour amélioration des lieux loués
+5BH,12,5B,Contrats,Baux professionnels,Baux professionnels - Demande du locataire tendant  à être autorisé d'exécuter des travaux ou à faire exécuter des travaux à la charge du bailleur
+5BI,13,5B,Contrats,Baux professionnels,Baux professionnels - Demande tendant à la fixation judiciaire du montant du loyer
+5BZ,14,5B,Contrats,Baux professionnels,Baux professionnels - Autres demandes relatives à un bail professionnel
+60,6,60,Responsabilité et quasi-contrats,Dommages causés par des véhicules,Dommages causés par des véhicules
+60A,6,60,Responsabilité et quasi-contrats,Dommages causés par des véhicules,Demande en réparation des dommages causés par des véhicules terrestres à moteur
+60B,6,60,Responsabilité et quasi-contrats,Dommages causés par des véhicules,Demande en réparation des dommages causés par des véhicules terrestres sans moteur
+60C,6,60,Responsabilité et quasi-contrats,Dommages causés par des véhicules,"Demande en réparation des dommages causés par un véhicule aérien, maritime ou fluvial"
+61,6,61,Responsabilité et quasi-contrats,"Dommages causés par des animaux, des produits ou des services","Dommages causés par des animaux, des produits ou des services"
+61A,6,61,Responsabilité et quasi-contrats,"Dommages causés par des animaux, des produits ou des services",Demande en réparation des dommages causés par un animal
+61B,6,61,Responsabilité et quasi-contrats,"Dommages causés par des animaux, des produits ou des services",Demande en réparation des dommages causés par un produit ou une prestation de services défectueux
+62,6,62,Responsabilité et quasi-contrats,Dommages causés par des immeubles,Dommages causés par des immeubles
+62A,6,62,Responsabilité et quasi-contrats,Dommages causés par des immeubles,Demande en réparation des dommages causés à une personne par un immeuble
+62B,6,62,Responsabilité et quasi-contrats,Dommages causés par des immeubles,Demande en réparation des dommages causés à une chose mobilière ou immobilière par un immeuble
+63,6,63,Responsabilité et quasi-contrats,Dommages causés par l'activité professionnelle de certaines personnes qualifiées,Dommages causés par l'activité professionnelle de certaines personnes qualifiées
+63A,6,63,Responsabilité et quasi-contrats,Dommages causés par l'activité professionnelle de certaines personnes qualifiées,Demande en réparation des dommages causés par l'activité médicale ou para-médicale
+63B,6,63,Responsabilité et quasi-contrats,Dommages causés par l'activité professionnelle de certaines personnes qualifiées,Demande en réparation des dommages causés par l'activité des auxiliaires de justice
+63C,6,63,Responsabilité et quasi-contrats,Dommages causés par l'activité professionnelle de certaines personnes qualifiées,"Demande en réparation des dommages causés par l'activité d'un expert en diagnostic, un commissaire aux comptes, un commissaire aux apports, un commissaire à la fusion ou un expert-comptable"
+63D,6,63,Responsabilité et quasi-contrats,Dommages causés par l'activité professionnelle de certaines personnes qualifiées,Demande en réparation des dommages causés par l'activité d'un prestataire de services d'investissement
+64,6,64,Responsabilité et quasi-contrats,Dommages causés par l'action directe d'une personne,Dommages causés par l'action directe d'une personne
+64A,6,64,Responsabilité et quasi-contrats,Dommages causés par l'action directe d'une personne,Demande en réparation des dommages causés par une nuisance de l'environnement
+64B,6,64,Responsabilité et quasi-contrats,Dommages causés par l'action directe d'une personne,Demande en réparation des dommages causés par d'autres faits personnels
+64C,6,64,Responsabilité et quasi-contrats,Dommages causés par l'action directe d'une personne,Demande en réparation d'un préjudice écologique
+64D,6,64,Responsabilité et quasi-contrats,Dommages causés par l'action directe d'une personne,"Action en prévention, en cessation ou en réparation d'une atteinte au secret des affaires"
+64E,6,64,Responsabilité et quasi-contrats,Dommages causés par l'action directe d'une personne,Demande en réparation des dommages causés par un acte de terrorisme
+64F,6,64,Responsabilité et quasi-contrats,Dommages causés par l'action directe d'une personne,"Demande de blocage, retrait ou déréférencement de contenus illicites accessibles en ligne"
+64G,6,64,Responsabilité et quasi-contrats,Dommages causés par l'action directe d'une personne,Demande en réparation du préjudice causé par l'inexécution des obligations d'une société relatives au plan de vigilance
+65,6,65,Responsabilité et quasi-contrats,Dommages causés par l'action d'une personne dont on est responsable,Dommages causés par l'action d'une personne dont on est responsable
+65A,6,65,Responsabilité et quasi-contrats,Dommages causés par l'action d'une personne dont on est responsable,"Demande en réparation des dommages causés par un mineur ou un majeur, formée contre les parents ou la personne contrôlant son mode de vie ou son activité"
+65B,6,65,Responsabilité et quasi-contrats,Dommages causés par l'action d'une personne dont on est responsable,"Demande en réparation des dommages causés par les salariés et apprentis, formée contre l'employeur "
+65C,6,65,Responsabilité et quasi-contrats,Dommages causés par l'action d'une personne dont on est responsable,"Demande en réparation des dommages causés par un fonctionnaire ou employé, formée contre l'Etat ou une collectivité territoriale"
+66,6,66,Responsabilité et quasi-contrats,Quasi-contrats,Quasi-contrats
+66A,6,66,Responsabilité et quasi-contrats,Quasi-contrats,Demande relative à une gestion d'affaire
+66B,6,66,Responsabilité et quasi-contrats,Quasi-contrats,Demande en restitution d'une chose ou en paiement d'un prix reçu indûment
+66C,6,66,Responsabilité et quasi-contrats,Quasi-contrats,Demande d'indemnisation pour enrichissement sans cause
+70,7,70,Biens - Propriété littéraire et artistique ,Propriété et possession immobilières,Propriété et possession immobilières
+70A,7,70,Biens - Propriété littéraire et artistique ,Propriété et possession immobilières,Revendication d'un bien immobilier
+70B,7,70,Biens - Propriété littéraire et artistique ,Propriété et possession immobilières,Demande formée par le propriétaire de démolition d'une construction ou d'enlèvement d'une plantation faite par un tiers sur son terrain
+70C,7,70,Biens - Propriété littéraire et artistique ,Propriété et possession immobilières,Demande d'expulsion et/ou d'indemnités dirigée contre les occupants des lieux
+70D,7,70,Biens - Propriété littéraire et artistique ,Propriété et possession immobilières,Demande en bornage ou en clôture
+70E,7,70,Biens - Propriété littéraire et artistique ,Propriété et possession immobilières,"Demande relative aux murs, haies et  fossés mitoyens"
+70G,7,70,Biens - Propriété littéraire et artistique ,Propriété et possession immobilières,Demande d'ordonnance d'expropriation
+70H,7,70,Biens - Propriété littéraire et artistique ,Propriété et possession immobilières,Demande de fixation de l'indemnité d'expropriation
+70I,7,70,Biens - Propriété littéraire et artistique ,Propriété et possession immobilières,Demande de rétrocession d'un immeuble exproprié
+70J,7,70,Biens - Propriété littéraire et artistique ,Propriété et possession immobilières,Demande relative à l'inscription ou à la radiation d'un droit ou d'une charge au Livre foncier
+70K,7,70,Biens - Propriété littéraire et artistique ,Propriété et possession immobilières,Demande de constatation d'absence de base légale du transfert de propriété et sur ses conséquences
+70L,7,70,Biens - Propriété littéraire et artistique ,Propriété et possession immobilières,"Demande de désignation d'un expert par le président du TJ, en vue de la déclaration de l'état de carence du propriétaire d'un immeuble"
+70M,7,70,Biens - Propriété littéraire et artistique ,Propriété et possession immobilières,Demande de désignation d'expert pour un immeuble menaçant ruine
+70N,7,70,Biens - Propriété littéraire et artistique ,Propriété et possession immobilières,Demande du maire tendant à la démolition d'un bâtiment menaçant ruine
+70O,7,70,Biens - Propriété littéraire et artistique ,Propriété et possession immobilières,Demande tendant à la démolition ou la mise en conformité d'un ouvrage édifié ou installé en violation des règles d'urbanisme
+70Z,7,70,Biens - Propriété littéraire et artistique ,Propriété et possession immobilières,Autres demandes relatives à la propriété ou à la possession d'un immeuble ou relevant de la compétence du juge de l'expropriation
+71,7,71,Biens - Propriété littéraire et artistique ,Copropriété (I): organisation et administration,Copropriété (I): organisation et administration
+71A,7,71,Biens - Propriété littéraire et artistique ,Copropriété (I): organisation et administration,Demande tendant à déclarer non écrite une clause du règlement de copropriété ou demande de nouvelle répartition des charges
+71B,7,71,Biens - Propriété littéraire et artistique ,Copropriété (I): organisation et administration,Demande de nomination du syndic lorsque l'assemblée générale convoquée à cet effet n'est pas parvenue à en désigner un
+71C,7,71,Biens - Propriété littéraire et artistique ,Copropriété (I): organisation et administration,Demande de désignation d'un administrateur provisoire
+71D,7,71,Biens - Propriété littéraire et artistique ,Copropriété (I): organisation et administration,Demande de désignation d'un administrateur provisoire d'une copropriété en difficulté
+71E,7,71,Biens - Propriété littéraire et artistique ,Copropriété (I): organisation et administration,Demande de convocation d'une assemblée générale
+71F,7,71,Biens - Propriété littéraire et artistique ,Copropriété (I): organisation et administration,Demande en nullité d'une assemblée générale ou d'une délibération de cette assemblée
+71G,7,71,Biens - Propriété littéraire et artistique ,Copropriété (I): organisation et administration,Action en responsabilité exercée contre le syndicat
+71H,7,71,Biens - Propriété littéraire et artistique ,Copropriété (I): organisation et administration,Action en responsabilité exercée contre le syndic ou tendant à sa révocation
+71I,7,71,Biens - Propriété littéraire et artistique ,Copropriété (I): organisation et administration,Demande de remise de pièces ou de fonds détenus par le syndic
+71J,7,71,Biens - Propriété littéraire et artistique ,Copropriété (I): organisation et administration,Demande de désignation d'un mandataire ad hoc d'une copropriété en pré-difficulté dans le cadre d'une procédure d'alerte
+71K,7,71,Biens - Propriété littéraire et artistique ,Copropriété (I): organisation et administration,Demande de placement de l'immeuble sous administration provisoire renforcée
+71L,7,71,Biens - Propriété littéraire et artistique ,Copropriété (I): organisation et administration,"Demande de désignation des membres du conseil syndical, à défaut de désignation par l'assemblée générale à la majorité requise"
+71M,7,71,Biens - Propriété littéraire et artistique ,Copropriété (I): organisation et administration,Demande de désignation d'un mandataire commun en cas d'indivision ou de démembrement du droit de propriété
+71N,7,71,Biens - Propriété littéraire et artistique ,Copropriété (I): organisation et administration,Demande de désignation d'un mandataire ad hoc
+72,7,72,Biens - Propriété littéraire et artistique ,Copropriété (II): droits et obligations des copropriétaires,Copropriété (II): droits et obligations des copropriétaires
+72A,7,72,Biens - Propriété littéraire et artistique ,Copropriété (II): droits et obligations des copropriétaires,Demande en paiement des charges ou des contributions
+72B,7,72,Biens - Propriété littéraire et artistique ,Copropriété (II): droits et obligations des copropriétaires,Demande présentée par ou contre le syndicat à l'occasion de la vente d'un lot
+72C,7,72,Biens - Propriété littéraire et artistique ,Copropriété (II): droits et obligations des copropriétaires,Demande du syndicat tendant à la cessation et/ou à la sanction d'une violation des règles de la copropriété commise par un copropriétaire
+72D,7,72,Biens - Propriété littéraire et artistique ,Copropriété (II): droits et obligations des copropriétaires,Demande d'un copropriétaire tendant à la cessation et/ou à la sanction d'une atteinte à la propriété ou à la jouissance d'un lot
+72E,7,72,Biens - Propriété littéraire et artistique ,Copropriété (II): droits et obligations des copropriétaires,Demande en réparation du préjudice causé à un copropriétaire par des travaux régulièrement décidés par l'assemblée générale
+72F,7,72,Biens - Propriété littéraire et artistique ,Copropriété (II): droits et obligations des copropriétaires,Demande en inopposabilité de travaux décidés par l'assemblée générale
+72G,7,72,Biens - Propriété littéraire et artistique ,Copropriété (II): droits et obligations des copropriétaires,Demande d'autorisation de travaux d'amélioration
+72H,7,72,Biens - Propriété littéraire et artistique ,Copropriété (II): droits et obligations des copropriétaires,Demande des copropriétaires de résidences services tendant à la suspension ou la suppression d'un ou des services
+72I,7,72,Biens - Propriété littéraire et artistique ,Copropriété (II): droits et obligations des copropriétaires,Demande en paiement de provisions ou sommes exigibles présentée devant le Président du TJ statuant selon la procédure accélérée au fond (art. 19-2 de L. 1965)
+72J,7,72,Biens - Propriété littéraire et artistique ,Copropriété (II): droits et obligations des copropriétaires,Demande en paiement de pénalités de retard dues par le syndic pour défaut de délivrance de pièces ou documents au profit du syndicat des copropriétaires
+72Z,7,72,Biens - Propriété littéraire et artistique ,Copropriété (II): droits et obligations des copropriétaires,Autres demandes relatives à la copropriété
+73,7,73,Biens - Propriété littéraire et artistique ,Usufruit - Usage et habitation,Usufruit - Usage et habitation
+73A,7,73,Biens - Propriété littéraire et artistique ,Usufruit - Usage et habitation,Demande formée par l'usufruitier
+73B,7,73,Biens - Propriété littéraire et artistique ,Usufruit - Usage et habitation,Demande formée par le nu-propriétaire
+73Z,7,73,Biens - Propriété littéraire et artistique ,Usufruit - Usage et habitation,Demande relative à un droit d'usage et d'habitation
+74,7,74,Biens - Propriété littéraire et artistique ,Servitudes,Servitudes
+74A,7,74,Biens - Propriété littéraire et artistique ,Servitudes,Demande relative à une servitude d'usage ou de passage des eaux
+74B,7,74,Biens - Propriété littéraire et artistique ,Servitudes,Demande relative à une servitude de distance pour les plantations et constructions
+74C,7,74,Biens - Propriété littéraire et artistique ,Servitudes,Demande relative à une servitude de jours et vues sur le fonds voisin
+74D,7,74,Biens - Propriété littéraire et artistique ,Servitudes,Demande relative à un droit de passage
+74E,7,74,Biens - Propriété littéraire et artistique ,Servitudes,Demande d'établissement d'une servitude de cour commune
+74F,7,74,Biens - Propriété littéraire et artistique ,Servitudes,Demande relative à un droit d'usage forestier ou rural
+74Z,7,74,Biens - Propriété littéraire et artistique ,Servitudes,Demande relative à d'autres servitudes
+75,7,75,Biens - Propriété littéraire et artistique ,Emphytéose - Bail à construction - Concession immobilière,Emphytéose - Bail à construction - Concession immobilière
+75A,7,75,Biens - Propriété littéraire et artistique ,Emphytéose - Bail à construction - Concession immobilière,"Demande relative au montant et au paiement des redevances emphytéotiques, ou des loyers du bail à construction"
+75B,7,75,Biens - Propriété littéraire et artistique ,Emphytéose - Bail à construction - Concession immobilière,Demande relative au sort du bien ou des constructions à l'expiration du bail à construction ou emphytéotique
+75D,7,75,Biens - Propriété littéraire et artistique ,Emphytéose - Bail à construction - Concession immobilière,Autres demandes relatives au bail à construction ou à l'emphytéose
+75E,7,75,Biens - Propriété littéraire et artistique ,Emphytéose - Bail à construction - Concession immobilière,Demande relative à une concession immobilière
+76,7,76,Biens - Propriété littéraire et artistique ,Sûretés mobilières et immobilières,Sûretés mobilières et immobilières
+76A,7,76,Biens - Propriété littéraire et artistique ,Sûretés mobilières et immobilières,"Demande en nullité, en radiation ou en réduction d'une sûreté immobilière "
+76B,7,76,Biens - Propriété littéraire et artistique ,Sûretés mobilières et immobilières,Recours contre les décisions relatives à l'inscription  ou à la radiation d'une hypothèque ou d'un privilège d'un droit réel immobilier au Livre foncier
+76D,7,76,Biens - Propriété littéraire et artistique ,Sûretés mobilières et immobilières,Autres demandes relatives à une sûreté immobilière
+76E,7,76,Biens - Propriété littéraire et artistique ,Sûretés mobilières et immobilières,"Demande en nullité, en radiation ou en réduction d'une sûreté mobilière "
+76F,7,76,Biens - Propriété littéraire et artistique ,Sûretés mobilières et immobilières,"Demande tendant à la réalisation de la sûreté : vente forcée, autorisation de vente amiable, ou attribution d'un bien mobilier constitutif de la sûreté"
+76H,7,76,Biens - Propriété littéraire et artistique ,Sûretés mobilières et immobilières,Autres demandes relatives à une sûreté mobilière
+77,7,77,Biens - Propriété littéraire et artistique ,Propriété et possession mobilières,Propriété et possession mobilières
+77A,7,77,Biens - Propriété littéraire et artistique ,Propriété et possession mobilières,Demande en revendication d'un bien mobilier
+77B,7,77,Biens - Propriété littéraire et artistique ,Propriété et possession mobilières,Demande en restitution d'un meuble vendu avec une clause de réserve de propriété
+78,7,78,Biens - Propriété littéraire et artistique ,Saisies et mesures conservatoires,Saisies et mesures conservatoires
+78A,7,78,Biens - Propriété littéraire et artistique ,Saisies et mesures conservatoires,Demande tendant à la vente immobilière et à la distribution du prix
+78B,7,78,Biens - Propriété littéraire et artistique ,Saisies et mesures conservatoires,"Demande tendant à la suspension de la procédure de saisie immobilière, l'annulation ou la péremption du commandement  ou  tendant à la vente amiable"
+78C,7,78,Biens - Propriété littéraire et artistique ,Saisies et mesures conservatoires,Demande tendant à la remise en vente du bien (procédures introduites avant le 1er janvier 2007)
+78E,7,78,Biens - Propriété littéraire et artistique ,Saisies et mesures conservatoires,Autres demandes relatives à la procédure de saisie immobilière
+78F,7,78,Biens - Propriété littéraire et artistique ,Saisies et mesures conservatoires,"Demande en nullité et/ou en mainlevée, en suspension ou en exécution d'une saisie mobilière"
+78G,7,78,Biens - Propriété littéraire et artistique ,Saisies et mesures conservatoires,Demande relative à la saisissabilité et/ou à la mise à disposition de sommes ou d'un  bien
+78H,7,78,Biens - Propriété littéraire et artistique ,Saisies et mesures conservatoires,Demande d'ouverture ou contestation d'une procédure de saisie des rémunérations
+78I,7,78,Biens - Propriété littéraire et artistique ,Saisies et mesures conservatoires,Autres demandes relatives à la saisie mobilière
+78J,7,78,Biens - Propriété littéraire et artistique ,Saisies et mesures conservatoires,Demande d’autorisation d’une visite et/ou d’une mesure conservatoire
+78K,7,78,Biens - Propriété littéraire et artistique ,Saisies et mesures conservatoires,Demande en nullité et/ou de mainlevée d'une mesure conservatoire
+78M,7,78,Biens - Propriété littéraire et artistique ,Saisies et mesures conservatoires,Autres demandes relatives à une mesure conservatoire
+78N,7,78,Biens - Propriété littéraire et artistique ,Saisies et mesures conservatoires,Demande d'autorisation de mesures conservatoires et de mesures d'exécution forcée sur les biens des Etats étrangers
+78O,7,78,Biens - Propriété littéraire et artistique ,Saisies et mesures conservatoires,Demande d'ordonnance européenne de saisie conservatoire des comptes bancaires
+78P,7,78,Biens - Propriété littéraire et artistique ,Saisies et mesures conservatoires,Recours du débiteur contre l'ordonnance européenne de saisie conservatoire des comptes bancaires
+78Q,7,78,Biens - Propriété littéraire et artistique ,Saisies et mesures conservatoires,Recours du débiteur contre l'exécution de l'ordonnance européenne de saisie conservatoire des comptes bancaires
+78R,7,78,Biens - Propriété littéraire et artistique ,Saisies et mesures conservatoires,Demande de modification ou de révocation de l'ordonnance européenne de saisie conservatoire des comptes bancaires
+78S,7,78,Biens - Propriété littéraire et artistique ,Saisies et mesures conservatoires,Demande d’autorisation de visites et de saisies administratives dans le cadre de la prévention de la commission d'actes de terrorisme
+78T,7,78,Biens - Propriété littéraire et artistique ,Saisies et mesures conservatoires,Demande d'autorisation d'une mesure conservatoire
+78U,7,78,Biens - Propriété littéraire et artistique ,Saisies et mesures conservatoires,Demande d'autorisation d'une visite et/ou d'une saisie et/ou d'une mesure conservatoire formée devant le JLD
+79,7,79,Biens - Propriété littéraire et artistique ,Propriété littéraire et artistique,Propriété littéraire et artistique
+79A,7,79,Biens - Propriété littéraire et artistique ,Propriété littéraire et artistique,"Demande tendant à faire cesser et/ou à sanctionner une contrefaçon ou une atteinte illicite au droit de l'auteur, à un droit voisin du droit d'auteur ou à un droit de producteur de base de données"
+79B,7,79,Biens - Propriété littéraire et artistique ,Propriété littéraire et artistique,Demande en paiement de droits d'auteur ou de droits voisins
+79C,7,79,Biens - Propriété littéraire et artistique ,Propriété littéraire et artistique,Demande tendant à faire cesser et/ou à sanctionner l'inexécution des obligations de l'éditeur dans un contrat d'édition
+79D,7,79,Biens - Propriété littéraire et artistique ,Propriété littéraire et artistique,Demande tendant à faire cesser et/ou à sanctionner l'inexécution des obligations de l'auteur dans un contrat d'édition
+79E,7,79,Biens - Propriété littéraire et artistique ,Propriété littéraire et artistique,Demande relative à un contrat de représentation d'une oeuvre littéraire ou artistique
+79F,7,79,Biens - Propriété littéraire et artistique ,Propriété littéraire et artistique,"Demande relative à un contrat de production d'une oeuvre audiovisuelle, de vidéogrammes, de phonogrammes ou de bases de données"
+79Z,7,79,Biens - Propriété littéraire et artistique ,Propriété littéraire et artistique,Autres demandes relatives à la propriété littéraire et artistique
+80,8,80,Relations du travail et protection sociale,Relations individuelles de travail,Relations individuelles de travail
+80A,8,80,Relations du travail et protection sociale,Relations individuelles de travail,"Demande d'indemnités liées à la rupture du contrat de travail CDI ou CDD, son exécution ou inexécution"
+80B,8,80,Relations du travail et protection sociale,Relations individuelles de travail,Demande d'indemnités liées à la rupture du contrat de travail pour motif économique
+80C,8,80,Relations du travail et protection sociale,Relations individuelles de travail,Demande d'indemnités ou de salaires
+80D,8,80,Relations du travail et protection sociale,Relations individuelles de travail,Demande d'annulation d'une sanction disciplinaire
+80E,8,80,Relations du travail et protection sociale,Relations individuelles de travail,Demande d'autorisation judiciaire de congé particulier
+80F,8,80,Relations du travail et protection sociale,Relations individuelles de travail,Demande de remise de documents
+80G,8,80,Relations du travail et protection sociale,Relations individuelles de travail,Demande en paiement de créances salariales en l'absence de rupture du contrat de travail
+80H,8,80,Relations du travail et protection sociale,Relations individuelles de travail,Demande présentée par un employeur liée à la rupture du contrat de travail ou à des créances salariales
+80I,8,80,Relations du travail et protection sociale,Relations individuelles de travail,Demande présentée par un employeur liée à la rupture du contrat de travail ou à des créances salariales
+80J,8,80,Relations du travail et protection sociale,Relations individuelles de travail,Contestation du motif non économique de la rupture du contrat de travail
+80K,8,80,Relations du travail et protection sociale,Relations individuelles de travail,Contestation du motif économique de la rupture du contrat de travail
+80L,8,80,Relations du travail et protection sociale,Relations individuelles de travail,Demande de prise d'acte de la rupture du contrat de travail
+80M,8,80,Relations du travail et protection sociale,Relations individuelles de travail,Demande de résiliation ou de résolution judiciaire du contrat de travail formée par un salarié
+80N,8,80,Relations du travail et protection sociale,Relations individuelles de travail,Demande de mise à la retraite formée par un salarié
+80O,8,80,Relations du travail et protection sociale,Relations individuelles de travail,Demande de requalification du contrat de travail
+80P,8,80,Relations du travail et protection sociale,Relations individuelles de travail,Demande en paiement de créances salariales sans contestation du motif de la rupture du contrat de travail
+80Q,8,80,Relations du travail et protection sociale,Relations individuelles de travail,Demande d'annulation d'une sanction disciplinaire
+80R,8,80,Relations du travail et protection sociale,Relations individuelles de travail,Demande d'autorisation judiciaire de congé particulier ou demande de congés formation
+80S,8,80,Relations du travail et protection sociale,Relations individuelles de travail,Demande de remise de documents
+80T,8,80,Relations du travail et protection sociale,Relations individuelles de travail,Demande en paiement de créances salariales en l'absence de rupture du contrat de travail
+80U,8,80,Relations du travail et protection sociale,Relations individuelles de travail,Demande présentée par un employeur liée à la rupture du contrat de travail ou à des créances salariales
+80V,8,80,Relations du travail et protection sociale,Relations individuelles de travail,Demande dirigée par un salarié contre un autre salarié
+80W,8,80,Relations du travail et protection sociale,Relations individuelles de travail,Contestation en matière de médecine du travail
+80Y,8,80,Relations du travail et protection sociale,Relations individuelles de travail,Demande de nullité de la rupture du contrat de travail 
+81,8,81,Relations du travail et protection sociale,Élections professionnelles,Élections professionnelles
+81A,8,81,Relations du travail et protection sociale,Élections professionnelles,Demande relative à l'organisation des élections des institutions représentatives du personnel dans l'entreprise
+81B,8,81,Relations du travail et protection sociale,Élections professionnelles,Demande relative à l'inscription sur les listes électorales ou sur la liste des candidats  pour l'élection des institutions représentatives du personnel dans l'entreprise
+81C,8,81,Relations du travail et protection sociale,Élections professionnelles,Demande d'annulation du scrutin d'élection d'une institution représentative du personnel de l'entreprise ou d'un scrutin de révocation
+81D,8,81,Relations du travail et protection sociale,Élections professionnelles,Demande d'annulation de la désignation élective de représentants du personnel des institutions représentatives ou d'un scrutin de révocation
+81E,8,81,Relations du travail et protection sociale,Élections professionnelles,"Demande relative à la constitution, la composition ou l'inclusion dans un groupe "
+81F,8,81,Relations du travail et protection sociale,Élections professionnelles,Demande relative à la désignation des représentants du personnel au comité de groupe
+81G,8,81,Relations du travail et protection sociale,Élections professionnelles,Demande relative à l'élection de représentants des salariés au conseil d'une entreprise du secteur public ou d'une société privée
+81H,8,81,Relations du travail et protection sociale,Élections professionnelles,Demande en révocation d'un administrateur salarié pour faute
+81I,8,81,Relations du travail et protection sociale,Élections professionnelles,Demande relative à l'élection d'autres représentants du personnel
+81J,8,81,Relations du travail et protection sociale,Élections professionnelles,Demande relative aux élections des conseillers prud'hommes
+81K,8,81,Relations du travail et protection sociale,Élections professionnelles,Contestation de la décision administrative relative au scrutin sur sigle organisé dans les très petites entreprises
+82,8,82,Relations du travail et protection sociale,Représentation des intérêts des salariés,Représentation des intérêts des salariés
+82A,8,82,Relations du travail et protection sociale,Représentation des intérêts des salariés,Demande de moyens de fonctionnement d'une institution représentative du personnel
+82B,8,82,Relations du travail et protection sociale,Représentation des intérêts des salariés,Demande en exécution d'obligations corrélatives aux attributions de représentants du personnel
+82C,8,82,Relations du travail et protection sociale,Représentation des intérêts des salariés,"Demande relative à la désignation, au mandat ou la rémunération d'un expert"
+82D,8,82,Relations du travail et protection sociale,Représentation des intérêts des salariés,Demande en nullité d'une délibération d'une institution représentative
+82E,8,82,Relations du travail et protection sociale,Représentation des intérêts des salariés,Autres demandes des représentants du personnel
+82F,8,82,Relations du travail et protection sociale,Représentation des intérêts des salariés,Autres demandes contre une institution représentative en raison de son fonctionnement
+82G,8,82,Relations du travail et protection sociale,Représentation des intérêts des salariés,Demande relative à l'expression directe des salariés
+82H,8,82,Relations du travail et protection sociale,Représentation des intérêts des salariés,Demande relative à la personnalité juridique d'un syndicat
+82I,8,82,Relations du travail et protection sociale,Représentation des intérêts des salariés,Demande d'annulation de la désignation ou de la révocation d'un délégué syndical ou d'un représentant syndical au comité d'entreprise
+82J,8,82,Relations du travail et protection sociale,Représentation des intérêts des salariés,Autres demandes contre un syndicat
+82K,8,82,Relations du travail et protection sociale,Représentation des intérêts des salariés,Demande relative à un plan de sauvegarde de l'emploi
+83,8,83,Relations du travail et protection sociale,Statut des salariés protégés,Statut des salariés protégés
+83A,8,83,Relations du travail et protection sociale,Statut des salariés protégés,Demande en paiement d'heures consacrées aux fonctions
+83B,8,83,Relations du travail et protection sociale,Statut des salariés protégés,Demande d'annulation d'une sanction disciplinaire frappant un salarié protégé
+83C,8,83,Relations du travail et protection sociale,Statut des salariés protégés,Demande d'indemnités ou de salaires  liée à la rupture autorisée ou non d'un contrat de travail d'un salarié protégé
+83D,8,83,Relations du travail et protection sociale,Statut des salariés protégés,Demande en résiliation du contrat de travail d'un administrateur salarié de société
+83E,8,83,Relations du travail et protection sociale,Statut des salariés protégés,Autres demandes d'un salarié protégé
+83F,8,83,Relations du travail et protection sociale,Statut des salariés protégés,Demande d'un employeur contre un salarié protégé
+83G,8,83,Relations du travail et protection sociale,Statut des salariés protégés,Demande de résiliation ou de résolution judiciaire du contrat de travail formée par un salarié protégé
+83H,8,83,Relations du travail et protection sociale,Statut des salariés protégés,Autres demandes d'un salarié protégé
+83I,8,83,Relations du travail et protection sociale,Statut des salariés protégés,Demande d'un employeur contre un salarié protégé
+84,8,84,Relations du travail et protection sociale,"Condition du personnel dans les procédures de sauvegarde, de redressement ou de liquidation judiciaire","Condition du personnel dans les procédures de sauvegarde, de redressement ou de liquidation judiciaire"
+84A,8,84,Relations du travail et protection sociale,"Condition du personnel dans les procédures de sauvegarde, de redressement ou de liquidation judiciaire",Demande en annulation de la désignation du représentant des salariés ou des institutions représentatives du personnel
+84B,8,84,Relations du travail et protection sociale,"Condition du personnel dans les procédures de sauvegarde, de redressement ou de liquidation judiciaire",Autres demandes relatives à la désignation du représentant des salariés ou des institutions représentatives du personnel
+84C,8,84,Relations du travail et protection sociale,"Condition du personnel dans les procédures de sauvegarde, de redressement ou de liquidation judiciaire",Demande en annulation de la décision de remplacement du représentant des salariés ou des institutions représentatives du personnel
+84D,8,84,Relations du travail et protection sociale,"Condition du personnel dans les procédures de sauvegarde, de redressement ou de liquidation judiciaire","Action en responsabilité civile exercée contre le représentant des salariés, des institutions représentatives ou des représentants du personnel, pour manquement à l'obligation de discrétion"
+84E,8,84,Relations du travail et protection sociale,"Condition du personnel dans les procédures de sauvegarde, de redressement ou de liquidation judiciaire",Demande consécutive à une autorisation de licenciements pour motif économique
+84F,8,84,Relations du travail et protection sociale,"Condition du personnel dans les procédures de sauvegarde, de redressement ou de liquidation judiciaire","Demande d'indemnités ou de salaires liée ou non à la rupture du contrat de travail, présentée après l'ouverture d'une procédure collective"
+84G,8,84,Relations du travail et protection sociale,"Condition du personnel dans les procédures de sauvegarde, de redressement ou de liquidation judiciaire",Demande en relevé de forclusion opposable à un salarié
+84H,8,84,Relations du travail et protection sociale,"Condition du personnel dans les procédures de sauvegarde, de redressement ou de liquidation judiciaire",Demande de l'A.G.S. en paiement des cotisations contre un employeur soumis à l'obligation d'assurance des créances salariales
+84I,8,84,Relations du travail et protection sociale,"Condition du personnel dans les procédures de sauvegarde, de redressement ou de liquidation judiciaire","Demande de l'A.G.S. d'un administrateur judiciaire, d'un représentant des créanciers, ou mandataire liquidateur contre un salarié"
+84J,8,84,Relations du travail et protection sociale,"Condition du personnel dans les procédures de sauvegarde, de redressement ou de liquidation judiciaire",Constestation de la rupture du contrat de travail présentée après l'ouverture d'une procédure collective
+84K,8,84,Relations du travail et protection sociale,"Condition du personnel dans les procédures de sauvegarde, de redressement ou de liquidation judiciaire",Demande d'indemnités ou de salaires sans contestation de la rupture du contrat de travail présentée après l'ouverture d'une procédure collective
+84L,8,84,Relations du travail et protection sociale,"Condition du personnel dans les procédures de sauvegarde, de redressement ou de liquidation judiciaire",Demande en relevé de forclusion opposable à un salarié
+84M,8,84,Relations du travail et protection sociale,"Condition du personnel dans les procédures de sauvegarde, de redressement ou de liquidation judiciaire",Demande de l'A.G.S. en paiement des cotisations contre un employeur soumis à l'obligation d'assurance des créances salariales
+84N,8,84,Relations du travail et protection sociale,"Condition du personnel dans les procédures de sauvegarde, de redressement ou de liquidation judiciaire","Demande de l'A.G.S. d'un administrateur judiciaire, d'un représentant des créanciers, ou mandataire liquidateur contre un salarié"
+85,8,85,Relations du travail et protection sociale,Conflits collectifs du travail,Conflits collectifs du travail
+85A,8,85,Relations du travail et protection sociale,Conflits collectifs du travail,Demande d'expulsion d'occupants des lieux de travail
+85B,8,85,Relations du travail et protection sociale,Conflits collectifs du travail,Demande tendant à la réouverture des locaux de travail
+85C,8,85,Relations du travail et protection sociale,Conflits collectifs du travail,Autres demandes de l'employeur relatives à un mouvement collectif
+85D,8,85,Relations du travail et protection sociale,Conflits collectifs du travail,Autres demandes d'un syndicat ou d'un salarié en matière de conflits collectifs
+86,8,86,Relations du travail et protection sociale,Négociation collective,Négociation collective
+86A,8,86,Relations du travail et protection sociale,Négociation collective,Demande relative à l'ouverture ou au déroulement d'une négociation collective
+86B,8,86,Relations du travail et protection sociale,Négociation collective,"Demande en nullité d'une clause, d'une convention ou d'un accord collectif"
+86C,8,86,Relations du travail et protection sociale,Négociation collective,Demande en appréciation de validité d'une clause conventionnelle
+86D,8,86,Relations du travail et protection sociale,Négociation collective,"Demande en exécution d'engagements conventionnels, ou tendant à sanctionner leur inexécution"
+86E,8,86,Relations du travail et protection sociale,Négociation collective,Demande relative au fonctionnement d'un organisme créé par une convention ou un accord collectif de travail
+86F,8,86,Relations du travail et protection sociale,Négociation collective,"Demande en exécution d'un accord de conciliation, d'un accord sur une recommandation de médiateur, d'une sentence arbitrale, ou tendant à sanctionner leur inexécution"
+86G,8,86,Relations du travail et protection sociale,Négociation collective,Demande relative à la validité d'une clause d'un accord ou d'un accord de conciliation ou d'un accord sur une recommandation de médiateur
+87,8,87,Relations du travail et protection sociale,Formation et insertion professionnelles,Formation et insertion professionnelles
+87A,8,87,Relations du travail et protection sociale,Formation et insertion professionnelles,"Demande relative à la validité, l'exécution ou la résiliation du contrat d'apprentissage formée par l'apprenti"
+87B,8,87,Relations du travail et protection sociale,Formation et insertion professionnelles,"Demande relative à la validité, l'exécution ou la résiliation du contrat d'apprentissage formée par l'employeur"
+87C,8,87,Relations du travail et protection sociale,Formation et insertion professionnelles,"Demande formée par un employeur ou un salarié contre un organisme de formation, un organisme paritaire collecteur agrée ou un fonds d'assurance formation"
+87D,8,87,Relations du travail et protection sociale,Formation et insertion professionnelles,Demande formée par un organisme de formation ou d'un fonds d'assurance- formation
+87E,8,87,Relations du travail et protection sociale,Formation et insertion professionnelles,Demande relative au fonctionnement d'un organisme de formation professionnelle
+87F,8,87,Relations du travail et protection sociale,Formation et insertion professionnelles, Autres demandes en matière d'apprentissage
+88,8,88,Relations du travail et protection sociale,Protection sociale,Protection sociale
+88A,8,88,Relations du travail et protection sociale,Protection sociale,"Constestation d'une décision d'un organisme portant sur l'immatriculation, l'affiliation ou un refus de reconnaissance d'un droit "
+88B,8,88,Relations du travail et protection sociale,Protection sociale,Demande d'annulation d'une mise en demeure ou d'une contrainte
+88C,8,88,Relations du travail et protection sociale,Protection sociale,"Demande en paiement de cotisations, majorations de retard et/ou pénalités"
+88D,8,88,Relations du travail et protection sociale,Protection sociale,"Demande en remboursement de cotisations, prestations ou allocations indues"
+88E,8,88,Relations du travail et protection sociale,Protection sociale,Demande en paiement de prestations
+88F,8,88,Relations du travail et protection sociale,Protection sociale,Demande en dommages-intérêts contre un organisme
+88G,8,88,Relations du travail et protection sociale,Protection sociale,Autres demandes contre un organisme
+88H,8,88,Relations du travail et protection sociale,Protection sociale,"Autres demandes d'un organisme, ou au profit d'un organisme"
+88I,8,88,Relations du travail et protection sociale,Protection sociale,Demande en nullité d'une décision de justice
+88J,8,88,Relations du travail et protection sociale,Protection sociale,Demande relative à une élection à un organisme de protection sociale
+88K,8,88,Relations du travail et protection sociale,Protection sociale,Demande en répétition de prestations ou allocations indûment versées
+88L,8,88,Relations du travail et protection sociale,Protection sociale,Majeur handicapé - Contestation d'une décision relative à l'attribution d'un taux
+88M,8,88,Relations du travail et protection sociale,Protection sociale,Majeur handicapé - Contestation d'une décision relative à une allocation
+88N,8,88,Relations du travail et protection sociale,Protection sociale,"Majeur handicapé - Contestation d'une décision relative à l'affiliation, à l'orientation et au placement"
+88O,8,88,Relations du travail et protection sociale,Protection sociale,Majeur handicapé - Contestation d'une décision relative aux cartes
+88P,8,88,Relations du travail et protection sociale,Protection sociale,Mineur handicapé - Contestation d'une décision relative à l'attribution d'un taux
+88Q,8,88,Relations du travail et protection sociale,Protection sociale,Mineur handicapé - Contestation d'une décision relative à une allocation
+88R,8,88,Relations du travail et protection sociale,Protection sociale,Mineur handicapé - Contestation d'une décision relative à l'orientation et au placement
+88S,8,88,Relations du travail et protection sociale,Protection sociale,Mineur handicapé - Contestation d'une décision relative aux cartes
+88T,8,88,Relations du travail et protection sociale,Protection sociale,Invalidité - Contestation relative à une décision de reconnaissance
+88U,8,88,Relations du travail et protection sociale,Protection sociale,Invalidité - Contestation d'une décision relative à une allocation
+88V,8,88,Relations du travail et protection sociale,Protection sociale,Inaptitude - Contestation d'une décision relative à l'inaptitude
+88W,8,88,Relations du travail et protection sociale,Protection sociale,Aide sociale - Contestation d'une décision relative à une allocation santé
+88Y,8,88,Relations du travail et protection sociale,Protection sociale,Aide sociale - Contestation d'une décision relative aux allocations et/ou aux droits des personnes âgées
+89,8,89,Relations du travail et protection sociale,Risques professionnels,Risques professionnels
+89A,8,89,Relations du travail et protection sociale,Risques professionnels,A.T.M.P. : Demande de prise en charge au titre des A.T.M.P. et/ou contestation relative au taux d'incapacité
+89B,8,89,Relations du travail et protection sociale,Risques professionnels,A.T.M.P. : Demande relative à la faute inexcusable de l'employeur
+89C,8,89,Relations du travail et protection sociale,Risques professionnels,A.T.M.P. : Demande en réparation supplémentaire pour faute intentionnelle de l'employeur
+89D,8,89,Relations du travail et protection sociale,Risques professionnels,A.T.M.P. : Recours contre une décision d'une caisse motivée par une faute inexcusable ou intentionnelle de la victime ou d'un de ses ayants-droit
+89E,8,89,Relations du travail et protection sociale,Risques professionnels,A.T.M.P. : Demande d'un employeur contestant une décision d'une caisse
+89F,8,89,Relations du travail et protection sociale,Risques professionnels,A.T.M.P. : Demande en paiement de cotisations d' A.T.M.P.
+89G,8,89,Relations du travail et protection sociale,Risques professionnels,A.T.M.P. : Demande en répétition de prestations ou de frais
+89H,8,89,Relations du travail et protection sociale,Risques professionnels,A.T.M.P. : Demande relative à l'assurance complémentaire contre les A.T.M.P. des non salariés de l'agriculture
+89I,8,89,Relations du travail et protection sociale,Risques professionnels,Demande tendant à faire ordonner une mesure préventive de la réalisation d'un risque professionnel
+89J,8,89,Relations du travail et protection sociale,Risques professionnels,Demande relative au compte personnel de prévention de la pénibilité
+89K,8,89,Relations du travail et protection sociale,Risques professionnels,Demande relative à l'exposition à un risque professionnel
+89L,8,89,Relations du travail et protection sociale,Risques professionnels,Tarification - Demande tendant à faire inscrire une maladie professionnelle au compte spécial ou aux charges techniques générales
+89M,8,89,Relations du travail et protection sociale,Risques professionnels,Tarification - Demande tendant au retrait ou à la modification du compte employeur des coûts moyens relatifs à une maladie professionnelle ou un accident du travail
+89N,8,89,Relations du travail et protection sociale,Risques professionnels,Tarification - Demande relative à l'attribution d'un taux réduit pour le personnel exerçant des fonctions support de nature administrative au sein de l'entreprise
+89O,8,89,Relations du travail et protection sociale,Risques professionnels,Tarification - Contestation du taux de cotisation fondée sur le classement de l'entreprise
+89P,8,89,Relations du travail et protection sociale,Risques professionnels,Tarification - Contestation d'une décision portant sur une cotisation supplémentaire liée à un risque exceptionnel présenté par l'exploitation ou sur une cotisation complémentaire liée à une faute inexcusable de l'employeur
+89Q,8,89,Relations du travail et protection sociale,Risques professionnels,Tarification - Contestation du taux de cotisation fondée sur des motifs autres que les maladies professionnelles et accidents du travail
+89R,8,89,Relations du travail et protection sociale,Risques professionnels,Tarification - Autres demandes ou contestations relatives au taux de cotisation
+89Z,8,89,Relations du travail et protection sociale,Risques professionnels,Autres demandes en matière de risques professionnels
+90,9,90,Relations avec les personnes publiques,Contributions indirectes et monopoles fiscaux,Contributions indirectes et monopoles fiscaux
+90A,9,90,Relations avec les personnes publiques,Contributions indirectes et monopoles fiscaux,Demande en décharge ou en réduction des droits relatifs au commerce et à la circulation des boissons
+90B,9,90,Relations avec les personnes publiques,Contributions indirectes et monopoles fiscaux,Demande relative au recouvrement des droits relatifs au commerce et à la circulation des boissons
+90C,9,90,Relations avec les personnes publiques,Contributions indirectes et monopoles fiscaux,Demande en décharge ou en réduction des droits relatifs aux spectacles
+90D,9,90,Relations avec les personnes publiques,Contributions indirectes et monopoles fiscaux,Demande relative au recouvrement des droits relatifs aux spectacles
+90Z,9,90,Relations avec les personnes publiques,Contributions indirectes et monopoles fiscaux,Demande relative à d'autres droits indirects
+91,9,91,Relations avec les personnes publiques,Droits d'enregistrement et assimilés,Droits d'enregistrement et assimilés
+91A,9,91,Relations avec les personnes publiques,Droits d'enregistrement et assimilés,Demande en décharge ou en réduction des droits d'enregistrement portant sur des actes et mutations à titre onéreux
+91B,9,91,Relations avec les personnes publiques,Droits d'enregistrement et assimilés,Demande relative au recouvrement des droits de mutation à titre onéreux
+91C,9,91,Relations avec les personnes publiques,Droits d'enregistrement et assimilés,Demande en décharge ou en réduction des droits d'enregistrement portant sur des mutations à titre gratuit ou des partages
+91D,9,91,Relations avec les personnes publiques,Droits d'enregistrement et assimilés,Demande relative au recouvrement des droits d'enregistrement portant sur des mutations à titre gratuit ou des partages
+91Z,9,91,Relations avec les personnes publiques,Droits d'enregistrement et assimilés,Demande relative à d'autres droits d'enregistrement ou assimilés
+92,9,92,Relations avec les personnes publiques,Droits de douane et assimilés,Droits de douane et assimilés
+92A,9,92,Relations avec les personnes publiques,Droits de douane et assimilés,Demande en décharge ou en réduction des droits de douane à l'importation
+92B,9,92,Relations avec les personnes publiques,Droits de douane et assimilés,Demande relative au recouvrement des droits de douane à l'importation
+92C,9,92,Relations avec les personnes publiques,Droits de douane et assimilés,"Demande en décharge ou en réduction des taxes douanières fiscales, parafiscales et taxes annexes"
+92D,9,92,Relations avec les personnes publiques,Droits de douane et assimilés,"Demande relative au  recouvrement des taxes douanières fiscales, parafiscales et taxes annexes"
+92Z,9,92,Relations avec les personnes publiques,Droits de douane et assimilés,Autres demandes en matière de droits de douane
+93,9,93,Relations avec les personnes publiques,Autres contestations en matière fiscale et douanière,Autres contestations en matière fiscale et douanière
+93A,9,93,Relations avec les personnes publiques,Autres contestations en matière fiscale et douanière,Actions en opposition à poursuites relatives à d'autres droits et contributions
+93B,9,93,Relations avec les personnes publiques,Autres contestations en matière fiscale et douanière,Demande en revendication d'objets saisis
+93C,9,93,Relations avec les personnes publiques,Autres contestations en matière fiscale et douanière,Demande relative à la contrainte par corps pour défaut de paiement des impositions
+94,9,94,Relations avec les personnes publiques,Elections politiques et référundum,Elections politiques et référendum
+94A,9,94,Relations avec les personnes publiques,Elections politiques et référundum,"Contestations des décisions de la commission administrative ayant dressé la liste électorale, concernant l’inscription ou la radiation d’un électeur"
+94B,9,94,Relations avec les personnes publiques,Elections politiques et référundum,Contestations des décisions de la commission administrative concernant l’inscription d’un électeur sur une liste alors que celui-ci était sur plusieurs listes
+94C,9,94,Relations avec les personnes publiques,Elections politiques et référundum,Demandes d’inscription sur les listes électorales en dehors des périodes de révision
+94D,9,94,Relations avec les personnes publiques,Elections politiques et référundum,Demande formée en référé aux fins de faire cesser la diffusion en ligne de fausses informations de nature à altérer la sincérité du scrutin
+94Z,9,94,Relations avec les personnes publiques,Elections politiques et référundum,Autres demandes en matière d'élections politiques ou de référendum
+95,9,95,Relations avec les personnes publiques,Elections à certains organismes,Elections à certains organismes
+95A,9,95,Relations avec les personnes publiques,Elections à certains organismes,Contestations relatives aux inscriptions et radiations sur les listes électorales des membres des tribunaux et chambres de commerce ou des chambres des métiers
+95B,9,95,Relations avec les personnes publiques,Elections à certains organismes,Contestations relatives aux inscriptions et radiations sur les listes électorales des membres assesseurs des tribunaux paritaires de baux ruraux ou des membres des chambres d'agriculture
+95C,9,95,Relations avec les personnes publiques,Elections à certains organismes,Contestations en matière d'élections concernant d'autres organismes
+96,9,96,Relations avec les personnes publiques,Responsabilité des personnes publiques,Responsabilité des personnes publiques
+96A,9,96,Relations avec les personnes publiques,Responsabilité des personnes publiques,Demande de réparation des dommages causés par une personne publique à la propriété privée
+96B,9,96,Relations avec les personnes publiques,Responsabilité des personnes publiques,Demande de réparation du préjudice causé par un agissement d'une personne publique constitutive d'une voie de fait
+96C,9,96,Relations avec les personnes publiques,Responsabilité des personnes publiques,Demande de réparation d'une atteinte causée par une personne publique à la liberté individuelle ou aux libertés publiques
+96D,9,96,Relations avec les personnes publiques,Responsabilité des personnes publiques,Demande en réparation des dommages causés par le fonctionnement défectueux du service de la justice
+96E,9,96,Relations avec les personnes publiques,Responsabilité des personnes publiques,Demande d'indemnisation à raison d'une détention provisoire
+96Z,9,96,Relations avec les personnes publiques,Responsabilité des personnes publiques,Autres actions en responsabilité exercées contre des personnes publiques
+97,9,97,Relations avec les personnes publiques,Recours et actions contre des décisions rendues par certains organismes,Recours et actions contre des décisions rendues par certains organismes
+97A,9,97,Relations avec les personnes publiques,Recours et actions contre des décisions rendues par certains organismes,Recours contre les décisions des commissions d'indemnisation de victimes
+97B,9,97,Relations avec les personnes publiques,Recours et actions contre des décisions rendues par certains organismes,Recours contre les décisions des juridictions disciplinaires des ordres d'avocats
+97C,9,97,Relations avec les personnes publiques,Recours et actions contre des décisions rendues par certains organismes,Recours contre les décisions administratives des ordres d'avocats
+97D,9,97,Relations avec les personnes publiques,Recours et actions contre des décisions rendues par certains organismes,Actions disciplinaires exercées contre les notaires et officiers ministériels
+97E,9,97,Relations avec les personnes publiques,Recours et actions contre des décisions rendues par certains organismes,Recours contre les décisions des bureaux d'aide juridictionnelle
+97F,9,97,Relations avec les personnes publiques,Recours et actions contre des décisions rendues par certains organismes,Demandes et recours relatifs à la discipline des experts
+97G,9,97,Relations avec les personnes publiques,Recours et actions contre des décisions rendues par certains organismes,Demande relative à l'immatriculation au registre du commerce et des sociétés
+97H,9,97,Relations avec les personnes publiques,Recours et actions contre des décisions rendues par certains organismes,Recours contre les décisions de l'autorité de la concurrence
+97I,9,97,Relations avec les personnes publiques,Recours et actions contre des décisions rendues par certains organismes,Recours contre une décision administrative relative au maintien en rétention des étrangers (ce poste ne doit plus être utilisé à compter du 1er janvier 2009)
+97J,9,97,Relations avec les personnes publiques,Recours et actions contre des décisions rendues par certains organismes,Contestation concernant le montant et le recouvrement des honoraires des avocats
+97K,9,97,Relations avec les personnes publiques,Recours et actions contre des décisions rendues par certains organismes,Actions disciplinaires exercées contre les notaires
+97L,9,97,Relations avec les personnes publiques,Recours et actions contre des décisions rendues par certains organismes,Actions disciplinaires exercées contre les huissiers
+97M,9,97,Relations avec les personnes publiques,Recours et actions contre des décisions rendues par certains organismes,Actions disciplinaires exercées contre les avocats au Conseil et à la Cour de cassation
+97N,9,97,Relations avec les personnes publiques,Recours et actions contre des décisions rendues par certains organismes,Actions disciplinaires exercées contre les greffiers des tribunaux de commerce
+97O,9,97,Relations avec les personnes publiques,Recours et actions contre des décisions rendues par certains organismes,Actions disciplinaires exercées contre les commissaires-priseurs judiciaires
+97P,9,97,Relations avec les personnes publiques,Recours et actions contre des décisions rendues par certains organismes,Recours contre certaines décisions du rapporteur général de l'autorité de la concurrence
+97Z,9,97,Relations avec les personnes publiques,Recours et actions contre des décisions rendues par certains organismes,Recours et actions exercés contre les décisions d'autres personnes publiques
