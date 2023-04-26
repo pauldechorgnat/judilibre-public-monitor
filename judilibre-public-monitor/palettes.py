@@ -137,7 +137,9 @@ PALETTES = {
     "pal_gouv_p": [COLORS[i] for i in ("p0", "p1", "p2", "p3", "p4")],
     "pal_gouv_q": [COLORS[i] for i in ("q0", "q1", "q2", "q3", "a4")],
     "pal_gouv_r": [COLORS[i] for i in ("r1", "r2", "r3", "r4")],
-    "pal_gouv_qual1": [COLORS[i] for i in (f"{l}1" for l in ascii_letters[1:18])],
+    "pal_gouv_qual1": [
+        COLORS[i] for i in (f"{letter}1" for letter in ascii_letters[1:18])
+    ],
     "pal_gouv_qual2": [COLORS[i] for i in ("c1", "f1", "h1", "k1", "p1")],
     "pal_gouv_div1": [
         COLORS[i] for i in ("f0", "f1", "f2", "f3", "f4", "h4", "h3", "h2", "h1", "h0")

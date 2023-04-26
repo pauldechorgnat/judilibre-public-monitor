@@ -5,8 +5,8 @@ from dash import Output
 from dash import State
 from data.load_data import get_ca_data
 from data.load_data import load_data
+from flask_caching import Cache
 from graphs import get_chamber_graph
-from graphs import get_jurisidction_graph
 from graphs import get_location_graph
 from graphs import get_nac_graph
 from graphs import get_nac_location_graph
@@ -23,7 +23,13 @@ app = Dash(
     external_stylesheets=EXTERNAL_STYLESHEETS,
 )
 
-app._favicon = "images/cour-de-cassation.png"
+cache = Cache(app.server, config={"CACHE_TYPE": "filesystem", "CACHE_DIR": "cache"})
+
+app._favicon = "images/cour-de-cassation.svg"
+
+# adding language accessibility
+
+app._index_string = app._index_string.replace("<html>", "<html lang='fr'>")
 
 app.layout = get_layout()
 
@@ -41,19 +47,26 @@ app.layout = get_layout()
     Output("nb-decisions-cc-card", "children"),
     Output("nb-decisions-ca-card", "children"),
     Input("dummy-input", "value"),
+    Input("start-date-picker", "date"),
+    Input("end-date-picker", "date"),
 )
-def update_graphs(n_clicks):
+# @cache.memoize(timeout=3600)
+def update_graphs(n_clicks, start_date, end_date):
     df = load_data(path="./data")
-
-    nb_decisions = f"{df.shape[0]:,}".replace(",", " ")
+    print(df.shape)
+    nb_decisions = df["n_decisions"].sum()
+    nb_decisions = f"{nb_decisions:,}".replace(",", " ")
     max_date = df["decision_date"].max()
 
     max_date = f"{max_date.day:02}/{max_date.month:02}/{max_date.year:04}"
 
-    nb_decisions_cc = (df["jurisdiction"] == "cc").sum()
+    nb_decisions_cc = df.loc[df["jurisdiction"] == "cc", "n_decisions"].sum()
     nb_decisions_cc = f"{nb_decisions_cc:,}".replace(",", " ")
-    nb_decisions_ca = (df["jurisdiction"] == "ca").sum()
+    nb_decisions_ca = df.loc[df["jurisdiction"] == "ca", "n_decisions"].sum()
     nb_decisions_ca = f"{nb_decisions_ca:,}".replace(",", " ")
+
+    df = df[df["decision_date"] >= start_date]
+    df = df[df["decision_date"] <= end_date]
 
     source_graph = get_source_graph(df=df)
     # jurisdiction_graph = get_jurisidction_graph(df=df)

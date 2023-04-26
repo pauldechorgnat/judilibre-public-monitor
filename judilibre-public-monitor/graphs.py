@@ -10,7 +10,6 @@ from plotly import graph_objects as go
 
 
 def get_source_graph(df: pd.DataFrame):
-    df["n_decisions"] = 1
     df_source = (
         df.groupby(["source", "jurisdiction"]).agg({"n_decisions": "sum"}).reset_index()
     )
@@ -42,7 +41,6 @@ def get_source_graph(df: pd.DataFrame):
 
 
 def get_jurisidction_graph(df: pd.DataFrame):
-    df["n_decisions"] = 1
     df_source = df.groupby("jurisdiction").agg({"n_decisions": "sum"}).reset_index()
 
     fig = go.Figure(
@@ -60,14 +58,15 @@ def get_jurisidction_graph(df: pd.DataFrame):
 
 
 def get_location_graph(df: pd.DataFrame, include_cc: bool = False):
-    df["n_decisions"] = 1
     df_location = df.groupby("location").agg({"n_decisions": "sum"}).reset_index()
 
     if not include_cc:
         df_location = df_location[df_location["location"] != "cc"]
 
     df_location["location"] = (
-        df_location["location"].apply(LOCATIONS.get).apply(remove_cour_dappel)
+        df_location["location"]
+        .apply(lambda location: LOCATIONS.get(location, "Non renseigné"))
+        .apply(remove_cour_dappel)
     )
 
     fig = px.bar(
@@ -88,7 +87,6 @@ def get_location_graph(df: pd.DataFrame, include_cc: bool = False):
 
 
 def get_nac_graph(df: pd.DataFrame):
-    df["n_decisions"] = 1
     df_nac = df.groupby("nac").agg({"n_decisions": "sum"}).reset_index()
 
     df_nac = df_nac.dropna(subset=["nac"])
@@ -108,8 +106,6 @@ def get_nac_graph(df: pd.DataFrame):
 
 
 def get_time_graph(df: pd.DataFrame, date_type: str = "decision_date"):
-    df["n_decisions"] = 1
-
     df_time = df.copy()
 
     df_time[date_type] = pd.to_datetime(df_time[date_type])
@@ -135,7 +131,7 @@ def get_time_graph(df: pd.DataFrame, date_type: str = "decision_date"):
             "Cour de cassation": COLORS["rouge_marianne"],
             "Cours d'appel": COLORS["bleu_france"],
         },
-        range_x=[1980, 2025],
+        # range_x=[1980, 2025],
         labels={
             "n_decisions": "Nombre de décisions",
             date_type: "Année",
@@ -153,8 +149,6 @@ def get_time_graph(df: pd.DataFrame, date_type: str = "decision_date"):
 def get_time_location_graph(
     df: pd.DataFrame, locations: list[str] = ["Paris", "Versailles", "Aix-en-Provence"]
 ):
-    df["n_decisions"] = 1
-
     date_type = "decision_date"
 
     df_time = df.copy()
@@ -202,13 +196,14 @@ def get_time_location_graph(
 def get_nac_location_graph(
     df: pd.DataFrame, locations: list[str] = ["Paris", "Versailles", "Aix-en-Provence"]
 ):
-    df["n_decisions"] = 1
     df_nac = df.groupby(["nac", "location"]).agg({"n_decisions": "sum"}).reset_index()
 
     df_nac = df_nac.dropna(subset=["nac"])
 
     df_nac["location"] = (
-        df_nac["location"].apply(LOCATIONS.get).apply(remove_cour_dappel)
+        df_nac["location"]
+        .apply(lambda location: LOCATIONS.get(location, "Non renseigné"))
+        .apply(remove_cour_dappel)
     )
 
     df_nac = df_nac[df_nac["location"].isin(locations)].sort_values(
@@ -237,17 +232,26 @@ def get_nac_location_graph(
 
 
 def get_chamber_graph(df: pd.DataFrame):
-    df["n_decisions"] = 1
-
     df = df[df["jurisdiction"] == "cc"].copy()
 
-    df = df.groupby("chamber").agg({"n_decisions": "sum"}).reset_index()
+    df = (
+        df.groupby(
+            [
+                "formation_clean",
+            ]
+        )
+        .agg({"n_decisions": "sum"})
+        .reset_index()
+    )
 
     fig = px.bar(
         data_frame=df,
-        x="chamber",
+        x="formation_clean",
         y="n_decisions",
-        labels={"chamber": "Chambre", "n_decisions": "Nombre de décisions"},
+        labels={
+            "formation_clean": "Formation ou chambre",
+            "n_decisions": "Nombre de décisions",
+        },
         color_discrete_sequence=[COLORS["rouge_marianne"]],
     )
 
@@ -259,8 +263,6 @@ def get_chamber_graph(df: pd.DataFrame):
 
 
 def get_type_graph(df: pd.DataFrame):
-    df["n_decisions"] = 1
-
     df = df[df["jurisdiction"] == "cc"].copy()
 
     df = df.groupby("type").agg({"n_decisions": "sum"}).reset_index()
@@ -269,7 +271,7 @@ def get_type_graph(df: pd.DataFrame):
         data_frame=df,
         x="type",
         y="n_decisions",
-        labels={"type": "Type d'arrêt", "n_decisions": "Nombre de décisions"},
+        labels={"type": "Type de décision", "n_decisions": "Nombre de décisions"},
         color_discrete_sequence=[COLORS["rouge_marianne"]],
     )
 
