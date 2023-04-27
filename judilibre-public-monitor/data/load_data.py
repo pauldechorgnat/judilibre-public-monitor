@@ -7,8 +7,14 @@ from .data_utils import SOURCES
 from .data_utils import TYPES
 
 
-def load_data(path: str = ".", filename="full_data.parquet"):
-    df = pd.read_parquet(os.path.join(path, filename))
+def load_data(
+    path: str = ".",
+    main_filename: str = "full_data.parquet",
+    nac_reference_filename: str = "nac_reference.csv",
+):
+    df = pd.read_parquet(os.path.join(path, main_filename))
+
+    df_nac = pd.read_csv(os.path.join(path, nac_reference_filename))
 
     df["formation_clean"] = "Non renseigné"
 
@@ -42,6 +48,10 @@ def load_data(path: str = ".", filename="full_data.parquet"):
         )
         .agg({"n_decisions": "sum"})
         .reset_index()
+    )
+
+    df = pd.merge(
+        left=df, right=df_nac, how="left", left_on=["nac"], right_on=["Code NAC"]
     )
     return df
 

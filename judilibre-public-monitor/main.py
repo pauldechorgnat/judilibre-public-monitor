@@ -7,14 +7,18 @@ from data.load_data import get_ca_data
 from data.load_data import load_data
 from flask_caching import Cache
 from graphs import get_chamber_graph
+from graphs import get_formation_time_graph
 from graphs import get_location_graph
 from graphs import get_nac_graph
+from graphs import get_nac_level_graph
+from graphs import get_nac_level_location_graph
 from graphs import get_nac_location_graph
 from graphs import get_source_graph
 from graphs import get_time_graph
 from graphs import get_time_location_graph
 from graphs import get_type_graph
 from layout import get_layout
+
 
 EXTERNAL_STYLESHEETS = ["assets/custom.css"]
 
@@ -46,6 +50,8 @@ app.layout = get_layout()
     Output("type-graph", "figure"),
     Output("nb-decisions-cc-card", "children"),
     Output("nb-decisions-ca-card", "children"),
+    Output("nac-level-graph", "figure"),
+    Output("formation-time-graph", "figure"),
     Input("dummy-input", "value"),
     Input("start-date-picker", "date"),
     Input("end-date-picker", "date"),
@@ -53,7 +59,10 @@ app.layout = get_layout()
 # @cache.memoize(timeout=3600)
 def update_graphs(n_clicks, start_date, end_date):
     df = load_data(path="./data")
-    print(df.shape)
+
+    source_graph = get_source_graph(df=df)
+    time_graph = get_time_graph(df=df, date_type="decision_date")
+
     nb_decisions = df["n_decisions"].sum()
     nb_decisions = f"{nb_decisions:,}".replace(",", " ")
     max_date = df["decision_date"].max()
@@ -68,12 +77,15 @@ def update_graphs(n_clicks, start_date, end_date):
     df = df[df["decision_date"] >= start_date]
     df = df[df["decision_date"] <= end_date]
 
-    source_graph = get_source_graph(df=df)
-    time_graph = get_time_graph(df=df, date_type="decision_date")
     location_graph = get_location_graph(df=df, include_cc=False)
     nac_graph = get_nac_graph(df=df)
     chamber_graph = get_chamber_graph(df=df)
     type_graph = get_type_graph(df=df)
+
+    nac_level_graph = get_nac_level_graph(df=df)
+
+    formation_time_graph = get_formation_time_graph(df=df)
+
     return (
         source_graph,
         time_graph,
@@ -85,19 +97,27 @@ def update_graphs(n_clicks, start_date, end_date):
         type_graph,
         nb_decisions_cc,
         nb_decisions_ca,
+        nac_level_graph,
+        formation_time_graph,
     )
 
 
 @app.callback(
     Output("time-location-graph", "figure"),
     Output("nac-location-graph", "figure"),
+    Output("level-location-graph", "figure"),
     Input("time-location-input", "value"),
+    Input("start-date-picker", "date"),
+    Input("end-date-picker", "date"),
 )
-def update_time_location_graph(locations):
+def update_time_location_graph(locations, start_date, end_date):
     df = load_data(path="./data")
+    df = df[df["decision_date"] >= start_date]
+    df = df[df["decision_date"] <= end_date]
     time_location_graph = get_time_location_graph(df=df, locations=locations)
     nac_location_graph = get_nac_location_graph(df=df, locations=locations)
-    return time_location_graph, nac_location_graph
+    nac_level_location_graph = get_nac_level_location_graph(df=df, locations=locations)
+    return time_location_graph, nac_location_graph, nac_level_location_graph
 
 
 @app.callback(

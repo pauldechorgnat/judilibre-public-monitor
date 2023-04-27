@@ -16,20 +16,22 @@ body {
 
 .header-container {
     height: 100px;
-    padding: 20px 20%;
-    margin-bottom: 70px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
     width: 60%;
     box-shadow: 0 8px 8px #0000001a, 0 8px 16px -16px #00000052;
-    background-color: white;
-    display: inline-block;
+    padding-left: 20%;
+    padding-right: 20%;
 }
 
 
 
 .title-container {
-    margin-top: auto;
+    margin-top: 0;
     margin-bottom: auto;
     display: inline-block;
+    vertical-align: top;
 }
 
 .main-title {
@@ -52,7 +54,6 @@ body {
 
 .card-container {
     display: flex;
-    /* background-color: blue; */
     justify-content: center;
     margin-bottom: 50px;
 }
@@ -113,7 +114,7 @@ h2:after {
     height: 3px;
     border-top: 1px solid;
     border-bottom: 1px solid #fff;
-    width: 100rem;
+    width: 80rem;
     margin-right: -100%;
     margin-left: 2rem;
 
@@ -150,10 +151,10 @@ button {
     box-shadow: none;
 }
 
-#cour-de-cassation-bloc-marque {
-    padding-left: 20%;
+#cour-de-cassation-logo {
     margin-right: 20px;
 }
+
 
 .CalendarDay__selected {
     background-color: var(--bleu-france);
@@ -176,4 +177,47 @@ button {
     display: none
 }
 
-/* .DayPickerKeyboardShortcuts_buttonReset_1 DayPickerKeyboardShortcuts_show DayPickerKeyboardShortcuts_show_2 DayPickerKeyboardShortcuts_show__bottomRight DayPickerKeyboardShortcuts_show__bottomRight_3 */
+.label-for-date-picker,
+.date-picker {
+    display: flex;
+    flex-direction: column;
+}
+
+.date-picker-card {
+    margin: 20px;
+    text-align: center;
+}
+
+.footer {
+    border-top: solid 1px;
+    padding-left: 20%;
+    padding-right: 20%;
+    height: 150px;
+    width: 60%;
+    justify-content: space-between;
+    display: flex;
+
+}
+
+.link-container {
+    padding-top: 1rem;
+    display: inline-block;
+    /* margin-left: 40%; */
+    /* height: 100%; */
+    vertical-align: top;
+
+}
+
+.link-container>a {
+    color: black;
+    font: bold;
+    display: block;
+}
+
+.logo-republic {
+    vertical-align: top;
+}
+
+.label-for-download-picker {
+    padding-right: 2rem;
+}

@@ -6,7 +6,6 @@ from data.data_utils import LOCATIONS
 from data.data_utils import remove_cour_dappel
 from palettes import COLORS
 from palettes import PALETTES
-from plotly import graph_objects as go
 
 
 def get_source_graph(df: pd.DataFrame):
@@ -43,7 +42,12 @@ def get_source_graph(df: pd.DataFrame):
 
 def get_location_graph(df: pd.DataFrame, include_cc: bool = False):
     """Returns a graph of decisions per location (cours d'appel)"""
-    df_location = df.groupby("location").agg({"n_decisions": "sum"}).reset_index()
+    df_location = (
+        df.loc[df["jurisdiction"] == "ca"]
+        .groupby("location")
+        .agg({"n_decisions": "sum"})
+        .reset_index()
+    )
 
     if not include_cc:
         df_location = df_location[df_location["location"] != "cc"]
@@ -73,17 +77,26 @@ def get_location_graph(df: pd.DataFrame, include_cc: bool = False):
 
 def get_nac_graph(df: pd.DataFrame):
     """Returns a graph of decisions per code NAC (cour d'appel)"""
-    df_nac = df.groupby("nac").agg({"n_decisions": "sum"}).reset_index()
-
-    df_nac = df_nac.dropna(subset=["nac"])
-
-    fig = go.Figure(
-        go.Bar(
-            x=df_nac["nac"],
-            y=df_nac["n_decisions"],
-            marker={"color": COLORS["bleu_france"]},
-        )
+    df_nac = (
+        df.loc[df["jurisdiction"] == "ca"]
+        .groupby(["nac", "Niveau 1", "N1", "Intitulé NAC"])
+        .agg({"n_decisions": "sum"})
+        .reset_index()
     )
+
+    fig = px.bar(
+        data_frame=df_nac[df_nac["n_decisions"] != 0].sort_values(["N1", "nac"]),
+        x="nac",
+        y="n_decisions",
+        color="Niveau 1",
+        color_discrete_sequence=PALETTES["pal_gouv_qual1"],
+        hover_data=["n_decisions", "nac", "Intitulé NAC", "Niveau 1"],
+        labels={
+            "n_decisions": "Nombre de décisions",
+            "nac": "Code Nature Affaire Civile",
+        },
+    )
+
     fig.update_layout(
         plot_bgcolor="rgba(0,0,0,0)",
     )
@@ -117,6 +130,7 @@ def get_time_graph(df: pd.DataFrame, date_type: str = "decision_date"):
             "Cour de cassation": COLORS["rouge_marianne"],
             "Cours d'appel": COLORS["bleu_france"],
         },
+        range_x=[1980, 2024],
         labels={
             "n_decisions": "Nombre de décisions",
             date_type: "Année",
@@ -166,7 +180,7 @@ def get_time_location_graph(
         color="location",
         color_discrete_sequence=PALETTES["pal_gouv_qual1"],
         labels={
-            "n_decisions": "Nombre de décisions par mois",
+            "n_decisions": "Nombre de décisions",
             "location": "Cour d'appel",
             date_type: "Mois",
         },
@@ -183,7 +197,11 @@ def get_nac_location_graph(
     df: pd.DataFrame, locations: list[str] = ["Paris", "Versailles", "Aix-en-Provence"]
 ):
     """Returns a graph of decisions per Code NAC and cour d'appel"""
-    df_nac = df.groupby(["nac", "location"]).agg({"n_decisions": "sum"}).reset_index()
+    df_nac = (
+        df.groupby(["nac", "Intitulé NAC", "location"])
+        .agg({"n_decisions": "sum"})
+        .reset_index()
+    )
 
     df_nac = df_nac.dropna(subset=["nac"])
 
@@ -204,13 +222,13 @@ def get_nac_location_graph(
         color="location",
         barmode="stack",
         color_discrete_sequence=PALETTES["pal_gouv_qual1"],
+        hover_data=["nac", "Intitulé NAC", "n_decisions", "location"],
         labels={
             "nac": "Code NAC",
             "location": "Cour d'appel",
             "n_decisions": "Nombre de décisions",
         },
     )
-
     fig.update_layout(
         plot_bgcolor="rgba(0,0,0,0)",
     )
@@ -267,4 +285,104 @@ def get_type_graph(df: pd.DataFrame):
     fig.update_layout(
         plot_bgcolor="rgba(0,0,0,0)",
     )
+    return fig
+
+
+def get_nac_level_graph(df: pd.DataFrame):
+    """Returns a graph of decisions per NAC level (1 and 2) (Cours d'appel)"""
+
+    df_level = (
+        df.groupby(["Niveau 2", "N1", "Niveau 1"])
+        .agg({"n_decisions": "sum"})
+        .reset_index()
+    )
+
+    fig = px.bar(
+        data_frame=df_level.sort_values("N1"),
+        x="Niveau 1",
+        y="n_decisions",
+        color="Niveau 1",
+        hover_data=["n_decisions", "Niveau 1", "Niveau 2"],
+        color_discrete_sequence=PALETTES["pal_gouv_qual1"],
+        labels={"n_decisions": "Nombre de décisions"},
+    )
+
+    fig.update_layout(
+        plot_bgcolor="rgba(0,0,0,0)",
+    )
+
+    return fig
+
+
+def get_nac_level_location_graph(df: pd.DataFrame, locations: list[str] = ["Paris"]):
+    df_nac = (
+        df.groupby(["N1", "Niveau 1", "location"])
+        .agg({"n_decisions": "sum"})
+        .reset_index()
+    )
+
+    df_nac = df_nac.dropna(subset=["N1", "Niveau 1"])
+
+    df_nac["location"] = (
+        df_nac["location"]
+        .apply(lambda location: LOCATIONS.get(location, "Non renseigné"))
+        .apply(remove_cour_dappel)
+    )
+
+    df_nac = df_nac[df_nac["location"].isin(locations)].sort_values(
+        by=["location", "N1"]
+    )
+
+    fig = px.bar(
+        data_frame=df_nac,
+        x="Niveau 1",
+        y="n_decisions",
+        color="location",
+        barmode="stack",
+        color_discrete_sequence=PALETTES["pal_gouv_qual1"],
+        labels={
+            "Niveau 1": "Niveau 1",
+            "location": "Cour d'appel",
+            "n_decisions": "Nombre de décisions",
+        },
+    )
+
+    fig.update_layout(
+        plot_bgcolor="rgba(0,0,0,0)",
+    )
+
+    return fig
+
+
+def get_formation_time_graph(df: pd.DataFrame):
+    df_time = df.copy()
+    df_time["decision_date"] = df_time["decision_date"] - (
+        df_time["decision_date"].dt.day - 1
+    ) * datetime.timedelta(days=1)
+
+    df_time = (
+        df_time.groupby(["decision_date"]).agg({"n_decisions": "sum"}).reset_index()
+    )
+
+    # df_time = df_time[df_time["formation_clean"] != "Non renseigné"]
+
+    fig = px.line(
+        data_frame=df_time,
+        x="decision_date",
+        y="n_decisions",
+        # color="formation_clean",
+        # color_discrete_sequence=PALETTES["pal_gouv_qual1"],
+        color_discrete_sequence=[COLORS["rouge_marianne"]],
+        # range_x=[1980, 2024],
+        labels={
+            "n_decisions": "Nombre de décisions",
+            "decision_date": "Mois de la décision",
+            # "jurisdiction": "Juridiction",
+        },
+    )
+
+    fig.update_layout(
+        plot_bgcolor="rgba(0,0,0,0)",
+    )
+
     return fig
