@@ -5,8 +5,6 @@ from dash import html
 from data.data_utils import LOCATIONS_CA
 from data.data_utils import remove_cour_dappel
 
-DISCLAIMER = open("assets/texts/disclaimer.txt").read()
-
 
 def get_layout():
     return html.Div(
@@ -18,6 +16,8 @@ def get_layout():
             get_focus_ca(),
             dcc.Input(id="dummy-input", style={"display": "none"}),
             get_footer(),
+            dcc.Interval(id="download-interval", interval=1000 * 60 * 60 * 2),
+            html.Div(id="dummy-div", style={"display": "none"}),
         ]
     )
 
@@ -25,10 +25,6 @@ def get_layout():
 def get_header():
     return html.Header(
         children=[
-            # html.Img(
-            #     src="/assets/images/france.png",
-            #     height="100px", id="france-bloc-marque"
-            # ),
             html.Img(
                 src="/assets/images/cour-de-cassation.svg",
                 height="100px",

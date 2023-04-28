@@ -1,10 +1,16 @@
+import datetime
+import logging
+import os
+
 from dash import Dash
 from dash import dcc
 from dash import Input
 from dash import Output
 from dash import State
+from data.download_latest_data import download_latest_data
 from data.load_data import get_download_data
 from data.load_data import load_data
+from dotenv import load_dotenv
 from flask_caching import Cache
 from graphs import get_chamber_graph
 from graphs import get_formation_time_graph
@@ -18,7 +24,6 @@ from graphs import get_time_graph
 from graphs import get_time_location_graph
 from graphs import get_type_graph
 from layout import get_layout
-
 
 EXTERNAL_STYLESHEETS = ["assets/custom.css"]
 
@@ -59,7 +64,6 @@ app.layout = get_layout()
 # @cache.memoize(timeout=3600)
 def update_graphs(n_clicks, start_date, end_date):
     df = load_data(path="./data")
-    print(df[df["jurisdiction"] == "Cours d'appel"].tail())
 
     source_graph = get_source_graph(df=df)
     time_graph = get_time_graph(df=df)
@@ -143,8 +147,24 @@ def download_data(data_choice, n_clicks):
     return dcc.send_data_frame(df.to_csv, filename=f"{data_choice}.csv")
 
 
+@app.callback(
+    Output("dummy-div", "children"), Input("download-interval", "n_intervals")
+)
+def update_data(n_interval):
+    print(f"{datetime.datetime.now()} - Downloading new data")
+    download_latest_data(
+        api_key_id=os.environ.get("PISTE_API_KEY"),
+        api_url=os.environ.get("PISTE_API_URL"),
+        reference_file="./data/full_data.parquet",
+        target_file="./data/full_data.parquet",
+    )
+
+
 if __name__ == "__main__":
     from argparse import ArgumentParser
+
+    load_dotenv()
+    logging.basicConfig(level=logging.INFO)
 
     argument_parser = ArgumentParser()
 
