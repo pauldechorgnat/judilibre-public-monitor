@@ -127,16 +127,18 @@ def update_time_location_graph(locations, start_date, end_date):
     Output("download-ca-data", "data"),
     State("download-ca-choice", "value"),
     Input("download-ca-submit", "n_clicks"),
-    State("start-date-picker", "date"),
-    State("end-date-picker", "date"),
+    # State("start-date-picker", "date"),
+    # State("end-date-picker", "date"),
     # prevent_initial_callbacks=True,
 )
-def download_data(data_choice, n_clicks, start_date, end_date):
+def download_data(data_choice, n_clicks):
     if not n_clicks:
         return None
     df = load_data(path="./data")
     df = get_download_data(
-        df=df, choice=data_choice, start_date=start_date, end_date=end_date
+        df=df,
+        choice=data_choice,
+        # start_date=start_date, end_date=end_date
     )
     return dcc.send_data_frame(df.to_csv, filename=f"{data_choice}.csv")
 

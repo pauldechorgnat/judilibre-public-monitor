@@ -268,6 +268,8 @@ def get_focus_ca():
                             "ca_nac": "Nombre de décisions par code NAC",
                             "ca_location_nac": "Nombre de décisions "
                             "par cour d'appel et code NAC",
+                            "all_data": "Données complètes agrégées",
+                            # "all_ids": "Identifiant des décisions utilisées",
                         },
                         "ca_location",
                         multi=False,

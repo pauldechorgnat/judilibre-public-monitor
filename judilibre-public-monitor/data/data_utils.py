@@ -137,3 +137,16 @@ TYPES = {
 
 
 SOURCES = {"dila": "DILA", "jurinet": "Jurinet", "jurica": "Jurica"}
+
+
+CLEAN_COLUMN_NAMES = {
+    "formation_clean": "Chambre ou formation",
+    "decision_date": "Date",
+    "source": "Source",
+    "jurisdiction": "Juridiction",
+    "court": "Cour",
+    "location": "Localisation",
+    "type": "Type de décision",
+    "Niveau 1": "Niveau 1 d'Affaire Civile",
+    "Niveau 2": "Niveau 2 d'Affaire Civile",
+}

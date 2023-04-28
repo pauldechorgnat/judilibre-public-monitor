@@ -1,8 +1,8 @@
-import datetime
 import os
 
 import pandas as pd
 
+from .data_utils import CLEAN_COLUMN_NAMES
 from .data_utils import FORMATIONS_CC
 from .data_utils import JURISDICTIONS
 from .data_utils import LOCATIONS
@@ -69,22 +69,46 @@ def load_data(
     df = pd.merge(
         left=df, right=df_nac, how="left", left_on=["nac"], right_on=["Code NAC"]
     )
+
     return df
 
 
 def get_download_data(
     df: pd.DataFrame,
     choice: str = "ca_location",
-    start_date: datetime.date = datetime.date(year=2000, month=1, day=1),
-    end_date: datetime.date = datetime.date.today(),
+    # start_date: datetime.date = datetime.date(year=2000, month=1, day=1),
+    # end_date: datetime.date = datetime.date.today(),
 ):
     if choice == "ca_location":
-        df = df.groupby(["location"]).agg({"n_decisions": "sum"})
+        df = (
+            df.loc[df["jurisdiction"] == "Cours d'appel"]
+            .rename(columns=CLEAN_COLUMN_NAMES)
+            .groupby(["Cour"])
+            .agg({"Nombre de décisions": "sum"})
+        )
     elif choice == "ca_nac":
-        df = df.groupby(["nac", "Intitulé NAC"]).agg({"n_decisions": "sum"})
+        df = (
+            df.loc[df["jurisdiction"] == "Cours d'appel"]
+            .rename(columns=CLEAN_COLUMN_NAMES)
+            .groupby(["Code NAC", "Intitulé NAC"])
+            .agg({"Nombre de décisions": "sum"})
+        )
+    elif choice == "ca_location_nac":
+        df = (
+            df.loc[df["jurisdiction"] == "Cours d'appel"]
+            .rename(columns={"n_decisions": "Nombre de décisions", "court": "Cour"})
+            .groupby(["Cour", "Code NAC", "Intitulé NAC"])
+            .agg({"Nombre de décisions": "sum"})
+        )
+    elif choice == "all_ids":
+        df = pd.read_parquet("./full_date.parquet")
+        df = df[["id"]].set_index("id")
     else:
-        df = df.groupby(["location", "nac", "Intitulé NAC"]).agg({"n_decisions": "sum"})
-
+        df = (
+            df.rename(CLEAN_COLUMN_NAMES)
+            .drop(["N1", "N2", "nac"], axis=1)
+            .set_index("Code NAC")
+        )
     return df
 
 
