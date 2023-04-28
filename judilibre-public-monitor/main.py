@@ -3,7 +3,7 @@ from dash import dcc
 from dash import Input
 from dash import Output
 from dash import State
-from data.load_data import get_ca_data
+from data.load_data import get_download_data
 from data.load_data import load_data
 from flask_caching import Cache
 from graphs import get_chamber_graph
@@ -59,9 +59,10 @@ app.layout = get_layout()
 # @cache.memoize(timeout=3600)
 def update_graphs(n_clicks, start_date, end_date):
     df = load_data(path="./data")
+    print(df[df["jurisdiction"] == "Cours d'appel"].tail())
 
     source_graph = get_source_graph(df=df)
-    time_graph = get_time_graph(df=df, date_type="decision_date")
+    time_graph = get_time_graph(df=df)
 
     nb_decisions = df["n_decisions"].sum()
     nb_decisions = f"{nb_decisions:,}".replace(",", " ")
@@ -69,15 +70,17 @@ def update_graphs(n_clicks, start_date, end_date):
 
     max_date = f"{max_date.day:02}/{max_date.month:02}/{max_date.year:04}"
 
-    nb_decisions_cc = df.loc[df["jurisdiction"] == "cc", "n_decisions"].sum()
+    nb_decisions_cc = df.loc[
+        df["jurisdiction"] == "Cour de cassation", "n_decisions"
+    ].sum()
     nb_decisions_cc = f"{nb_decisions_cc:,}".replace(",", " ")
-    nb_decisions_ca = df.loc[df["jurisdiction"] == "ca", "n_decisions"].sum()
+    nb_decisions_ca = df.loc[df["jurisdiction"] == "Cours d'appel", "n_decisions"].sum()
     nb_decisions_ca = f"{nb_decisions_ca:,}".replace(",", " ")
 
     df = df[df["decision_date"] >= start_date]
     df = df[df["decision_date"] <= end_date]
 
-    location_graph = get_location_graph(df=df, include_cc=False)
+    location_graph = get_location_graph(df=df)
     nac_graph = get_nac_graph(df=df)
     chamber_graph = get_chamber_graph(df=df)
     type_graph = get_type_graph(df=df)
@@ -124,14 +127,18 @@ def update_time_location_graph(locations, start_date, end_date):
     Output("download-ca-data", "data"),
     State("download-ca-choice", "value"),
     Input("download-ca-submit", "n_clicks"),
+    State("start-date-picker", "date"),
+    State("end-date-picker", "date"),
     # prevent_initial_callbacks=True,
 )
-def download_ca_data(ca_choice, n_clicks):
+def download_data(data_choice, n_clicks, start_date, end_date):
     if not n_clicks:
         return None
     df = load_data(path="./data")
-    df = get_ca_data(df=df, choice=ca_choice)
-    return dcc.send_data_frame(df.to_csv, filename=f"{ca_choice}.csv")
+    df = get_download_data(
+        df=df, choice=data_choice, start_date=start_date, end_date=end_date
+    )
+    return dcc.send_data_frame(df.to_csv, filename=f"{data_choice}.csv")
 
 
 if __name__ == "__main__":

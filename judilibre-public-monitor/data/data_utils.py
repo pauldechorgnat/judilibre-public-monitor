@@ -11,8 +11,8 @@ SOURCES_DTYPE = CategoricalDtype(SOURCES)
 
 JURISDICTIONS = {
     "cc": "Cour de cassation",
-    "ca": "Cour d'appel",
-    "tj": "Tribunal judiciaire",
+    "ca": "Cours d'appel",
+    "tj": "Tribunaux judiciaires",
 }
 
 

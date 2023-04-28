@@ -2,8 +2,6 @@ import datetime
 
 import pandas as pd
 import plotly.express as px
-from data.data_utils import LOCATIONS
-from data.data_utils import remove_cour_dappel
 from palettes import COLORS
 from palettes import PALETTES
 
@@ -12,9 +10,6 @@ def get_source_graph(df: pd.DataFrame):
     """Returns a graph of decisions per source and jurisidiction"""
     df_source = (
         df.groupby(["source", "jurisdiction"]).agg({"n_decisions": "sum"}).reset_index()
-    )
-    df_source["jurisdiction"] = df_source["jurisdiction"].replace(
-        {"cc": "Cour de cassation", "ca": "Cours d'appel"}
     )
 
     fig = px.bar(
@@ -40,22 +35,13 @@ def get_source_graph(df: pd.DataFrame):
     return fig
 
 
-def get_location_graph(df: pd.DataFrame, include_cc: bool = False):
+def get_location_graph(df: pd.DataFrame):
     """Returns a graph of decisions per location (cours d'appel)"""
     df_location = (
-        df.loc[df["jurisdiction"] == "ca"]
-        .groupby("location")
+        df.loc[df["jurisdiction"] == "Cours d'appel"]
+        .groupby(["location"])
         .agg({"n_decisions": "sum"})
         .reset_index()
-    )
-
-    if not include_cc:
-        df_location = df_location[df_location["location"] != "cc"]
-
-    df_location["location"] = (
-        df_location["location"]
-        .apply(lambda location: LOCATIONS.get(location, "Non renseigné"))
-        .apply(remove_cour_dappel)
     )
 
     fig = px.bar(
@@ -76,9 +62,9 @@ def get_location_graph(df: pd.DataFrame, include_cc: bool = False):
 
 
 def get_nac_graph(df: pd.DataFrame):
-    """Returns a graph of decisions per code NAC (cour d'appel)"""
+    """Returns a graph of decisions per code NAC (cours d'appel)"""
     df_nac = (
-        df.loc[df["jurisdiction"] == "ca"]
+        df.loc[df["jurisdiction"] == "Cours d'appel"]
         .groupby(["nac", "Niveau 1", "N1", "Intitulé NAC"])
         .agg({"n_decisions": "sum"})
         .reset_index()
@@ -104,26 +90,21 @@ def get_nac_graph(df: pd.DataFrame):
     return fig
 
 
-def get_time_graph(df: pd.DataFrame, date_type: str = "decision_date"):
+def get_time_graph(df: pd.DataFrame):
     """Returns a graph of decisions per year and jurisdiction"""
     df_time = df.copy()
 
-    df_time[date_type] = pd.to_datetime(df_time[date_type])
-    df_time[date_type] = df_time[date_type].dt.year
+    df_time["decision_year"] = df_time["decision_date"].dt.year
 
     df_time = (
-        df_time.groupby([date_type, "jurisdiction"])
+        df_time.groupby(["decision_year", "jurisdiction"])
         .agg({"n_decisions": "sum"})
         .reset_index()
     )
 
-    df_time["jurisdiction"] = df_time["jurisdiction"].replace(
-        {"cc": "Cour de cassation", "ca": "Cours d'appel"}
-    )
-
     fig = px.line(
         data_frame=df_time,
-        x=date_type,
+        x="decision_year",
         y="n_decisions",
         color="jurisdiction",
         color_discrete_map={
@@ -133,7 +114,7 @@ def get_time_graph(df: pd.DataFrame, date_type: str = "decision_date"):
         range_x=[1980, 2024],
         labels={
             "n_decisions": "Nombre de décisions",
-            date_type: "Année",
+            "decision_year": "Année",
             "jurisdiction": "Juridiction",
         },
     )
@@ -149,40 +130,31 @@ def get_time_location_graph(
     df: pd.DataFrame, locations: list[str] = ["Paris", "Versailles", "Aix-en-Provence"]
 ):
     """Returns a graph of decisions per month and cour d'appel"""
-    date_type = "decision_date"
 
     df_time = df.copy()
-    df_time = df_time[df_time["jurisdiction"] == "ca"]
+    df_time = df_time[df_time["location"].isin(locations)]
 
-    df_time[date_type] = pd.to_datetime(df_time[date_type])
-    df_time[date_type] = df_time[date_type] - (
-        df_time[date_type].dt.day - 1
+    df_time["decision_date"] = df_time["decision_date"] - (
+        df_time["decision_date"].dt.day - 1
     ) * datetime.timedelta(days=1)
 
     df_time = (
-        df_time.groupby([date_type, "location"])
+        df_time.groupby(["decision_date", "location", "court"])
         .agg({"n_decisions": "sum"})
         .reset_index()
-    )
-
-    df_time["location"] = (
-        df_time["location"].apply(LOCATIONS.get).apply(remove_cour_dappel)
-    )
-
-    df_time = df_time[df_time["location"].isin(locations)].sort_values(
-        by=["location", date_type]
+        .sort_values(by=["location", "decision_date"])
     )
 
     fig = px.line(
         data_frame=df_time,
-        x=date_type,
+        x="decision_date",
         y="n_decisions",
         color="location",
         color_discrete_sequence=PALETTES["pal_gouv_qual1"],
         labels={
             "n_decisions": "Nombre de décisions",
-            "location": "Cour d'appel",
-            date_type: "Mois",
+            "court": "Cour d'appel",
+            "decision_date": "Mois",
         },
     )
 
@@ -198,21 +170,12 @@ def get_nac_location_graph(
 ):
     """Returns a graph of decisions per Code NAC and cour d'appel"""
     df_nac = (
-        df.groupby(["nac", "Intitulé NAC", "location"])
+        df.loc[df["location"].isin(locations)]
+        .groupby(["nac", "Intitulé NAC", "location"])
         .agg({"n_decisions": "sum"})
         .reset_index()
-    )
-
-    df_nac = df_nac.dropna(subset=["nac"])
-
-    df_nac["location"] = (
-        df_nac["location"]
-        .apply(lambda location: LOCATIONS.get(location, "Non renseigné"))
-        .apply(remove_cour_dappel)
-    )
-
-    df_nac = df_nac[df_nac["location"].isin(locations)].sort_values(
-        by=["location", "nac"]
+        .dropna(subset=["nac"])
+        .sort_values(by=["location", "nac"])
     )
 
     fig = px.bar(
@@ -238,7 +201,7 @@ def get_nac_location_graph(
 
 def get_chamber_graph(df: pd.DataFrame):
     """Returns a graph of decisions per formation (Cour de cassation)"""
-    df = df[df["jurisdiction"] == "cc"].copy()
+    df = df[df["jurisdiction"] == "Cour de cassation"].copy()
 
     df = (
         df.groupby(
@@ -270,7 +233,7 @@ def get_chamber_graph(df: pd.DataFrame):
 
 def get_type_graph(df: pd.DataFrame):
     """Returns a graph of decisions per formation (Cour de cassation)"""
-    df = df[df["jurisdiction"] == "cc"].copy()
+    df = df[df["jurisdiction"] == "Cour de cassation"].copy()
 
     df = df.groupby("type").agg({"n_decisions": "sum"}).reset_index()
 
@@ -316,21 +279,12 @@ def get_nac_level_graph(df: pd.DataFrame):
 
 def get_nac_level_location_graph(df: pd.DataFrame, locations: list[str] = ["Paris"]):
     df_nac = (
-        df.groupby(["N1", "Niveau 1", "location"])
+        df[df["location"].isin(locations)]
+        .groupby(["N1", "Niveau 1", "location"])
         .agg({"n_decisions": "sum"})
         .reset_index()
-    )
-
-    df_nac = df_nac.dropna(subset=["N1", "Niveau 1"])
-
-    df_nac["location"] = (
-        df_nac["location"]
-        .apply(lambda location: LOCATIONS.get(location, "Non renseigné"))
-        .apply(remove_cour_dappel)
-    )
-
-    df_nac = df_nac[df_nac["location"].isin(locations)].sort_values(
-        by=["location", "N1"]
+        .dropna(subset=["N1", "Niveau 1"])
+        .sort_values(by=["location", "N1"])
     )
 
     fig = px.bar(
@@ -376,7 +330,7 @@ def get_formation_time_graph(df: pd.DataFrame):
         # range_x=[1980, 2024],
         labels={
             "n_decisions": "Nombre de décisions",
-            "decision_date": "Mois de la décision",
+            "decision_date": "Mois",
             # "jurisdiction": "Juridiction",
         },
     )
