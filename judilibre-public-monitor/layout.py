@@ -6,7 +6,7 @@ from data.data_utils import LOCATIONS_CA
 from data.data_utils import remove_cour_dappel
 
 
-def get_layout():
+def get_layout(include_download: bool = False):
     return html.Div(
         [
             get_header(),
@@ -14,6 +14,7 @@ def get_layout():
             get_main_content(),
             get_focus_cc(),
             get_focus_ca(),
+            get_download(include_download=include_download),
             dcc.Input(id="dummy-input", style={"display": "none"}),
             get_footer(),
             dcc.Interval(id="download-interval", interval=1000 * 60 * 60 * 2),
@@ -250,42 +251,54 @@ def get_focus_ca():
                 get_graph("nac-location-graph", "Nombre de décisions par code NAC"),
                 className="row",
             ),
-            html.H2("Téléchargements"),
-            html.Div(
-                [
-                    html.Label(
-                        "Sélectionnez un jeu de données à télécharger",
-                        htmlFor="download-ca-choice",
-                        className="label-for-download-picker",
-                    ),
-                    dcc.Dropdown(
-                        {
-                            "ca_location": "Nombre de décisions par cour d'appel",
-                            "ca_nac": "Nombre de décisions par code NAC",
-                            "ca_location_nac": "Nombre de décisions "
-                            "par cour d'appel et code NAC",
-                            "all_data": "Données complètes agrégées",
-                            # "all_ids": "Identifiant des décisions utilisées",
-                        },
-                        "ca_location",
-                        multi=False,
-                        clearable=False,
-                        id="download-ca-choice",
-                        style={"width": "100%"},
-                    ),
-                ],
-                className="row",
-            ),
-            html.Div(
-                [
-                    html.Button("Télécharger", id="download-ca-submit"),
-                    dcc.Download(id="download-ca-data"),
-                ],
-                className="row",
-            ),
         ],
         className="content-container",
     )
+
+
+def get_download(include_download: bool = False):
+    # div_style = {}
+    # if not include_download:
+    #     div_style["display"] = "none"
+    if include_download:
+        return html.Div(
+            [
+                html.H2("Téléchargements"),
+                html.Div(
+                    [
+                        html.Label(
+                            "Sélectionnez un jeu de données à télécharger",
+                            htmlFor="download-ca-choice",
+                            className="label-for-download-picker",
+                        ),
+                        dcc.Dropdown(
+                            {
+                                "ca_location": "Nombre de décisions par cour d'appel",
+                                "ca_nac": "Nombre de décisions par code NAC",
+                                "ca_location_nac": "Nombre de décisions "
+                                "par cour d'appel et code NAC",
+                                "all_data": "Données complètes agrégées",
+                            },
+                            "ca_location",
+                            multi=False,
+                            clearable=False,
+                            id="download-ca-choice",
+                            style={"width": "100%"},
+                        ),
+                    ],
+                    className="row",
+                ),
+                html.Div(
+                    [
+                        html.Button("Télécharger", id="download-ca-submit"),
+                        dcc.Download(id="download-ca-data"),
+                    ],
+                    className="row",
+                ),
+            ],
+            className="content-container",
+            # style=div_style,
+        )
 
 
 def get_focus_cc():

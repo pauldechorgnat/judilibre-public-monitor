@@ -25,11 +25,15 @@ from graphs import get_time_location_graph
 from graphs import get_type_graph
 from layout import get_layout
 
+load_dotenv()
+
 EXTERNAL_STYLESHEETS = ["assets/custom.css"]
 
 LATEST_UPDATE_DATE = datetime.date.today() - datetime.timedelta(days=1)
 
-UPDATE_DATA = bool(os.environ.get("UPDATE_DATA"))
+UPDATE_DATA = bool(int(os.environ.get("UPDATE_DATA")))
+INCLUDE_DOWNLOAD = bool(int(os.environ.get("INCLUDE_DOWNLOAD")))
+
 
 app = Dash(
     title="Judilibre - Tableau de suivi",
@@ -44,7 +48,7 @@ app._favicon = "images/cour-de-cassation.svg"
 
 app._index_string = app._index_string.replace("<html>", "<html lang='fr'>")
 
-app.layout = get_layout()
+app.layout = get_layout(include_download=INCLUDE_DOWNLOAD)
 
 
 @app.callback(
