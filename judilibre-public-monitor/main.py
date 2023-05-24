@@ -29,6 +29,8 @@ EXTERNAL_STYLESHEETS = ["assets/custom.css"]
 
 LATEST_UPDATE_DATE = datetime.date.today() - datetime.timedelta(days=1)
 
+UPDATE_DATA = bool(os.environ.get("UPDATE_DATA"))
+
 app = Dash(
     title="Judilibre - Tableau de suivi",
     external_stylesheets=EXTERNAL_STYLESHEETS,
@@ -154,7 +156,8 @@ def download_data(data_choice, n_clicks):
 )
 def update_data(n_interval):
     global LATEST_UPDATE_DATE
-    if LATEST_UPDATE_DATE != datetime.date.today():
+    global UPDATE_DATA
+    if (LATEST_UPDATE_DATE != datetime.date.today()) and UPDATE_DATA:
         print(f"{datetime.datetime.now()} - Downloading new data")
         download_latest_data(
             api_key_id=os.environ.get("PISTE_API_KEY"),

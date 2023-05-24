@@ -309,7 +309,7 @@ def get_nac_level_location_graph(df: pd.DataFrame, locations: list[str] = ["Pari
 
 
 def get_formation_time_graph(df: pd.DataFrame):
-    df_time = df.copy()
+    df_time = df[df["jurisdiction"] == "Cour de cassation"].copy()
     df_time["decision_date"] = df_time["decision_date"] - (
         df_time["decision_date"].dt.day - 1
     ) * datetime.timedelta(days=1)
@@ -318,21 +318,23 @@ def get_formation_time_graph(df: pd.DataFrame):
         df_time.groupby(["decision_date"]).agg({"n_decisions": "sum"}).reset_index()
     )
 
-    # df_time = df_time[df_time["formation_clean"] != "Non renseigné"]
+    df_time["n_decisions_lisse"] = (
+        df_time["n_decisions"].rolling(window=12, center=True).mean()
+    )
+
+    df_time = df_time.rename(
+        columns={
+            "n_decisions": "Nombre de décisions",
+            "decision_date": "Mois",
+            "n_decisions_lisse": "Nombre de décisions lissé",
+        }
+    )
 
     fig = px.line(
         data_frame=df_time,
-        x="decision_date",
-        y="n_decisions",
-        # color="formation_clean",
-        # color_discrete_sequence=PALETTES["pal_gouv_qual1"],
-        color_discrete_sequence=[COLORS["rouge_marianne"]],
-        # range_x=[1980, 2024],
-        labels={
-            "n_decisions": "Nombre de décisions",
-            "decision_date": "Mois",
-            # "jurisdiction": "Juridiction",
-        },
+        x="Mois",
+        y=["Nombre de décisions", "Nombre de décisions lissé"],
+        color_discrete_sequence=[COLORS["rouge_marianne"], COLORS["bleu_france"]],
     )
 
     fig.update_layout(
