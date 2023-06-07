@@ -5,10 +5,8 @@ from dash import html
 from data.data_utils import LOCATIONS_CA
 from data.data_utils import remove_cour_dappel
 
-DISCLAIMER = open("assets/texts/disclaimer.txt").read()
 
-
-def get_layout():
+def get_layout(include_download: bool = False):
     return html.Div(
         [
             get_header(),
@@ -16,7 +14,11 @@ def get_layout():
             get_main_content(),
             get_focus_cc(),
             get_focus_ca(),
+            get_download(include_download=include_download),
             dcc.Input(id="dummy-input", style={"display": "none"}),
+            get_footer(),
+            dcc.Interval(id="download-interval", interval=1000 * 60 * 60 * 2),
+            html.Div(id="dummy-div", style={"display": "none"}),
         ]
     )
 
@@ -24,21 +26,18 @@ def get_layout():
 def get_header():
     return html.Header(
         children=[
-            # html.Img(
-            #     src="/assets/images/france.png",
-            #     height="100px", id="france-bloc-marque"
-            # ),
             html.Img(
                 src="/assets/images/cour-de-cassation.svg",
                 height="100px",
                 alt="Logo de la Cour de cassation",
-                id="cour-de-cassation-bloc-marque",
+                id="cour-de-cassation-logo",
             ),
             html.Div(
                 [
                     html.H1("API Judilibre", className="main-title"),
                     html.P(
-                        "Statistiques des données ouvertes", className="secondary-title"
+                        "Statistiques des décisions de justice diffusées en Open Data",
+                        className="secondary-title",
                     ),
                 ],
                 className="title-container",
@@ -51,7 +50,7 @@ def get_header():
 def get_summary():
     return html.Div(
         [
-            html.H2("Total"),
+            # html.H2("Résumé"),
             html.Div(
                 [
                     get_summary_card(
@@ -77,7 +76,7 @@ def get_summary():
                 ],
                 className="card-container",
             ),
-            html.H2("Résumé"),
+            # html.H2("Résumé"),
         ],
         className="content-container",
     )
@@ -100,22 +99,58 @@ def get_main_content():
                 className="row",
             ),
             html.Div(
+                html.P(
+                    "Sélectionnez des dates pour restreindre les graphiques suivants:",
+                    className="text",
+                ),
+                className="row",
+            ),
+            html.Div(
                 [
-                    html.Label("Date de début", htmlFor="start-date-picker"),
-                    dcc.DatePickerSingle(
-                        id="start-date-picker",
-                        min_date_allowed=datetime.date(year=1790, month=1, day=1),
-                        max_date_allowed=datetime.date.today(),
-                        date=datetime.date(year=2000, month=1, day=1),
+                    html.Div(
+                        [
+                            html.Label(
+                                "Date de début",
+                                htmlFor="start-date-picker",
+                                className="label-for-date-picker",
+                            ),
+                            dcc.DatePickerSingle(
+                                id="start-date-picker",
+                                min_date_allowed=datetime.date(
+                                    year=1790,
+                                    month=1,
+                                    day=1,
+                                ),
+                                max_date_allowed=datetime.date.today(),
+                                date=datetime.date(year=2000, month=1, day=1),
+                                className="date-picker",
+                                with_portal=True,
+                            ),
+                        ],
+                        className="date-picker-card",
                     ),
-                    html.Label("Date de fin", htmlFor="end-date-picker"),
-                    dcc.DatePickerSingle(
-                        id="end-date-picker",
-                        min_date_allowed=datetime.date(year=1790, month=1, day=1),
-                        max_date_allowed=datetime.date.today(),
-                        date=datetime.date.today(),
+                    html.Div(
+                        [
+                            html.Label(
+                                "Date de fin",
+                                htmlFor="end-date-picker",
+                                className="label-for-date-picker",
+                            ),
+                            dcc.DatePickerSingle(
+                                id="end-date-picker",
+                                min_date_allowed=datetime.date(
+                                    year=1790, month=1, day=1
+                                ),
+                                max_date_allowed=datetime.date.today(),
+                                date=datetime.date.today(),
+                                className="date-picker",
+                                with_portal=True,
+                            ),
+                        ],
+                        className="date-picker-card",
                     ),
-                ]
+                ],
+                className="row",
             ),
         ],
         className="content-container",
@@ -154,7 +189,10 @@ def get_graph(graph_id: str, graph_title: str, width: str = None):
         return div
 
     div = html.Div(
-        [html.P(graph_title, className="graph-title"), dcc.Graph(id=graph_id)],
+        [
+            html.P(graph_title, className="graph-title"),
+            dcc.Graph(id=graph_id, config={"displaylogo": False}),
+        ],
         className="graph-container",
     )
     return div
@@ -169,9 +207,20 @@ def get_focus_ca():
                 className="row",
             ),
             html.Div(
+                [
+                    get_graph(
+                        "nac-level-graph", "Nombre de décisions par niveau d'affaire"
+                    )
+                ],
+                className="row",
+            ),
+            html.Div(
                 [get_graph("nac-graph", "Nombre de décisions par code NAC")],
                 className="row",
             ),
+            # html.H2("Sélection de cour d'appel"),
+            html.Br(),
+            html.Br(),
             html.Label(
                 "Choix d'une ou plusieurs cour(s) d'appel:",
                 htmlFor="time-location-input",
@@ -190,35 +239,16 @@ def get_focus_ca():
                 className="row",
             ),
             html.Div(
+                [
+                    get_graph(
+                        "level-location-graph",
+                        "Nombre de décisions par niveau d'affaire",
+                    )
+                ],
+                className="row",
+            ),
+            html.Div(
                 get_graph("nac-location-graph", "Nombre de décisions par code NAC"),
-                className="row",
-            ),
-            html.Div(
-                [
-                    html.Label(
-                        "Selectionnez un jeu de données à télécharger",
-                        htmlFor="download-ca-choice",
-                    ),
-                    dcc.Dropdown(
-                        {
-                            "ca_location": "Nombre de décisions par cour d'appel",
-                            "ca_nac": "Nombre de décisions par code NAC",
-                            "ca_location_nac": "Nombre de décisions "
-                            "par cour d'appel et code NAC",
-                        },
-                        "ca_location",
-                        multi=False,
-                        id="download-ca-choice",
-                        style={"width": "100%"},
-                    ),
-                ],
-                className="row",
-            ),
-            html.Div(
-                [
-                    html.Button("Télécharger", id="download-ca-submit"),
-                    dcc.Download(id="download-ca-data"),
-                ],
                 className="row",
             ),
         ],
@@ -226,10 +256,62 @@ def get_focus_ca():
     )
 
 
+def get_download(include_download: bool = False):
+    # div_style = {}
+    # if not include_download:
+    #     div_style["display"] = "none"
+    if include_download:
+        return html.Div(
+            [
+                html.H2("Téléchargements"),
+                html.Div(
+                    [
+                        html.Label(
+                            "Sélectionnez un jeu de données à télécharger",
+                            htmlFor="download-ca-choice",
+                            className="label-for-download-picker",
+                        ),
+                        dcc.Dropdown(
+                            {
+                                "ca_location": "Nombre de décisions par cour d'appel",
+                                "ca_nac": "Nombre de décisions par code NAC",
+                                "ca_location_nac": "Nombre de décisions "
+                                "par cour d'appel et code NAC",
+                                "all_data": "Données complètes agrégées",
+                            },
+                            "ca_location",
+                            multi=False,
+                            clearable=False,
+                            id="download-ca-choice",
+                            style={"width": "100%"},
+                        ),
+                    ],
+                    className="row",
+                ),
+                html.Div(
+                    [
+                        html.Button("Télécharger", id="download-ca-submit"),
+                        dcc.Download(id="download-ca-data"),
+                    ],
+                    className="row",
+                ),
+            ],
+            className="content-container",
+            # style=div_style,
+        )
+
+
 def get_focus_cc():
     return html.Div(
         [
             html.Header(html.H2("Décisions de la Cour de cassation")),
+            html.Div(
+                get_graph(
+                    "formation-time-graph",
+                    "Nombre de décisions par mois",
+                ),
+                className="row",
+            ),
             html.Div(
                 [
                     get_graph("chamber-graph", "Nombre de décisions par formation"),
@@ -239,4 +321,37 @@ def get_focus_cc():
             ),
         ],
         className="content-container",
+    )
+
+
+def get_footer():
+    return html.Div(
+        [
+            html.Img(
+                src="/assets/images/Republique_Francaise_RVB.png",
+                height="150px",
+                className="logo-republic",
+                alt="Logo de la République Française",
+            ),
+            html.Div(
+                [
+                    html.A("Cour de cassation", href="https://www.courdecassation.fr/"),
+                    html.A(
+                        "Recherche Judilibre",
+                        href="https://www.courdecassation.fr/recherche-judilibre",
+                    ),
+                    html.A(
+                        "Code source",
+                        href="https://github.com/pauldechorgnat/judilibre-public-monitor",
+                    ),
+                    html.A("piste.gouv.fr", href="https://piste.gouv.fr/"),
+                    html.A(
+                        "api.gouv.fr", href="https://api.gouv.fr/les-api/api-judilibre"
+                    ),
+                    html.A("Contact", href="mailto:prenom.nom@justice.fr"),
+                ],
+                className="link-container",
+            ),
+        ],
+        className="footer",
     )
