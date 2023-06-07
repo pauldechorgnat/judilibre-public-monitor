@@ -330,20 +330,15 @@ def get_formation_time_graph(df: pd.DataFrame):
         }
     )
 
-    fig = px.bar(
+    fig = px.line(
         data_frame=df_time,
         x="Mois",
-        y="Nombre de décisions",
+        y=["Nombre de décisions", "Nombre de décisions lissé"],
         color_discrete_sequence=[COLORS["rouge_marianne"], COLORS["bleu_france"]],
     )
 
-    fig.add_trace(
-        px.line(
-            data_frame=df_time,
-            x="Mois",
-            y="Nombre de décisions lissé",
-            color_discrete_sequence=[COLORS["bleu_france"]],
-        )
+    fig.update_layout(
+        plot_bgcolor="rgba(0,0,0,0)",
     )
 
     fig.update_layout(
