@@ -51,6 +51,12 @@ app._index_string = app._index_string.replace("<html>", "<html lang='fr'>")
 app.layout = get_layout(include_download=INCLUDE_DOWNLOAD)
 
 
+def format_date(date_str):
+    (day, month, year) = date_str.replace(".", "/").replace("-", "/").split("/")
+
+    return datetime.date(year=int(year), month=int(month), day=int(day))
+
+
 @app.callback(
     Output("source-graph", "figure"),
     # Output("jurisdiction-graph", "figure"),
@@ -66,11 +72,14 @@ app.layout = get_layout(include_download=INCLUDE_DOWNLOAD)
     Output("nac-level-graph", "figure"),
     Output("formation-time-graph", "figure"),
     Input("dummy-input", "value"),
-    Input("start-date-picker", "date"),
-    Input("end-date-picker", "date"),
+    Input("start-date-picker", "value"),
+    Input("end-date-picker", "value"),
 )
 # @cache.memoize(timeout=3600)
 def update_graphs(n_clicks, start_date, end_date):
+    start_date = format_date(start_date)
+    end_date = format_date(end_date)
+
     df = load_data(path="./data")
 
     source_graph = get_source_graph(df=df)
@@ -89,8 +98,8 @@ def update_graphs(n_clicks, start_date, end_date):
     nb_decisions_ca = df.loc[df["jurisdiction"] == "Cours d'appel", "n_decisions"].sum()
     nb_decisions_ca = f"{nb_decisions_ca:,}".replace(",", " ")
 
-    df = df[df["decision_date"] >= start_date]
-    df = df[df["decision_date"] <= end_date]
+    df = df[df["decision_date"].dt.date >= start_date]
+    df = df[df["decision_date"].dt.date <= end_date]
 
     location_graph = get_location_graph(df=df)
     nac_graph = get_nac_graph(df=df)
@@ -122,13 +131,16 @@ def update_graphs(n_clicks, start_date, end_date):
     Output("nac-location-graph", "figure"),
     Output("level-location-graph", "figure"),
     Input("time-location-input", "value"),
-    Input("start-date-picker", "date"),
-    Input("end-date-picker", "date"),
+    Input("start-date-picker", "value"),
+    Input("end-date-picker", "value"),
 )
 def update_time_location_graph(locations, start_date, end_date):
     df = load_data(path="./data")
-    df = df[df["decision_date"] >= start_date]
-    df = df[df["decision_date"] <= end_date]
+    start_date = format_date(start_date)
+    end_date = format_date(end_date)
+
+    df = df[df["decision_date"].dt.date >= start_date]
+    df = df[df["decision_date"].dt.date <= end_date]
     time_location_graph = get_time_location_graph(df=df, locations=locations)
     nac_location_graph = get_nac_location_graph(df=df, locations=locations)
     nac_level_location_graph = get_nac_level_location_graph(df=df, locations=locations)

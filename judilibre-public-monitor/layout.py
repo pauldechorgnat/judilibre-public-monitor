@@ -5,6 +5,8 @@ from dash import html
 from data.data_utils import LOCATIONS_CA
 from data.data_utils import remove_cour_dappel
 
+TODAY = datetime.date.today()
+
 
 def get_layout(include_download: bool = False):
     return html.Div(
@@ -98,6 +100,7 @@ def get_main_content():
                 ],
                 className="row",
             ),
+            html.Hr(style={"margin-top": "3rem", "margin-bottom": "3rem"}),
             html.Div(
                 html.P(
                     "Sélectionnez des dates pour restreindre les graphiques suivants:",
@@ -114,17 +117,12 @@ def get_main_content():
                                 htmlFor="start-date-picker",
                                 className="label-for-date-picker",
                             ),
-                            dcc.DatePickerSingle(
+                            dcc.Input(
                                 id="start-date-picker",
-                                min_date_allowed=datetime.date(
-                                    year=1790,
-                                    month=1,
-                                    day=1,
-                                ),
-                                max_date_allowed=datetime.date.today(),
-                                date=datetime.date(year=2000, month=1, day=1),
+                                value="01/01/2000",
+                                debounce=True,
+                                pattern=r"(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[13-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})",
                                 className="date-picker",
-                                with_portal=True,
                             ),
                         ],
                         className="date-picker-card",
@@ -136,15 +134,12 @@ def get_main_content():
                                 htmlFor="end-date-picker",
                                 className="label-for-date-picker",
                             ),
-                            dcc.DatePickerSingle(
+                            dcc.Input(
                                 id="end-date-picker",
-                                min_date_allowed=datetime.date(
-                                    year=1790, month=1, day=1
-                                ),
-                                max_date_allowed=datetime.date.today(),
-                                date=datetime.date.today(),
+                                value=f"{TODAY.day:02}/{TODAY.month:02}/{TODAY.year:04}",
+                                debounce=True,
+                                pattern=r"(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[13-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})",
                                 className="date-picker",
-                                with_portal=True,
                             ),
                         ],
                         className="date-picker-card",

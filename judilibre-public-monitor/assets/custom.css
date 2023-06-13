@@ -220,3 +220,21 @@ button {
 .label-for-download-picker {
     padding-right: 2rem;
 }
+
+
+#start-date-picker,
+#end-date-picker {
+    height: 2rem;
+    border: solid 2px lightgray;
+    color: rgb(58, 58, 58);
+    text-align: center;
+    font-size: 1rem;
+    border-radius: .25rem;
+
+}
+
+#start-date-picker:invalid,
+#end-date-picker:invalid {
+    border-color: #E1000F;
+    background-color: lightgray;
+}
