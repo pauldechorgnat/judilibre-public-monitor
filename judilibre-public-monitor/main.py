@@ -103,6 +103,10 @@ def compute_general_figures(n_clicks):
 
 
 @app.callback(
+    Output("nb-decisions-card-date", "children"),
+    Output("nb-decisions-cc-card-date", "children"),
+    Output("nb-decisions-ca-card-date", "children"),
+    Output("date-latest-decision-card-date", "children"),
     Output("time-by-month-cc-graph", "figure"),
     Output("chamber-cc-graph", "figure"),
     Output("type-cc-graph", "figure"),
@@ -126,6 +130,8 @@ def update_graphs(start_date, end_date):
         df_nac_level_ca,
         df_nac_ca,
     ) = load_general_datasets(path="data")
+
+    df_source, df_time_by_year = load_static_datasets(path="./data")
 
     start_date = format_date(start_date)
     end_date = format_date(end_date)
@@ -173,6 +179,33 @@ def update_graphs(start_date, end_date):
     df_nac_ca = df_nac_ca[df_nac_ca["decision_date"].dt.date >= start_date]
     df_nac_ca = df_nac_ca[df_nac_ca["decision_date"].dt.date <= end_date]
 
+    df_source = df_source[df_source["decision_date"].dt.date >= start_date]
+    df_source = df_source[df_source["decision_date"].dt.date <= end_date]
+
+    df_time_by_year = df_time_by_year[
+        df_time_by_year["decision_date"].dt.date >= start_date
+    ]
+    df_time_by_year = df_time_by_year[
+        df_time_by_year["decision_date"].dt.date <= end_date
+    ]
+
+    # computing cards
+    nb_decisions = df_source["n_decisions"].sum()
+    nb_decisions = f"{nb_decisions:,}".replace(",", " ")
+    max_date = df_source["decision_date"].max()
+
+    max_date = f"{max_date.day:02}/{max_date.month:02}/{max_date.year:04}"
+
+    nb_decisions_cc = df_time_by_year.loc[
+        df_time_by_year["jurisdiction"] == "Cour de cassation", "n_decisions"
+    ].sum()
+    nb_decisions_cc = f"{nb_decisions_cc:,}".replace(",", " ")
+    nb_decisions_ca = df_time_by_year.loc[
+        df_time_by_year["jurisdiction"] == "Cours d'appel", "n_decisions"
+    ].sum()
+
+    nb_decisions_ca = f"{nb_decisions_ca:,}".replace(",", " ")
+
     # computing graphs
 
     time_by_month_cc_graph = get_time_by_month_cc_graph(df_time_by_month)
@@ -188,6 +221,10 @@ def update_graphs(start_date, end_date):
     nac_ca_graph = get_nac_ca_graph(df_nac_ca)
 
     return (
+        nb_decisions,
+        nb_decisions_cc,
+        nb_decisions_ca,
+        max_date,
         time_by_month_cc_graph,
         chamber_cc_graph,
         type_cc_graph,

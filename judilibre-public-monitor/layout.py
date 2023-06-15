@@ -52,7 +52,7 @@ def get_header():
 def get_summary():
     return html.Div(
         [
-            html.H2("Résumé général"),
+            html.H2("Résumé général", style={"font-size": "2rem"}),
             html.Div(
                 [
                     get_summary_card(
@@ -100,7 +100,8 @@ def get_main_content():
                 ],
                 className="row",
             ),
-            html.Hr(style={"margin-top": "3rem", "margin-bottom": "3rem"}),
+            html.H2("Analyse", style={"font-size": "2rem"}),
+            # html.Hr(style={"margin-top": "3rem", "margin-bottom": "3rem"}),
             html.Div(
                 html.P(
                     "Sélectionnez des dates pour restreindre les graphiques suivants:",
@@ -155,6 +156,31 @@ def get_main_content():
 def get_focus_cc():
     return html.Div(
         [
+            html.Div(
+                [
+                    get_summary_card(
+                        card_content_default=0,
+                        card_title="Nombre de décisions",
+                        card_content_id="nb-decisions-card-date",
+                    ),
+                    get_summary_card(
+                        card_content_default=0,
+                        card_title="Nombre de décisions CA",
+                        card_content_id="nb-decisions-ca-card-date",
+                    ),
+                    get_summary_card(
+                        card_content_default=0,
+                        card_title="Nombre de décisions CC",
+                        card_content_id="nb-decisions-cc-card-date",
+                    ),
+                    get_summary_card(
+                        card_content_default="01/01/1790",
+                        card_title="Date dernière décision",
+                        card_content_id="date-latest-decision-card-date",
+                    ),
+                ],
+                className="card-container",
+            ),
             html.Header(html.H2("Décisions de la Cour de cassation")),
             html.Div(
                 get_graph(
@@ -211,9 +237,7 @@ def get_focus_ca():
                 [get_graph("nac-ca-graph", "Nombre de décisions par code NAC")],
                 className="row",
             ),
-            # html.H2("Sélection de cour d'appel"),
-            html.Br(),
-            html.Br(),
+            html.H2("Sélection de cours d'appel"),
             html.Label(
                 "Choix d'une ou plusieurs cour(s) d'appel:",
                 htmlFor="time-location-input",
