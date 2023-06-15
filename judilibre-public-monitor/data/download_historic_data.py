@@ -26,13 +26,13 @@ def download_historic_ca_data():
     end_dates += [datetime.date(year=2021, month=11, day=d) for d in range(14, 24)]
 
     for end_date in sorted(set(end_dates)):
-        logging.info(start_date, end_date)
+        logging.info(f"{start_date} -> {end_date}")
         data = download_data_between_update_dates(
             start_date=start_date, end_date=end_date, jurisdiction="ca"
         )
         df = pd.DataFrame(data)
 
-        logging.info(df.shape)
+        logging.info(str(df.shape))
 
         df.to_parquet(f"data/raw_data/data_ca_{start_date}-{end_date}.parquet")
 
@@ -58,7 +58,7 @@ def download_historic_cc_data():
     ]
 
     for end_date in end_dates:
-        logging.info(start_date, end_date)
+        logging.info(f"{start_date} -> {end_date}")
 
         data = download_data_between_update_dates(
             start_date=start_date, end_date=end_date, jurisdiction="cc"
@@ -66,7 +66,7 @@ def download_historic_cc_data():
 
         df = pd.DataFrame(data)
 
-        logging.info(df.shape)
+        logging.info(str(df.shape))
 
         df.to_parquet(f"data/raw_data/data_cc_{start_date}-{end_date}.parquet")
 
@@ -74,7 +74,8 @@ def download_historic_cc_data():
 
 
 if __name__ == "__main__":
-    # logging.basicConfig(level=logging.DEBUG)
+    logging.basicConfig(level=logging.INFO)
     load_dotenv()
 
     download_historic_ca_data()
+    download_historic_cc_data()

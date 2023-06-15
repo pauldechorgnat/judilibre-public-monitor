@@ -24,6 +24,8 @@ DEFAULT_KEYS = [
     "update_date",
     "type",
     "nac",
+    "formation",
+    "publication",
 ]
 
 
@@ -35,14 +37,17 @@ def download_data_between_update_dates(
     base_url: str = PISTE_API_URL,
     timeout: int = 5,
     mask: list[str] = DEFAULT_KEYS,
+    parameters: dict = {},
+    batch_size: int = 1_000,
 ):
     params = {
         "date_start": str(start_date),
         "date_end": str(end_date),
         "jurisdiction": jurisdiction,
         "date_type": "update",
-        "batch_size": 1_000,
+        "batch_size": batch_size,
         "batch": 0,
+        **parameters,
     }
 
     data = {m: [] for m in mask}

@@ -7,22 +7,28 @@ from dash import dcc
 from dash import Input
 from dash import Output
 from dash import State
+from data.compute_datasets import compute_all_datasets
+from data.compute_datasets import load_general_datasets
+from data.compute_datasets import load_selected_datasets
+from data.compute_datasets import load_static_datasets
 from data.download_latest_data import download_latest_data
 from data.load_data import get_download_data
 from data.load_data import load_data
 from dotenv import load_dotenv
 from flask_caching import Cache
-from graphs import get_chamber_graph
-from graphs import get_formation_time_graph
-from graphs import get_location_graph
-from graphs import get_nac_graph
-from graphs import get_nac_level_graph
-from graphs import get_nac_level_location_graph
-from graphs import get_nac_location_graph
+from graphs import get_chamber_cc_graph
+from graphs import get_formation_cc_graph
+from graphs import get_location_ca_graph
+from graphs import get_nac_ca_graph
+from graphs import get_nac_level_ca_graph
+from graphs import get_nac_level_selected_location_ca_graph
+from graphs import get_nac_selected_location_ca_graph
+from graphs import get_publication_cc_graph
 from graphs import get_source_graph
-from graphs import get_time_graph
-from graphs import get_time_location_graph
-from graphs import get_type_graph
+from graphs import get_time_by_month_cc_graph
+from graphs import get_time_by_year_graph
+from graphs import get_time_selected_location_ca_graph
+from graphs import get_type_cc_graph
 from layout import get_layout
 
 load_dotenv()
@@ -59,112 +65,216 @@ def format_date(date_str):
 
 @app.callback(
     Output("source-graph", "figure"),
-    # Output("jurisdiction-graph", "figure"),
-    Output("time-graph", "figure"),
-    Output("location-graph", "figure"),
-    Output("nac-graph", "figure"),
+    Output("time-by-year", "figure"),
     Output("nb-decisions-card", "children"),
-    Output("date-latest-decision-card", "children"),
-    Output("chamber-graph", "figure"),
-    Output("type-graph", "figure"),
     Output("nb-decisions-cc-card", "children"),
     Output("nb-decisions-ca-card", "children"),
-    Output("nac-level-graph", "figure"),
-    Output("formation-time-graph", "figure"),
+    Output("date-latest-decision-card", "children"),
     Input("dummy-input", "value"),
-    Input("start-date-picker", "value"),
-    Input("end-date-picker", "value"),
 )
-# @cache.memoize(timeout=3600)
-def update_graphs(n_clicks, start_date, end_date):
-    start_date = format_date(start_date)
-    end_date = format_date(end_date)
+def compute_general_figures(n_clicks):
+    df_source, df_time_by_year = load_static_datasets(path="./data")
+    source_graph = get_source_graph(df=df_source)
+    time_by_year_graph = get_time_by_year_graph(df=df_time_by_year)
 
-    df = load_data(path="./data")
-
-    source_graph = get_source_graph(df=df)
-    time_graph = get_time_graph(df=df)
-
-    nb_decisions = df["n_decisions"].sum()
+    nb_decisions = df_source["n_decisions"].sum()
     nb_decisions = f"{nb_decisions:,}".replace(",", " ")
-    max_date = df["decision_date"].max()
+    max_date = df_source["decision_date"].max()
 
     max_date = f"{max_date.day:02}/{max_date.month:02}/{max_date.year:04}"
 
-    nb_decisions_cc = df.loc[
-        df["jurisdiction"] == "Cour de cassation", "n_decisions"
+    nb_decisions_cc = df_time_by_year.loc[
+        df_time_by_year["jurisdiction"] == "Cour de cassation", "n_decisions"
     ].sum()
     nb_decisions_cc = f"{nb_decisions_cc:,}".replace(",", " ")
-    nb_decisions_ca = df.loc[df["jurisdiction"] == "Cours d'appel", "n_decisions"].sum()
+    nb_decisions_ca = df_time_by_year.loc[
+        df_time_by_year["jurisdiction"] == "Cours d'appel", "n_decisions"
+    ].sum()
     nb_decisions_ca = f"{nb_decisions_ca:,}".replace(",", " ")
-
-    df = df[df["decision_date"].dt.date >= start_date]
-    df = df[df["decision_date"].dt.date <= end_date]
-
-    location_graph = get_location_graph(df=df)
-    nac_graph = get_nac_graph(df=df)
-    chamber_graph = get_chamber_graph(df=df)
-    type_graph = get_type_graph(df=df)
-
-    nac_level_graph = get_nac_level_graph(df=df)
-
-    formation_time_graph = get_formation_time_graph(df=df)
 
     return (
         source_graph,
-        time_graph,
-        location_graph,
-        nac_graph,
+        time_by_year_graph,
         nb_decisions,
-        max_date,
-        chamber_graph,
-        type_graph,
         nb_decisions_cc,
         nb_decisions_ca,
-        nac_level_graph,
-        formation_time_graph,
+        max_date,
     )
 
 
 @app.callback(
-    Output("time-location-graph", "figure"),
-    Output("nac-location-graph", "figure"),
-    Output("level-location-graph", "figure"),
+    Output("time-by-month-cc-graph", "figure"),
+    Output("chamber-cc-graph", "figure"),
+    Output("type-cc-graph", "figure"),
+    Output("formation-cc-graph", "figure"),
+    Output("publication-cc-graph", "figure"),
+    Output("location-ca-graph", "figure"),
+    Output("nac-level-ca-graph", "figure"),
+    Output("nac-ca-graph", "figure"),
+    Input("start-date-picker", "value"),
+    Input("end-date-picker", "value"),
+)
+# @cache.memoize(timeout=3600)
+def update_graphs(start_date, end_date):
+    (
+        df_time_by_month,
+        df_chamber_cc,
+        df_type_cc,
+        df_formation_cc,
+        df_publication_cc,
+        df_location_ca,
+        df_nac_level_ca,
+        df_nac_ca,
+    ) = load_general_datasets(path="data")
+
+    start_date = format_date(start_date)
+    end_date = format_date(end_date)
+
+    # limiting data
+    df_time_by_month = df_time_by_month[
+        df_time_by_month["decision_date"].dt.date >= start_date
+    ]
+    df_time_by_month = df_time_by_month[
+        df_time_by_month["decision_date"].dt.date <= end_date
+    ]
+
+    df_chamber_cc = df_chamber_cc[df_chamber_cc["decision_date"].dt.date >= start_date]
+    df_chamber_cc = df_chamber_cc[df_chamber_cc["decision_date"].dt.date <= end_date]
+
+    df_type_cc = df_type_cc[df_type_cc["decision_date"].dt.date >= start_date]
+    df_type_cc = df_type_cc[df_type_cc["decision_date"].dt.date <= end_date]
+
+    df_formation_cc = df_formation_cc[
+        df_formation_cc["decision_date"].dt.date >= start_date
+    ]
+    df_formation_cc = df_formation_cc[
+        df_formation_cc["decision_date"].dt.date <= end_date
+    ]
+
+    df_publication_cc = df_publication_cc[
+        df_publication_cc["decision_date"].dt.date >= start_date
+    ]
+    df_publication_cc = df_publication_cc[
+        df_publication_cc["decision_date"].dt.date <= end_date
+    ]
+
+    df_location_ca = df_location_ca[
+        df_location_ca["decision_date"].dt.date >= start_date
+    ]
+    df_location_ca = df_location_ca[df_location_ca["decision_date"].dt.date <= end_date]
+
+    df_nac_level_ca = df_nac_level_ca[
+        df_nac_level_ca["decision_date"].dt.date >= start_date
+    ]
+    df_nac_level_ca = df_nac_level_ca[
+        df_nac_level_ca["decision_date"].dt.date <= end_date
+    ]
+
+    df_nac_ca = df_nac_ca[df_nac_ca["decision_date"].dt.date >= start_date]
+    df_nac_ca = df_nac_ca[df_nac_ca["decision_date"].dt.date <= end_date]
+
+    # computing graphs
+
+    time_by_month_cc_graph = get_time_by_month_cc_graph(df_time_by_month)
+
+    chamber_cc_graph = get_chamber_cc_graph(df_chamber_cc)
+    type_cc_graph = get_type_cc_graph(df_type_cc)
+
+    formation_cc_graph = get_formation_cc_graph(df_formation_cc)
+    publication_cc_graph = get_publication_cc_graph(df_publication_cc)
+
+    location_ca_graph = get_location_ca_graph(df_location_ca)
+    nac_level_ca_graph = get_nac_level_ca_graph(df_nac_level_ca)
+    nac_ca_graph = get_nac_ca_graph(df_nac_ca)
+
+    return (
+        time_by_month_cc_graph,
+        chamber_cc_graph,
+        type_cc_graph,
+        formation_cc_graph,
+        publication_cc_graph,
+        location_ca_graph,
+        nac_level_ca_graph,
+        nac_ca_graph,
+    )
+
+
+@app.callback(
+    Output("time-selected-location-ca-graph", "figure"),
+    Output("nac-level-selected-location-ca-graph", "figure"),
+    Output("nac-selected-location-ca-graph", "figure"),
     Input("time-location-input", "value"),
     Input("start-date-picker", "value"),
     Input("end-date-picker", "value"),
 )
 def update_time_location_graph(locations, start_date, end_date):
-    df = load_data(path="./data")
     start_date = format_date(start_date)
     end_date = format_date(end_date)
 
-    df = df[df["decision_date"].dt.date >= start_date]
-    df = df[df["decision_date"].dt.date <= end_date]
-    time_location_graph = get_time_location_graph(df=df, locations=locations)
-    nac_location_graph = get_nac_location_graph(df=df, locations=locations)
-    nac_level_location_graph = get_nac_level_location_graph(df=df, locations=locations)
-    return time_location_graph, nac_location_graph, nac_level_location_graph
+    (
+        df_time_selected_location_ca_dataset,
+        df_nac_level_selected_location_ca,
+        df_nac_selected_location_ca,
+    ) = load_selected_datasets(path="./data")
 
+    df_time_selected_location_ca_dataset = df_time_selected_location_ca_dataset[
+        df_time_selected_location_ca_dataset["decision_date"].dt.date <= end_date
+    ]
+    df_time_selected_location_ca_dataset = df_time_selected_location_ca_dataset[
+        df_time_selected_location_ca_dataset["decision_date"].dt.date >= start_date
+    ]
 
-@app.callback(
-    Output("download-ca-data", "data"),
-    State("download-ca-choice", "value"),
-    Input("download-ca-submit", "n_clicks"),
-    # State("start-date-picker", "date"),
-    # State("end-date-picker", "date"),
-    # prevent_initial_callbacks=True,
-)
-def download_data(data_choice, n_clicks):
-    if not n_clicks:
-        return None
-    df = load_data(path="./data")
-    df = get_download_data(
-        df=df,
-        choice=data_choice,
-        # start_date=start_date, end_date=end_date
+    df_nac_level_selected_location_ca = df_nac_level_selected_location_ca[
+        df_nac_level_selected_location_ca["decision_date"].dt.date <= end_date
+    ]
+    df_nac_level_selected_location_ca = df_nac_level_selected_location_ca[
+        df_nac_level_selected_location_ca["decision_date"].dt.date >= start_date
+    ]
+
+    df_nac_selected_location_ca = df_nac_selected_location_ca[
+        df_nac_selected_location_ca["decision_date"].dt.date <= end_date
+    ]
+    df_nac_selected_location_ca = df_nac_selected_location_ca[
+        df_nac_selected_location_ca["decision_date"].dt.date >= start_date
+    ]
+
+    time_selected_location_ca_graph = get_time_selected_location_ca_graph(
+        df=df_time_selected_location_ca_dataset, locations=locations
     )
-    return dcc.send_data_frame(df.to_csv, filename=f"{data_choice}.csv")
+    nac_level_selected_location_ca_graph = get_nac_level_selected_location_ca_graph(
+        df=df_nac_level_selected_location_ca, locations=locations
+    )
+    nac_selected_location_ca_graph = get_nac_selected_location_ca_graph(
+        df=df_nac_selected_location_ca, locations=locations
+    )
+
+    return (
+        time_selected_location_ca_graph,
+        nac_level_selected_location_ca_graph,
+        nac_selected_location_ca_graph,
+    )
+
+
+if INCLUDE_DOWNLOAD:
+
+    @app.callback(
+        Output("download-ca-data", "data"),
+        State("download-ca-choice", "value"),
+        Input("download-ca-submit", "n_clicks"),
+        # State("start-date-picker", "date"),
+        # State("end-date-picker", "date"),
+        # prevent_initial_callbacks=True,
+    )
+    def download_data(data_choice, n_clicks):
+        if not n_clicks:
+            return None
+        df = load_data(path="./data")
+        df = get_download_data(
+            df=df,
+            choice=data_choice,
+            # start_date=start_date, end_date=end_date
+        )
+        return dcc.send_data_frame(df.to_csv, filename=f"{data_choice}.csv")
 
 
 @app.callback(
@@ -181,6 +291,9 @@ def update_data(n_interval):
             reference_file="./data/full_data.parquet",
             target_file="./data/full_data.parquet",
         )
+
+        compute_all_datasets(path="./data")
+        print("Datasets are computed")
         LATEST_UPDATE_DATE = datetime.date.today()
 
 

@@ -52,7 +52,7 @@ def get_header():
 def get_summary():
     return html.Div(
         [
-            # html.H2("Résumé"),
+            html.H2("Résumé général"),
             html.Div(
                 [
                     get_summary_card(
@@ -95,7 +95,7 @@ def get_main_content():
                         width="30%",
                     ),
                     get_graph(
-                        "time-graph", "Nombre de décisions par année", width="70%"
+                        "time-by-year", "Nombre de décisions par année", width="70%"
                     ),
                 ],
                 className="row",
@@ -152,45 +152,39 @@ def get_main_content():
     )
 
 
-def get_summary_card(
-    # card_id: str,
-    card_title: str,
-    card_content_id: str,
-    card_content_default: str = "0",
-):
+def get_focus_cc():
     return html.Div(
         [
-            html.P(card_content_default, className="card-content", id=card_content_id),
-            html.P(card_title, className="card-title"),
-        ],
-        className="card",
-        # id=card_id
-    )
-
-
-def get_graph(graph_id: str, graph_title: str, width: str = None):
-    if width:
-        div = html.Div(
-            [
-                html.P(graph_title, className="graph-title"),
-                dcc.Graph(
-                    id=graph_id,
-                    config={"displaylogo": False},
+            html.Header(html.H2("Décisions de la Cour de cassation")),
+            html.Div(
+                get_graph(
+                    "time-by-month-cc-graph",
+                    "Nombre de décisions par mois",
                 ),
-            ],
-            className="graph-container",
-            style={"width": width},
-        )
-        return div
-
-    div = html.Div(
-        [
-            html.P(graph_title, className="graph-title"),
-            dcc.Graph(id=graph_id, config={"displaylogo": False}),
+                className="row",
+            ),
+            html.Div(
+                [
+                    get_graph("chamber-cc-graph", "Nombre de décisions par chambre"),
+                    get_graph("type-cc-graph", "Nombre de décisions par type"),
+                ],
+                className="row",
+            ),
+            html.Div(
+                [
+                    get_graph(
+                        "formation-cc-graph", "Nombre de décisions par formation"
+                    ),
+                    get_graph(
+                        "publication-cc-graph",
+                        "Nombre de décisions par type de publication",
+                    ),
+                ],
+                className="row",
+            ),
         ],
-        className="graph-container",
+        className="content-container",
     )
-    return div
 
 
 def get_focus_ca():
@@ -198,19 +192,23 @@ def get_focus_ca():
         [
             html.H2("Décisions des cours d'appel"),
             html.Div(
-                [get_graph("location-graph", "Nombre de décisions par cour d'appel")],
-                className="row",
-            ),
-            html.Div(
                 [
                     get_graph(
-                        "nac-level-graph", "Nombre de décisions par niveau d'affaire"
+                        "location-ca-graph", "Nombre de décisions par cour d'appel"
                     )
                 ],
                 className="row",
             ),
             html.Div(
-                [get_graph("nac-graph", "Nombre de décisions par code NAC")],
+                [
+                    get_graph(
+                        "nac-level-ca-graph", "Nombre de décisions par niveau d'affaire"
+                    )
+                ],
+                className="row",
+            ),
+            html.Div(
+                [get_graph("nac-ca-graph", "Nombre de décisions par code NAC")],
                 className="row",
             ),
             # html.H2("Sélection de cour d'appel"),
@@ -228,7 +226,7 @@ def get_focus_ca():
             ),
             html.Div(
                 get_graph(
-                    graph_id="time-location-graph",
+                    graph_id="time-selected-location-ca-graph",
                     graph_title="Nombre de décisions par mois",
                 ),
                 className="row",
@@ -236,14 +234,16 @@ def get_focus_ca():
             html.Div(
                 [
                     get_graph(
-                        "level-location-graph",
+                        "nac-level-selected-location-ca-graph",
                         "Nombre de décisions par niveau d'affaire",
                     )
                 ],
                 className="row",
             ),
             html.Div(
-                get_graph("nac-location-graph", "Nombre de décisions par code NAC"),
+                get_graph(
+                    "nac-selected-location-ca-graph", "Nombre de décisions par code NAC"
+                ),
                 className="row",
             ),
         ],
@@ -296,29 +296,6 @@ def get_download(include_download: bool = False):
         )
 
 
-def get_focus_cc():
-    return html.Div(
-        [
-            html.Header(html.H2("Décisions de la Cour de cassation")),
-            html.Div(
-                get_graph(
-                    "formation-time-graph",
-                    "Nombre de décisions par mois",
-                ),
-                className="row",
-            ),
-            html.Div(
-                [
-                    get_graph("chamber-graph", "Nombre de décisions par formation"),
-                    get_graph("type-graph", "Nombre de décisions par type"),
-                ],
-                className="row",
-            ),
-        ],
-        className="content-container",
-    )
-
-
 def get_footer():
     return html.Div(
         [
@@ -350,3 +327,44 @@ def get_footer():
         ],
         className="footer",
     )
+
+
+def get_summary_card(
+    # card_id: str,
+    card_title: str,
+    card_content_id: str,
+    card_content_default: str = "0",
+):
+    return html.Div(
+        [
+            html.P(card_content_default, className="card-content", id=card_content_id),
+            html.P(card_title, className="card-title"),
+        ],
+        className="card",
+        # id=card_id
+    )
+
+
+def get_graph(graph_id: str, graph_title: str, width: str = None):
+    if width:
+        div = html.Div(
+            [
+                html.P(graph_title, className="graph-title"),
+                dcc.Graph(
+                    id=graph_id,
+                    config={"displaylogo": False},
+                ),
+            ],
+            className="graph-container",
+            style={"width": width},
+        )
+        return div
+
+    div = html.Div(
+        [
+            html.P(graph_title, className="graph-title"),
+            dcc.Graph(id=graph_id, config={"displaylogo": False}),
+        ],
+        className="graph-container",
+    )
+    return div

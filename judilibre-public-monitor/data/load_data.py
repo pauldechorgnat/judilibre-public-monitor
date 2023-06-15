@@ -2,6 +2,7 @@ import os
 
 import pandas as pd
 
+from .data_utils import CHAMBERS_CC
 from .data_utils import CLEAN_COLUMN_NAMES
 from .data_utils import FORMATIONS_CC
 from .data_utils import JURISDICTIONS
@@ -17,7 +18,7 @@ def load_data(
     nac_reference_filename: str = "nac_reference.csv",
 ):
     df = pd.read_parquet(os.path.join(path, main_filename))
-
+    df = df.drop_duplicates(subset=["id"])
     df_nac = pd.read_csv(os.path.join(path, nac_reference_filename))
 
     # cleaning data
@@ -30,10 +31,14 @@ def load_data(
 
     df["location"] = df["court"].apply(remove_cour_dappel)
 
-    df["formation_clean"] = "Non renseigné"
+    df["chamber"] = df["chamber"].fillna("Non renseigné")
 
-    df.loc[df["jurisdiction"] == "cc", "formation_clean"] = df.loc[
+    df.loc[df["jurisdiction"] == "cc", "chamber"] = df.loc[
         df["jurisdiction"] == "cc", "chamber"
+    ].apply(CHAMBERS_CC.get)
+
+    df.loc[df["jurisdiction"] == "cc", "formation"] = df.loc[
+        df["jurisdiction"] == "cc", "formation"
     ].apply(FORMATIONS_CC.get)
 
     df["jurisdiction"] = df["jurisdiction"].apply(
@@ -45,8 +50,11 @@ def load_data(
     df["type"] = df["type"].apply(lambda t: TYPES.get(t, "Autre"))
     df["source"] = df["source"].apply(lambda source: SOURCES.get(source, "Autre"))
 
+    df["formation"] = df["formation"].fillna("Non renseigné")
+
     df.loc[df["nac"].isna(), "nac"] = "Non renseigné"
 
+    df["publication"] = df["publication"].astype(str)
     df["n_decisions"] = 1
 
     df = (
@@ -57,9 +65,11 @@ def load_data(
                 "court",
                 "location",
                 "nac",
-                "formation_clean",
+                "chamber",
                 "type",
                 "decision_date",
+                "formation",
+                "publication",
             ]
         )
         .agg({"n_decisions": "sum"})
@@ -69,6 +79,10 @@ def load_data(
     df = pd.merge(
         left=df, right=df_nac, how="left", left_on=["nac"], right_on=["Code NAC"]
     )
+
+    df["publication"] = df["publication"].apply(lambda x: [i for i in x])
+
+    df.info()
 
     return df
 

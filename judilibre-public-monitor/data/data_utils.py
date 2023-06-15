@@ -111,7 +111,7 @@ FORMATIONS_CC = {
 }
 
 
-FORMATIONS_CC = {
+CHAMBERS_CC = {
     "pl": "Plénière",
     "mi": "Mixte",
     "civ1": "Civile I",
@@ -140,7 +140,7 @@ SOURCES = {"dila": "DILA", "jurinet": "Jurinet", "jurica": "Jurica"}
 
 
 CLEAN_COLUMN_NAMES = {
-    "formation_clean": "Chambre ou formation",
+    "chamber": "Chambre ou formation",
     "decision_date": "Date",
     "source": "Source",
     "jurisdiction": "Juridiction",
@@ -149,4 +149,13 @@ CLEAN_COLUMN_NAMES = {
     "type": "Type de décision",
     "Niveau 1": "Niveau 1 d'Affaire Civile",
     "Niveau 2": "Niveau 2 d'Affaire Civile",
+}
+
+FORMATIONS_CC = {
+    "f": "Formation restreinte",
+    "fm": "Formation mixte",
+    "fp": "Formation plénière de chambre",
+    "frh": "Formation restreinte hors RNSM/NA",
+    "frr": "Formation restreinte RNSM/NA",
+    "fs": "Formation de section",
 }
