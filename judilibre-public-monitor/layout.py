@@ -19,8 +19,6 @@ def get_layout(include_download: bool = False):
             get_download(include_download=include_download),
             dcc.Input(id="dummy-input", style={"display": "none"}),
             get_footer(),
-            dcc.Interval(id="download-interval", interval=1000 * 60 * 60 * 2),
-            html.Div(id="dummy-div", style={"display": "none"}),
         ]
     )
 

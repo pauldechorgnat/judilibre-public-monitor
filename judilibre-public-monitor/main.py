@@ -2,6 +2,8 @@ import datetime
 import logging
 import os
 
+from apscheduler.schedulers.background import BackgroundScheduler
+from apscheduler.triggers.cron import CronTrigger
 from dash import Dash
 from dash import dcc
 from dash import Input
@@ -30,6 +32,8 @@ from graphs import get_time_by_year_graph
 from graphs import get_time_selected_location_ca_graph
 from graphs import get_type_cc_graph
 from layout import get_layout
+
+scheduler = BackgroundScheduler()
 
 load_dotenv()
 
@@ -314,10 +318,7 @@ if INCLUDE_DOWNLOAD:
         return dcc.send_data_frame(df.to_csv, filename=f"{data_choice}.csv")
 
 
-@app.callback(
-    Output("dummy-div", "children"), Input("download-interval", "n_intervals")
-)
-def update_data(n_interval):
+def update_data():
     global LATEST_UPDATE_DATE
     global UPDATE_DATA
     if (LATEST_UPDATE_DATE != datetime.date.today()) and UPDATE_DATA:
@@ -332,6 +333,11 @@ def update_data(n_interval):
         compute_all_datasets(path="./data")
         print("Datasets are computed")
         LATEST_UPDATE_DATE = datetime.date.today()
+
+
+scheduler.add_job(
+    update_data, trigger=CronTrigger.from_crontab("0 0 * * *"), id="download"
+)
 
 
 if __name__ == "__main__":
@@ -354,5 +360,7 @@ if __name__ == "__main__":
 
     port = arguments.port
     debug_mode = arguments.debug_mode
+
+    scheduler.start()
 
     app.run(host="0.0.0.0", debug=debug_mode, port=port)

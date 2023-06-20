@@ -24,3 +24,4 @@ six==1.16.0
 tenacity==8.2.1
 urllib3==1.26.14
 Werkzeug==2.2.3
+APScheduler==3.10.1
