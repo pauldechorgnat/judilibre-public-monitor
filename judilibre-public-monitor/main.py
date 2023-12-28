@@ -21,10 +21,13 @@ from flask_caching import Cache
 from graphs import get_chamber_cc_graph
 from graphs import get_formation_cc_graph
 from graphs import get_location_ca_graph
+from graphs import get_location_tj_graph
 from graphs import get_nac_ca_graph
 from graphs import get_nac_level_ca_graph
 from graphs import get_nac_level_selected_location_ca_graph
+from graphs import get_nac_level_tj_graph
 from graphs import get_nac_selected_location_ca_graph
+from graphs import get_nac_tj_graph
 from graphs import get_publication_cc_graph
 from graphs import get_source_graph
 from graphs import get_time_by_month_cc_graph
@@ -70,9 +73,9 @@ def format_date(date_str):
 @app.callback(
     Output("source-graph", "figure"),
     Output("time-by-year", "figure"),
-    Output("nb-decisions-card", "children"),
     Output("nb-decisions-cc-card", "children"),
     Output("nb-decisions-ca-card", "children"),
+    Output("nb-decisions-tj-card", "children"),
     Output("date-latest-decision-card", "children"),
     Input("dummy-input", "value"),
 )
@@ -95,21 +98,25 @@ def compute_general_figures(n_clicks):
         df_time_by_year["jurisdiction"] == "Cours d'appel", "n_decisions"
     ].sum()
     nb_decisions_ca = f"{nb_decisions_ca:,}".replace(",", " ")
+    nb_decisions_tj = df_time_by_year.loc[
+        df_time_by_year["jurisdiction"] == "Tribunaux judiciaires", "n_decisions"
+    ].sum()
+    nb_decisions_tj = f"{nb_decisions_tj:,}".replace(",", " ")
 
     return (
         source_graph,
         time_by_year_graph,
-        nb_decisions,
         nb_decisions_cc,
         nb_decisions_ca,
+        nb_decisions_tj,
         max_date,
     )
 
 
 @app.callback(
-    Output("nb-decisions-card-date", "children"),
     Output("nb-decisions-cc-card-date", "children"),
     Output("nb-decisions-ca-card-date", "children"),
+    Output("nb-decisions-tj-card-date", "children"),
     Output("date-latest-decision-card-date", "children"),
     Output("time-by-month-cc-graph", "figure"),
     Output("chamber-cc-graph", "figure"),
@@ -119,6 +126,9 @@ def compute_general_figures(n_clicks):
     Output("location-ca-graph", "figure"),
     Output("nac-level-ca-graph", "figure"),
     Output("nac-ca-graph", "figure"),
+    Output("location-tj-graph", "figure"),
+    Output("nac-level-tj-graph", "figure"),
+    Output("nac-tj-graph", "figure"),
     Input("start-date-picker", "value"),
     Input("end-date-picker", "value"),
 )
@@ -133,6 +143,9 @@ def update_graphs(start_date, end_date):
         df_location_ca,
         df_nac_level_ca,
         df_nac_ca,
+        df_location_tj,
+        df_nac_level_tj,
+        df_nac_tj,
     ) = load_general_datasets(path="data")
 
     df_source, df_time_by_year = load_static_datasets(path="./data")
@@ -204,11 +217,16 @@ def update_graphs(start_date, end_date):
         df_time_by_year["jurisdiction"] == "Cour de cassation", "n_decisions"
     ].sum()
     nb_decisions_cc = f"{nb_decisions_cc:,}".replace(",", " ")
+
     nb_decisions_ca = df_time_by_year.loc[
         df_time_by_year["jurisdiction"] == "Cours d'appel", "n_decisions"
     ].sum()
-
     nb_decisions_ca = f"{nb_decisions_ca:,}".replace(",", " ")
+
+    nb_decisions_tj = df_time_by_year.loc[
+        df_time_by_year["jurisdiction"] == "Tribunaux judiciaires", "n_decisions"
+    ].sum()
+    nb_decisions_tj = f"{nb_decisions_tj:,}".replace(",", " ")
 
     # computing graphs
 
@@ -224,10 +242,14 @@ def update_graphs(start_date, end_date):
     nac_level_ca_graph = get_nac_level_ca_graph(df_nac_level_ca)
     nac_ca_graph = get_nac_ca_graph(df_nac_ca)
 
+    location_tj_graph = get_location_tj_graph(df_location_tj)
+    nac_level_tj_graph = get_nac_level_tj_graph(df_nac_level_tj)
+    nac_tj_graph = get_nac_tj_graph(df_nac_tj)
+
     return (
-        nb_decisions,
         nb_decisions_cc,
         nb_decisions_ca,
+        nb_decisions_tj,
         max_date,
         time_by_month_cc_graph,
         chamber_cc_graph,
@@ -237,6 +259,9 @@ def update_graphs(start_date, end_date):
         location_ca_graph,
         nac_level_ca_graph,
         nac_ca_graph,
+        location_tj_graph,
+        nac_level_tj_graph,
+        nac_tj_graph,
     )
 
 
@@ -244,11 +269,11 @@ def update_graphs(start_date, end_date):
     Output("time-selected-location-ca-graph", "figure"),
     Output("nac-level-selected-location-ca-graph", "figure"),
     Output("nac-selected-location-ca-graph", "figure"),
-    Input("time-location-input", "value"),
+    Input("time-location-input-ca", "value"),
     Input("start-date-picker", "value"),
     Input("end-date-picker", "value"),
 )
-def update_time_location_graph(locations, start_date, end_date):
+def update_time_location_ca_graph(locations, start_date, end_date):
     start_date = format_date(start_date)
     end_date = format_date(end_date)
 
@@ -256,7 +281,69 @@ def update_time_location_graph(locations, start_date, end_date):
         df_time_selected_location_ca_dataset,
         df_nac_level_selected_location_ca,
         df_nac_selected_location_ca,
-    ) = load_selected_datasets(path="./data")
+    ) = load_selected_datasets(
+        path="./data",
+        jurisdiction="ca",
+    )
+
+    df_time_selected_location_ca_dataset = df_time_selected_location_ca_dataset[
+        df_time_selected_location_ca_dataset["decision_date"].dt.date <= end_date
+    ]
+    df_time_selected_location_ca_dataset = df_time_selected_location_ca_dataset[
+        df_time_selected_location_ca_dataset["decision_date"].dt.date >= start_date
+    ]
+
+    df_nac_level_selected_location_ca = df_nac_level_selected_location_ca[
+        df_nac_level_selected_location_ca["decision_date"].dt.date <= end_date
+    ]
+    df_nac_level_selected_location_ca = df_nac_level_selected_location_ca[
+        df_nac_level_selected_location_ca["decision_date"].dt.date >= start_date
+    ]
+
+    df_nac_selected_location_ca = df_nac_selected_location_ca[
+        df_nac_selected_location_ca["decision_date"].dt.date <= end_date
+    ]
+    df_nac_selected_location_ca = df_nac_selected_location_ca[
+        df_nac_selected_location_ca["decision_date"].dt.date >= start_date
+    ]
+
+    time_selected_location_ca_graph = get_time_selected_location_ca_graph(
+        df=df_time_selected_location_ca_dataset, locations=locations
+    )
+    nac_level_selected_location_ca_graph = get_nac_level_selected_location_ca_graph(
+        df=df_nac_level_selected_location_ca, locations=locations
+    )
+    nac_selected_location_ca_graph = get_nac_selected_location_ca_graph(
+        df=df_nac_selected_location_ca, locations=locations
+    )
+
+    return (
+        time_selected_location_ca_graph,
+        nac_level_selected_location_ca_graph,
+        nac_selected_location_ca_graph,
+    )
+
+
+@app.callback(
+    Output("time-selected-location-tj-graph", "figure"),
+    Output("nac-level-selected-location-tj-graph", "figure"),
+    Output("nac-selected-location-tj-graph", "figure"),
+    Input("time-location-input-tj", "value"),
+    Input("start-date-picker", "value"),
+    Input("end-date-picker", "value"),
+)
+def update_time_location_tj_graph(locations, start_date, end_date):
+    start_date = format_date(start_date)
+    end_date = format_date(end_date)
+
+    (
+        df_time_selected_location_ca_dataset,
+        df_nac_level_selected_location_ca,
+        df_nac_selected_location_ca,
+    ) = load_selected_datasets(
+        path="./data",
+        jurisdiction="tj",
+    )
 
     df_time_selected_location_ca_dataset = df_time_selected_location_ca_dataset[
         df_time_selected_location_ca_dataset["decision_date"].dt.date <= end_date

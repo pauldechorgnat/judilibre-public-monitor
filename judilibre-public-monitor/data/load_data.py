@@ -25,10 +25,9 @@ def load_data(
     df.loc[df["jurisdiction"] == "cc", "location"] = "Cour de cassation"
 
     df["court"] = "Cour de casation"
-    df.loc[df["jurisdiction"] == "ca", "court"] = df.loc[
-        df["jurisdiction"] == "ca", "location"
+    df.loc[df["jurisdiction"] != "cc", "court"] = df.loc[
+        df["jurisdiction"] != "cc", "location"
     ].apply(lambda location: LOCATIONS.get(location, "Non renseigné"))
-
     df["location"] = df["court"].apply(remove_cour_dappel)
 
     df["chamber"] = df["chamber"].fillna("Non renseigné")

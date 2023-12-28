@@ -53,6 +53,14 @@ def download_latest_data(
             jurisdiction="cc",
         )
 
+        result = download_data_between_update_dates(
+            base_url=api_url,
+            headers={"KeyId": api_key_id},
+            start_date=start_date,
+            end_date=end_date,
+            jurisdiction="tj",
+        )
+
         data.append(pd.DataFrame(result))
 
     df_new = pd.concat(data)

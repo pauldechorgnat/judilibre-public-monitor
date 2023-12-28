@@ -116,6 +116,9 @@ COLORS["bleu_france"] = "#000091"
 COLORS["blanc"] = "#FFFFFF"
 COLORS["rouge_marianne"] = "#E1000F"
 
+COLORS["cc"] = "#FF8D7E"
+COLORS["ca"] = "#484D7A"
+COLORS["tj"] = "#FFE800"
 
 PALETTES = {
     "pal_gouv_fr": [COLORS[i] for i in ("bleu_france", "blanc", "rouge_marianne")],

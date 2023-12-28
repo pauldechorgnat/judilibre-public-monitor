@@ -135,7 +135,8 @@ def compute_location_ca_dataset(df: pd.DataFrame):
 
 def compute_nac_level_ca_dataset(df: pd.DataFrame):
     df_nac_level_ca = (
-        df.groupby(["Niveau 2", "N1", "Niveau 1", "decision_date"])
+        df.loc[df["jurisdiction"] == "Cours d'appel"]
+        .groupby(["Niveau 2", "N1", "Niveau 1", "decision_date"])
         .agg({"n_decisions": "sum"})
         .reset_index()
     )
@@ -153,8 +154,40 @@ def compute_nac_ca_dataset(df: pd.DataFrame):
     return df_nac_ca
 
 
+def compute_location_tj_dataset(df: pd.DataFrame):
+    df_location_tj = (
+        df.loc[df["jurisdiction"] == "Tribunaux judiciaires"]
+        .groupby(["location", "decision_date"])
+        .agg({"n_decisions": "sum"})
+        .reset_index()
+    )
+
+    return df_location_tj
+
+
+def compute_nac_level_tj_dataset(df: pd.DataFrame):
+    df_nac_level_ca = (
+        df.loc[df["jurisdiction"] == "Tribunaux judiciaires"]
+        .groupby(["Niveau 2", "N1", "Niveau 1", "decision_date"])
+        .agg({"n_decisions": "sum"})
+        .reset_index()
+    )
+    return df_nac_level_ca
+
+
+def compute_nac_tj_dataset(df: pd.DataFrame):
+    df_nac_ca = (
+        df.loc[df["jurisdiction"] == "Tribunaux judiciaires"]
+        .groupby(["nac", "Niveau 1", "N1", "Intitulé NAC", "decision_date"])
+        .agg({"n_decisions": "sum"})
+        .reset_index()
+    )
+
+    return df_nac_ca
+
+
 def compute_time_selected_location_ca_dataset(df: pd.DataFrame):
-    df_time_selected_location_ca = df.copy()
+    df_time_selected_location_ca = df.loc[df["jurisdiction"] == "Cours d'appel"].copy()
 
     df_time_selected_location_ca["decision_month"] = pd.to_datetime(
         {
@@ -178,7 +211,8 @@ def compute_time_selected_location_ca_dataset(df: pd.DataFrame):
 
 def compute_nac_level_selected_location_ca_dataset(df: pd.DataFrame):
     df_nac_level_selected_location_ca = (
-        df.groupby(["N1", "Niveau 1", "location", "decision_date"])
+        df.loc[df["jurisdiction"] == "Cours d'appel"]
+        .groupby(["N1", "Niveau 1", "location", "decision_date"])
         .agg({"n_decisions": "sum"})
         .reset_index()
         .dropna(subset=["N1", "Niveau 1"])
@@ -190,7 +224,8 @@ def compute_nac_level_selected_location_ca_dataset(df: pd.DataFrame):
 
 def compute_nac_selected_location_ca_dataset(df: pd.DataFrame):
     df_nac_selected_location_ca = (
-        df.groupby(["nac", "Intitulé NAC", "location", "decision_date"])
+        df.loc[df["jurisdiction"] == "Cours d'appel"]
+        .groupby(["nac", "Intitulé NAC", "location", "decision_date"])
         .agg({"n_decisions": "sum"})
         .reset_index()
         .dropna(subset=["nac"])
@@ -199,64 +234,175 @@ def compute_nac_selected_location_ca_dataset(df: pd.DataFrame):
     return df_nac_selected_location_ca
 
 
+def compute_time_selected_location_tj_dataset(df: pd.DataFrame):
+    df_time_selected_location_tj = df.loc[
+        df["jurisdiction"] == "Tribunaux judiciaires"
+    ].copy()
+
+    df_time_selected_location_tj["decision_month"] = pd.to_datetime(
+        {
+            "day": 1,
+            "month": df_time_selected_location_tj["decision_date"].dt.month,
+            "year": df_time_selected_location_tj["decision_date"].dt.year,
+        }
+    )
+
+    df_time_selected_location_tj = (
+        df_time_selected_location_tj.groupby(
+            ["decision_month", "decision_date", "location", "court"]
+        )
+        .agg({"n_decisions": "sum"})
+        .reset_index()
+        .sort_values(by=["location", "decision_date"])
+    )
+
+    return df_time_selected_location_tj
+
+
+def compute_nac_level_selected_location_tj_dataset(df: pd.DataFrame):
+    df_nac_level_selected_location_tj = (
+        df.loc[df["jurisdiction"] == "Tribunaux judiciaires"]
+        .groupby(["N1", "Niveau 1", "location", "decision_date"])
+        .agg({"n_decisions": "sum"})
+        .reset_index()
+        .dropna(subset=["N1", "Niveau 1"])
+        .sort_values(by=["location", "N1"])
+    )
+
+    return df_nac_level_selected_location_tj
+
+
+def compute_nac_selected_location_tj_dataset(df: pd.DataFrame):
+    df_nac_selected_location_tj = (
+        df.loc[df["jurisdiction"] == "Tribunaux judiciaires"]
+        .groupby(["nac", "Intitulé NAC", "location", "decision_date"])
+        .agg({"n_decisions": "sum"})
+        .reset_index()
+        .dropna(subset=["nac"])
+        .sort_values(by=["location", "nac"])
+    )
+    return df_nac_selected_location_tj
+
+
 def compute_all_datasets(path="."):
     df = load_data(path=path)
 
     df_source = compute_source_dataset(df)
-    df_source.to_parquet(os.path.join(path, "df_source.parquet"), index=False)
+    df_source.to_parquet(
+        os.path.join(path, "df_source.parquet"),
+        index=False,
+    )
 
     df_time_by_year = compute_time_by_year_dataset(df)
     df_time_by_year.to_parquet(
-        os.path.join(path, "df_time_by_year.parquet"), index=False
+        os.path.join(path, "df_time_by_year.parquet"),
+        index=False,
     )
 
     df_time_by_month = compute_time_by_month_cc_dataset(df)
     df_time_by_month.to_parquet(
-        os.path.join(path, "df_time_by_month_cc.parquet"), index=False
+        os.path.join(path, "df_time_by_month_cc.parquet"),
+        index=False,
     )
 
     df_chamber_cc = compute_chamber_cc_dataset(df)
-    df_chamber_cc.to_parquet(os.path.join(path, "df_chamber_cc.parquet"), index=False)
+    df_chamber_cc.to_parquet(
+        os.path.join(path, "df_chamber_cc.parquet"),
+        index=False,
+    )
 
     df_type_cc = compute_type_cc_dataset(df)
-    df_type_cc.to_parquet(os.path.join(path, "df_type_cc.parquet"), index=False)
+    df_type_cc.to_parquet(
+        os.path.join(path, "df_type_cc.parquet"),
+        index=False,
+    )
 
     df_formation_cc = compute_formation_cc_dataset(df)
     df_formation_cc.to_parquet(
-        os.path.join(path, "df_formation_cc.parquet"), index=False
+        os.path.join(path, "df_formation_cc.parquet"),
+        index=False,
     )
 
     df_publication_cc = compute_publication_cc_dataset(df)
     df_publication_cc.to_parquet(
-        os.path.join(path, "df_publication_cc.parquet"), index=False
+        os.path.join(path, "df_publication_cc.parquet"),
+        index=False,
     )
 
     df_location_ca = compute_location_ca_dataset(df)
-    df_location_ca.to_parquet(os.path.join(path, "df_location_ca.parquet"), index=False)
+    df_location_ca.to_parquet(
+        os.path.join(path, "df_location_ca.parquet"),
+        index=False,
+    )
 
     df_nac_level_ca = compute_nac_level_ca_dataset(df)
     df_nac_level_ca.to_parquet(
-        os.path.join(path, "df_nac_level_ca.parquet"), index=False
+        os.path.join(path, "df_nac_level_ca.parquet"),
+        index=False,
     )
 
     df_nac_ca = compute_nac_ca_dataset(df)
-    df_nac_ca.to_parquet(os.path.join(path, "df_nac_ca.parquet"), index=False)
+    df_nac_ca.to_parquet(
+        os.path.join(path, "df_nac_ca.parquet"),
+        index=False,
+    )
+
+    df_location_tj = compute_location_tj_dataset(df)
+    df_location_tj.to_parquet(
+        os.path.join(path, "df_location_tj.parquet"),
+        index=False,
+    )
+
+    df_nac_level_tj = compute_nac_level_tj_dataset(df)
+    df_nac_level_tj.to_parquet(
+        os.path.join(path, "df_nac_level_tj.parquet"),
+        index=False,
+    )
+
+    df_nac_tj = compute_nac_tj_dataset(df)
+    df_nac_tj.to_parquet(
+        os.path.join(path, "df_nac_tj.parquet"),
+        index=False,
+    )
 
     df_time_selected_location_ca_dataset = compute_time_selected_location_ca_dataset(df)
     df_time_selected_location_ca_dataset.to_parquet(
-        os.path.join(path, "df_time_selected_location_ca_dataset.parquet"), index=False
+        os.path.join(path, "df_time_selected_location_ca_dataset.parquet"),
+        index=False,
     )
 
     df_nac_level_selected_location_ca = compute_nac_level_selected_location_ca_dataset(
         df
     )
     df_nac_level_selected_location_ca.to_parquet(
-        os.path.join(path, "df_nac_level_selected_location_ca.parquet"), index=False
+        os.path.join(path, "df_nac_level_selected_location_ca.parquet"),
+        index=False,
     )
 
     df_nac_selected_location_ca = compute_nac_selected_location_ca_dataset(df)
     df_nac_selected_location_ca.to_parquet(
-        os.path.join(path, "df_nac_selected_location_ca.parquet"), index=False
+        os.path.join(path, "df_nac_selected_location_ca.parquet"),
+        index=False,
+    )
+
+    df_time_selected_location_tj_dataset = compute_time_selected_location_tj_dataset(df)
+    df_time_selected_location_tj_dataset.to_parquet(
+        os.path.join(path, "df_time_selected_location_tj_dataset.parquet"),
+        index=False,
+    )
+
+    df_nac_level_selected_location_tj = compute_nac_level_selected_location_tj_dataset(
+        df
+    )
+    df_nac_level_selected_location_tj.to_parquet(
+        os.path.join(path, "df_nac_level_selected_location_tj.parquet"),
+        index=False,
+    )
+
+    df_nac_selected_location_tj = compute_nac_selected_location_tj_dataset(df)
+    df_nac_selected_location_tj.to_parquet(
+        os.path.join(path, "df_nac_selected_location_tj.parquet"),
+        index=False,
     )
 
 
@@ -278,6 +424,9 @@ def load_general_datasets(path="."):
     df_location_ca = pd.read_parquet(os.path.join(path, "df_location_ca.parquet"))
     df_nac_level_ca = pd.read_parquet(os.path.join(path, "df_nac_level_ca.parquet"))
     df_nac_ca = pd.read_parquet(os.path.join(path, "df_nac_ca.parquet"))
+    df_location_tj = pd.read_parquet(os.path.join(path, "df_location_tj.parquet"))
+    df_nac_level_tj = pd.read_parquet(os.path.join(path, "df_nac_level_tj.parquet"))
+    df_nac_tj = pd.read_parquet(os.path.join(path, "df_nac_tj.parquet"))
 
     return (
         df_time_by_month,
@@ -288,24 +437,30 @@ def load_general_datasets(path="."):
         df_location_ca,
         df_nac_level_ca,
         df_nac_ca,
+        df_location_tj,
+        df_nac_level_tj,
+        df_nac_tj,
     )
 
 
-def load_selected_datasets(path="."):
-    df_time_selected_location_ca_dataset = pd.read_parquet(
-        os.path.join(path, "df_time_selected_location_ca_dataset.parquet")
+def load_selected_datasets(
+    path=".",
+    jurisdiction="ca",
+):
+    df_time_selected_location_dataset = pd.read_parquet(
+        os.path.join(path, f"df_time_selected_location_{jurisdiction}_dataset.parquet")
     )
-    df_nac_level_selected_location_ca = pd.read_parquet(
-        os.path.join(path, "df_nac_level_selected_location_ca.parquet")
+    df_nac_level_selected_location = pd.read_parquet(
+        os.path.join(path, f"df_nac_level_selected_location_{jurisdiction}.parquet")
     )
-    df_nac_selected_location_ca = pd.read_parquet(
-        os.path.join(path, "df_nac_selected_location_ca.parquet")
+    df_nac_selected_location = pd.read_parquet(
+        os.path.join(path, f"df_nac_selected_location_{jurisdiction}.parquet")
     )
 
     return (
-        df_time_selected_location_ca_dataset,
-        df_nac_level_selected_location_ca,
-        df_nac_selected_location_ca,
+        df_time_selected_location_dataset,
+        df_nac_level_selected_location,
+        df_nac_selected_location,
     )
 
 

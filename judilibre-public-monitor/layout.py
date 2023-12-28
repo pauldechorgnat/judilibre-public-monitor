@@ -3,6 +3,7 @@ import datetime
 from dash import dcc
 from dash import html
 from data.data_utils import LOCATIONS_CA
+from data.data_utils import LOCATIONS_TJ
 from data.data_utils import remove_cour_dappel
 
 TODAY = datetime.date.today()
@@ -16,6 +17,9 @@ def get_layout(include_download: bool = False):
             get_main_content(),
             get_focus_cc(),
             get_focus_ca(),
+            get_focus_tj(),
+            get_selected_ca(),
+            get_selected_tj(),
             get_download(include_download=include_download),
             dcc.Input(id="dummy-input", style={"display": "none"}),
             get_footer(),
@@ -34,7 +38,10 @@ def get_header():
             ),
             html.Div(
                 [
-                    html.H1("API Judilibre", className="main-title"),
+                    html.H1(
+                        "API Judilibre",
+                        className="main-title",
+                    ),
                     html.P(
                         "Statistiques des décisions de justice diffusées en Open Data",
                         className="secondary-title",
@@ -55,8 +62,8 @@ def get_summary():
                 [
                     get_summary_card(
                         card_content_default=0,
-                        card_title="Nombre de décisions",
-                        card_content_id="nb-decisions-card",
+                        card_title="Nombre de décisions CC",
+                        card_content_id="nb-decisions-cc-card",
                     ),
                     get_summary_card(
                         card_content_default=0,
@@ -65,8 +72,8 @@ def get_summary():
                     ),
                     get_summary_card(
                         card_content_default=0,
-                        card_title="Nombre de décisions CC",
-                        card_content_id="nb-decisions-cc-card",
+                        card_title="Nombre de décisions TJ",
+                        card_content_id="nb-decisions-tj-card",
                     ),
                     get_summary_card(
                         card_content_default="01/01/1790",
@@ -93,7 +100,9 @@ def get_main_content():
                         width="30%",
                     ),
                     get_graph(
-                        "time-by-year", "Nombre de décisions par année", width="70%"
+                        "time-by-year",
+                        "Nombre de décisions par année",
+                        width="70%",
                     ),
                 ],
                 className="row",
@@ -158,8 +167,8 @@ def get_focus_cc():
                 [
                     get_summary_card(
                         card_content_default=0,
-                        card_title="Nombre de décisions",
-                        card_content_id="nb-decisions-card-date",
+                        card_title="Nombre de décisions CC",
+                        card_content_id="nb-decisions-cc-card-date",
                     ),
                     get_summary_card(
                         card_content_default=0,
@@ -168,8 +177,8 @@ def get_focus_cc():
                     ),
                     get_summary_card(
                         card_content_default=0,
-                        card_title="Nombre de décisions CC",
-                        card_content_id="nb-decisions-cc-card-date",
+                        card_title="Nombre de décisions TJ",
+                        card_content_id="nb-decisions-tj-card-date",
                     ),
                     get_summary_card(
                         card_content_default="01/01/1790",
@@ -211,6 +220,36 @@ def get_focus_cc():
     )
 
 
+def get_focus_tj():
+    return html.Div(
+        [
+            html.H2("Décisions des tribunaux judiciaires"),
+            html.Div(
+                [
+                    get_graph(
+                        "location-tj-graph",
+                        "Nombre de décisions par tribunal judiciaire",
+                    )
+                ],
+                className="row",
+            ),
+            html.Div(
+                [
+                    get_graph(
+                        "nac-level-tj-graph", "Nombre de décisions par niveau d'affaire"
+                    )
+                ],
+                className="row",
+            ),
+            html.Div(
+                [get_graph("nac-tj-graph", "Nombre de décisions par code NAC")],
+                className="row",
+            ),
+        ],
+        className="content-container",
+    )
+
+
 def get_focus_ca():
     return html.Div(
         [
@@ -235,15 +274,23 @@ def get_focus_ca():
                 [get_graph("nac-ca-graph", "Nombre de décisions par code NAC")],
                 className="row",
             ),
+        ],
+        className="content-container",
+    )
+
+
+def get_selected_ca():
+    return html.Div(
+        [
             html.H2("Sélection de cours d'appel"),
             html.Label(
                 "Choix d'une ou plusieurs cour(s) d'appel:",
-                htmlFor="time-location-input",
+                htmlFor="time-location-input-ca",
             ),
             dcc.Dropdown(
                 {remove_cour_dappel(v): v for v in LOCATIONS_CA.values()},
                 ["Paris"],
-                id="time-location-input",
+                id="time-location-input-ca",
                 multi=True,
             ),
             html.Div(
@@ -264,7 +311,50 @@ def get_focus_ca():
             ),
             html.Div(
                 get_graph(
-                    "nac-selected-location-ca-graph", "Nombre de décisions par code NAC"
+                    "nac-selected-location-ca-graph",
+                    "Nombre de décisions par code NAC",
+                ),
+                className="row",
+            ),
+        ],
+        className="content-container",
+    )
+
+
+def get_selected_tj():
+    return html.Div(
+        [
+            html.H2("Sélection de tribunaux judiciaires"),
+            html.Label(
+                "Choix d'une ou plusieurs tribunal judiciaire:",
+                htmlFor="time-location-input-tj",
+            ),
+            dcc.Dropdown(
+                {remove_cour_dappel(v): v for v in LOCATIONS_TJ.values()},
+                ["Paris"],
+                id="time-location-input-tj",
+                multi=True,
+            ),
+            html.Div(
+                get_graph(
+                    graph_id="time-selected-location-tj-graph",
+                    graph_title="Nombre de décisions par mois",
+                ),
+                className="row",
+            ),
+            html.Div(
+                [
+                    get_graph(
+                        "nac-level-selected-location-tj-graph",
+                        "Nombre de décisions par niveau d'affaire",
+                    )
+                ],
+                className="row",
+            ),
+            html.Div(
+                get_graph(
+                    "nac-selected-location-tj-graph",
+                    "Nombre de décisions par code NAC",
                 ),
                 className="row",
             ),

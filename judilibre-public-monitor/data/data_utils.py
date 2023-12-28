@@ -6,7 +6,7 @@ from pandas.api.types import CategoricalDtype
 LETTERS = [letter for letter in ascii_letters]
 NUMBERS = [number for number in digits]
 
-SOURCES = ["dila", "jurinet", "jurica"]
+SOURCES = ["dila", "jurinet", "jurica", "juritj"]
 SOURCES_DTYPE = CategoricalDtype(SOURCES)
 
 JURISDICTIONS = {
@@ -19,6 +19,9 @@ JURISDICTIONS = {
 def remove_cour_dappel(string: str = "Cour d'appel de Paris"):
     string = string.replace("Cour d'appel de ", "")
     string = string.replace("Cour d'appel d'", "")
+    string = string.replace("Tribunal judiciaire d'", "")
+    string = string.replace("Tribunal judiciaire de ", "")
+
     return string
 
 
@@ -92,7 +95,17 @@ LOCATIONS_CA = {
     "ca_cayenne": "Cour d'appel de Cayenne",
 }
 
-LOCATIONS = {**LOCATIONS_CA}
+LOCATIONS_TJ = {
+    "tj75056": "Tribunal judiciaire de Paris",
+    "tj93008": "Tribunal judiciaire de Bobigny",
+    "tj33063": "Tribunal judiciaire de Bordeaux",
+    "tj13055": "Tribunal judiciaire de Marseille",
+}
+
+LOCATIONS = {
+    **LOCATIONS_CA,
+    **LOCATIONS_TJ,
+}
 
 
 FORMATIONS_CC = {
@@ -136,7 +149,12 @@ TYPES = {
 }
 
 
-SOURCES = {"dila": "DILA", "jurinet": "Jurinet", "jurica": "Jurica"}
+SOURCES = {
+    "dila": "DILA",
+    "jurinet": "Jurinet",
+    "jurica": "Jurica",
+    "juritj": "JuriTJ",
+}
 
 
 CLEAN_COLUMN_NAMES = {

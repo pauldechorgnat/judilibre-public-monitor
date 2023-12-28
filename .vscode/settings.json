@@ -1,9 +1,9 @@
 {
-    "python.formatting.provider": "black",
-    "editor.formatOnSave": true,
-    // "editor.codeActionsOnSave": {
-    //     "source.organizeImports": true,
-    //     // "source.organizeImports.reorder-python-imports": true,
-    //     // "source.organizeImports.reorder-python-imports.path": "venv-dev/bin/reorder-python-imports"
-    // },
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "charliermarsh.ruff"
+    },
+    "ruff.format.args": [
+        "--line-length=120"
+    ]
 }
