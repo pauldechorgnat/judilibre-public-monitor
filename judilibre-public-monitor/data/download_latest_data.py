@@ -53,6 +53,8 @@ def download_latest_data(
             jurisdiction="cc",
         )
 
+        data.append(pd.DataFrame(result))
+
         result = download_data_between_update_dates(
             base_url=api_url,
             headers={"KeyId": api_key_id},
@@ -80,7 +82,10 @@ if __name__ == "__main__":
     argument_parser = ArgumentParser()
 
     argument_parser.add_argument(
-        "-i", "--input-file", default="./full_data.parquet", help="Reference file"
+        "-i",
+        "--input-file",
+        default="./full_data.parquet",
+        help="Reference file",
     )
 
     argument_parser.add_argument(
