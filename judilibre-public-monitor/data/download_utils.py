@@ -39,12 +39,13 @@ def download_data_between_update_dates(
     mask: list[str] = DEFAULT_KEYS,
     parameters: dict = {},
     batch_size: int = 1_000,
+    date_type: str = "update",
 ):
     params = {
         "date_start": str(start_date),
         "date_end": str(end_date),
         "jurisdiction": jurisdiction,
-        "date_type": "update",
+        "date_type": date_type,
         "batch_size": batch_size,
         "batch": 0,
         **parameters,

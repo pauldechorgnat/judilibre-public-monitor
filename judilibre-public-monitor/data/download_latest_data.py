@@ -61,6 +61,7 @@ def download_latest_data(
             start_date=start_date,
             end_date=end_date,
             jurisdiction="tj",
+            date_type="creation",
         )
 
         data.append(pd.DataFrame(result))
